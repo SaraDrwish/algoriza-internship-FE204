@@ -3,12 +3,10 @@ module.exports = {
   content: ["./index.html" , "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      "primary-color":"#451515",
+      "primary-color":"#fe5155",
     },
   },
-  fontFamily: {
-    Ropo:["sasas , serif "],
-  }
+   
   plugins: [],
 }
 
