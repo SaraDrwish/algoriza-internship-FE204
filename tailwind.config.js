@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html" , "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      "BlueColor": "#2F80ED", 
+      "primary": "#2F80ED", 
       "yellow-color": "#FCEFCA",
       "dark-black": "#181818",
       "med-footer-black": "#1B1F2D",
@@ -14,10 +14,10 @@ module.exports = {
     fontFamily: {
       SFProDisplay:["SF Pro Display, sans-serif"],
     },
-    // container: {
-    //   padding: "0.5rem",
-    //   center: true,
-    // },
+    container: {
+      padding: " 6.25rem",
+      center: true,
+    },
     screens: {
       sm: "640px",
       md:"768px",
