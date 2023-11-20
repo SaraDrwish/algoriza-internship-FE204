@@ -1,12 +1,16 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-  import Nav from "./components/Nav.vue"
+import Nav from "./components/Nav.vue"
+import HomaPage from "./components/HomePage.vue"
+  
 </script>
 
 <template>
 
-    <div class="flex flex-col min-h-screen font-SFProDisplay ">
-        <Nav />
+    <div class="flex">
+      <!-- <div class="flex flex-col min-h-screen font-SFProDisplay "> -->
+        <Nav/>
+        <HomaPage/>
         <RouterView />
     </div>
 

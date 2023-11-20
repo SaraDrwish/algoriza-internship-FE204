@@ -22,6 +22,9 @@ module.exports = {
       sm: "640px",
       md:"768px",
     },
+    //  borderRadius: {
+    //     'custom': '10px', 
+    //   },
   },
    
   plugins: [],

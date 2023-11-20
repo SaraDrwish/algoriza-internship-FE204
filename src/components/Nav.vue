@@ -1,5 +1,5 @@
 <template>
-     <header class="fixed top-0 left-[100px]">
+     <header class="fixed top-0 left-[100px] bg-white shadow-sm">
       <nav class="flex sm:flex-row items-center justify-between  ">
 
         <RouterLink :to="{name:'home'}">
@@ -9,18 +9,18 @@
           </div>
         </RouterLink>
 
-        <div class="flex gap-5">
+        <div class="  ">
           <ul>
-            <li>Home</li>
-            <li>Discover</li>
-            <li>Activities</li>
-            <li>About</li>
-            <li>Contact</li>
+            <a href="/"><li>Home</li></a>
+            <a href="#"><li>Discover</li></a>
+            <a href="#"><li>Activities</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
           </ul>
         </div>
 
         <div class="">
-          <button class=" bg-BlueColor text-BlueColor p-1 m-1">Register</button>
+          <button class=" ">Register</button>
         </div>
 
       </nav>
@@ -39,7 +39,7 @@ import { RouterLink } from 'vue-router';
   flex-shrink: 0;
   /* background: rgb(132, 100, 163); */
   }
-  * ,body{
+  * {
    font-family: SF Pro Display;
    font-style: normal;
   }
@@ -49,6 +49,7 @@ import { RouterLink } from 'vue-router';
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.36px;
+    transition: all 0.3s ease-in;
   }
   ul{
     display: inline-flex;
@@ -61,8 +62,14 @@ import { RouterLink } from 'vue-router';
     line-height: normal;
     letter-spacing: 0.32px;
   }
-  li{
-   /* background: rgb(120, 71, 71); */
+  a{
+    transition: all 0.3s ease;
+  }
+  ul a:hover 
+  /* ,  */
+  /* p:hover  */
+  {
+    color: var(--primary);
   }
   button{
     background-color: var(--primary);
@@ -72,6 +79,10 @@ import { RouterLink } from 'vue-router';
      font-weight: 500;
     line-height: 20px; /* 133.333% */
     letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+  button:hover{
+    background-color: #4391f7;
 }
 
 </style>
