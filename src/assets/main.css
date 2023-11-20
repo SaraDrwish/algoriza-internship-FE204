@@ -1,18 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
-#app {
-  background-color:coral ;
-}
-
-/* @font-face {
-  font-family: <name_u_choose>;
-  src: url('~@/assets/fonts/<static_font_file>.ttf');
-} */
-
 :root{
   --primary: #2F80ED ;
+  --background-color:#FFF;
 }
-
 *{
   margin: 0;
   padding: 0;
@@ -20,20 +11,48 @@
   font-family: 'SF Pro Display', sans-serif;
 }
 body{
-background-color: #5d2626 ;
-color: #483d8b ;
+background-color: #FFF ;
+/* color: #2F80ED ; */
 }
-
 input:not([type="radio"]):not([type="checkbox"]) {
   border-radius: 4px;
-  background: var(--Gray-6, #F2F2F2);
-
+  background: #F2F2F2 ;
 }
-
 button{
   border: none;
   border-radius: 6px;
-  /* border: 1px solid var(--Blue-1, #2F80ED);  */
-  /* background: #2F80ED; */
+}
+
+/* #app {
+  background-color: #a66173;
+} */
+
+/* //////////////////////////////////////////////// */
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2F80ED;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgb(128, 128, 128);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4b7dbe ;
+}
+/* selection */
+::selection {
+  color: #62a5fb;
+  background-color:#17437d ;
 }
 

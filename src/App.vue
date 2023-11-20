@@ -1,20 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, RouterView } from 'vue-router'
+  import Nav from "./components/Nav.vue"
 </script>
 
 <template>
-  <header>
- 
-    <div class="wrapper">
- 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-       </nav>
-    </div>
-  </header>
 
-  <RouterView />
+    <div class="flex flex-col min-h-screen font-SFProDisplay ">
+        <Nav />
+        <RouterView />
+    </div>
 
 </template>
-
- 
