@@ -1,6 +1,39 @@
-/* @import './base.css'; */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 #app {
   background-color:coral ;
 }
- 
+
+/* @font-face {
+  font-family: <name_u_choose>;
+  src: url('~@/assets/fonts/<static_font_file>.ttf');
+} */
+
+:root{
+  --primary: #2F80ED ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Pro Display', sans-serif;
+}
+body{
+background-color: #5d2626 ;
+color: #483d8b ;
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+  border-radius: 4px;
+  background: var(--Gray-6, #F2F2F2);
+
+}
+
+button{
+  border: none;
+  border-radius: 6px;
+  /* border: 1px solid var(--Blue-1, #2F80ED);  */
+  /* background: #2F80ED; */
+}
+
