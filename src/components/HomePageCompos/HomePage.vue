@@ -2,7 +2,7 @@
   <div class=" mt-[80px] mx-auto">
 
 <!-- the img and the text -->
-      <div class=" flex fixed left-[100px] w-[calc(100%-200px)] h-[500px] flex-shrink-0 ">
+      <div class=" flex fixed left-[100px] w-[calc(100%-200px)] h-[500px]  ">
           <div class="  h-full w-full  "> 
             <div class="overlay-home rounded-[10px] overflow-hidden bg-black opacity-30  h-full w-full absolute "> </div> 
             <img class="rounded-[10px] h-full w-full " src="../../assets/imgs/mainPAgeHomeImg.jpeg" alt="home main image">

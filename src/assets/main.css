@@ -14,9 +14,13 @@ body{
 background-color: #FFF ;
 /* color: #2F80ED ; */
 }
-input:not([type="radio"]):not([type="checkbox"]) {
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
   border-radius: 4px;
   background: #F2F2F2 ;
+  border: none;
+}
+input:focus:not([type="radio"]):not([type="checkbox"]):not([type="submit"])  {
+  outline: none;
 }
 button{
   border: none;
