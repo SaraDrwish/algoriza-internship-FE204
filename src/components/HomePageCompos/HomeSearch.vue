@@ -2,7 +2,7 @@
   <div class="">
         <div class=" relative left-[105px] w-[calc(100%-105px)]  h-[64px]  ">
           <!-- <div class="absolute left-[205px] bottom-[15%] w-[calc(100%-410px)] h-[64px]  "> -->
-          <form action="#" class=" flex rounded-[8px]  gap-[15px] bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+          <form action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
             <div class="flex gap-[10px]  w-[206px] bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/location 1.svg" alt="location-icon">
               <input class="text-[13px]" w-full type="text" placeholder="Where are you going?">

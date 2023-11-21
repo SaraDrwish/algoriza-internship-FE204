@@ -1,5 +1,5 @@
-<template>
-     <header class="fixed top-0  z-[10000] w-full bg-white shadow-sm">
+<template  >
+     <header class="fixed top-0  z-[10000] w-full bg-white shadow-sm ">
       <nav class=" mx-auto sm:flex-row flex shrink-0 items-center justify-between h-[68px] w-[calc(100%-200px)] ">
 
         <RouterLink :to="{name:'home'}">

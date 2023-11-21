@@ -1,8 +1,8 @@
 <template>
-  <div class=" relative left-[100px] mx-auto">
+  <div class=" relative left-[100px] mx-auto  	 ">
 
     <!-- the hero home img and the text -->
-      <div class=" relative mt-[80px] ">
+      <div class=" relative mt-[80px] h-[704px] 	 ">
         <HomePageHeroImg/>
           <!-- small box in the home img  -->
           <!-- <div class="absolute "> 
@@ -20,9 +20,9 @@
     <!-- end  danger alert  -->
 
     <!-- enjoy section starting  -->
-    <!-- <div class="">
+    <div class=" ">
       <EnjoySec />
-    </div> -->
+    </div>
     <!-- end enjoy  -->
 
    </div>

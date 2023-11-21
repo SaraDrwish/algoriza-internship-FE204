@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="herosearchalertcomponnt">
+    <div class="herosearchalertcomponnt  	">
       <div class=" h-[500px] w-[calc(100%-200px)]  ">
               <div class="relative h-full w-full "> 
                 <div class="rounded-[10px] overflow-hidden bg-black opacity-30  h-full w-full absolute "> </div> 
@@ -21,15 +21,15 @@
 
           </div>
 
-          <div class=" ">
+          <div class="  	">
             <HomeAlert />
           </div>
 
     </div>
 
-    <div class="">
+    <!-- <div class="">
         <EnjoySec />
-    </div>
+    </div> -->
 
   </div>  
 </template>
@@ -37,7 +37,7 @@
 <script setup>
 import HomeAlert from './HomeAlert.vue';
 import HomeSearch from './HomeSearch.vue';
-import EnjoySec from './EnjoySec.vue';
+// import EnjoySec from './EnjoySec.vue';
  </script>
 
 <style   scoped>
