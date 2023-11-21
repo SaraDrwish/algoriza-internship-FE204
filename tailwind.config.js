@@ -11,7 +11,8 @@ module.exports = {
         "light-blsck": "#4F4F4F",
         "gray": "#4F4F4F",
         "BGC": " #FFF",
-        "inputsGray":"#F2F2F2"
+        "inputsGray": "#F2F2F2",
+        "Gray2":"#333333"
       }
       
     },
@@ -19,7 +20,7 @@ module.exports = {
       SFProDisplay:["SF Pro Display, sans-serif"],
     },
     container: {
-      padding: " 6.25rem",
+      padding: "0 100px",
       center: true,
     },
     screens: {

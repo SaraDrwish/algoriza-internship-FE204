@@ -26,6 +26,9 @@ button{
   border: none;
   border-radius: 6px;
 }
+button:hover , input[type="submit"]:hover {
+  background-color: #318afe;
+}
 
 /* #app {
   background-color: #a66173;
