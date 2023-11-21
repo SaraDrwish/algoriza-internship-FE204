@@ -5,24 +5,24 @@
       <div class=" relative mt-[80px] ">
         <HomePageHeroImg/>
           <!-- small box in the home img  -->
-          <div class="absolute "> 
+          <!-- <div class="absolute "> 
             <HomeSearch />
-          </div> 
+          </div>  -->
           <!-- end small box in the home img  -->
       </div>
     <!-- end the hero home img and the text  -->
 
 
     <!-- start danger alert  -->
-    <div class="">
+    <!-- <div class="">
       <HomeAlert />
-    </div>
+    </div> -->
     <!-- end  danger alert  -->
 
     <!-- enjoy section starting  -->
-    <div class="">
+    <!-- <div class="">
       <EnjoySec />
-    </div>
+    </div> -->
     <!-- end enjoy  -->
 
    </div>
