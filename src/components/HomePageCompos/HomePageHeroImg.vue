@@ -2,7 +2,6 @@
   <div class="    ">
     <div class="herosearchalertcomponnt  relative mt-[80px] h-[704px] ">
       <div class=" h-[500px] ">
-        <!-- <div class=" h-[500px] w-[calc(100%-200px)]  "> -->
               <div class="relative h-full w-full "> 
                 <div class="rounded-[10px] overflow-hidden bg-black opacity-30  h-full w-full absolute "> </div> 
                 <img class="object-cover rounded-[10px] h-full w-full " src="../../assets/imgs/mainPAgeHomeImg.jpeg" alt="home main image">
@@ -38,8 +37,7 @@
 <script setup>
 import HomeAlert from './HomeAlert.vue';
 import HomeSearch from './HomeSearch.vue';
-// import EnjoySec from './EnjoySec.vue';
- </script>
+  </script>
 
 <style   scoped>
  
