@@ -34,7 +34,8 @@
                   <a class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
                     <li class=" ">cairo</li>
                   </a>
-                  <li class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">lux</li>
+                  <li class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
+                  <li class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
                  </ul>
               </div>
 
@@ -73,9 +74,12 @@
 
 
 <style scoped >
+
 input[type="submit"] {
   transition: all 0.3s ease;
 }
+li:last-child { border-bottom: none; }
+
 </style>
 
 

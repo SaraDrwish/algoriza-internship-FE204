@@ -9,7 +9,6 @@
          inspiration from us</p>
      </div>
 
-
      <div class=" flex gap-[20px]   ">
 
       <div class="flex flex-col gap-[14px] ">
