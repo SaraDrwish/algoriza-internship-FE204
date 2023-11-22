@@ -8,11 +8,11 @@ module.exports = {
         "yellow-color": "#FCEFCA",
         "dark-black": "#181818",
         "med-footer-black": "#1B1F2D",
-        "light-blsck": "#4F4F4F",
-        "gray": "#4F4F4F",
+        "light-black": "#4F4F4F",
         "BGC": " #FFF",
         "inputsGray": "#F2F2F2",
-        "Gray2":"#333333"
+        "Gray2": "#333333",
+        "bordrBtnGry":"#D6D6D6"
       }
       
     },
@@ -20,13 +20,13 @@ module.exports = {
       SFProDisplay:["SF Pro Display, sans-serif"],
     },
     container: {
-      padding: "0 100px",
+      margin: "100px",
       center: true,
     },
-    screens: {
-      sm: "640px",
-      md:"768px",
-    },
+    // screens: {
+    //   sm: "640px",
+    //   md:"768px",
+    // },
     //  borderRadius: {
     //     'custom': '10px', 
     //   },

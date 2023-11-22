@@ -1,5 +1,5 @@
 <template>
-  <div class=" flex flex-col gap-[30px] mb-[60px] overflow-hidden ">
+  <div class=" flex flex-col gap-[30px] mb-[60px]   ">
 
      <div class=" flex flex-col gap-[16px] ">
       <span class="text-dark-black text-[28px] font-[600] ">Enjoy your dream vacation</span>
@@ -10,7 +10,7 @@
      </div>
 
 
-     <div class=" flex gap-[20px] w-[calc(100%-200px)] overflow-hidden">
+     <div class=" flex gap-[20px]   ">
 
       <div class="flex flex-col gap-[14px] ">
         <div class="  ">

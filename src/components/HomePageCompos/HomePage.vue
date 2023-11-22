@@ -1,8 +1,9 @@
 <template>
-  <div class=" relative left-[100px] mx-auto  	 ">
+  <!-- <div class=" relative left-[100px] mx-auto  	 "> -->
+    <div class="container  ">
 
     <!-- the hero home img and the text -->
-      <div class=" relative mt-[80px] h-[704px] 	 ">
+      <div class=" 	 ">
         <HomePageHeroImg/>
           <!-- small box in the home img  -->
           <!-- <div class="absolute "> 
@@ -30,8 +31,8 @@
 
 <script setup>
 import EnjoySec from './EnjoySec.vue';
-import HomeAlert from './HomeAlert.vue';
-import HomeSearch from './HomeSearch.vue';
+// import HomeAlert from './HomeAlert.vue';
+// import HomeSearch from './HomeSearch.vue';
 import HomePageHeroImg from './HomePageHeroImg.vue';
 </script>
 

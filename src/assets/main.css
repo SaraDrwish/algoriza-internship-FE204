@@ -1,4 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+/* @import url('https://fonts.cdnfonts.com/css/sf-pro-display'); */
+
+/* https: //fonts.google.com/specimen/Work+Sans?query=work+sans */
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Caveat:wght@400;700&family=Hachi+Maru+Pop&family=Inter:wght@100;200;300;400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600&family=Mukta+Mahee:wght@600;700;800&family=Open+Sans:wght@300&family=Poltawski+Nowy&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,700;1,200;1,300;1,400;1,700&display=swap');
 
 :root{
   --primary: #2F80ED ;
@@ -8,7 +12,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'SF Pro Display', sans-serif;
+  /* font-family: 'SF Pro Display', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
 }
 body{
 background-color: #FFF ;
