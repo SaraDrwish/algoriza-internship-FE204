@@ -26,6 +26,20 @@
     </div>
     <!-- end enjoy  -->
 
+
+    <div class="">
+      <GetInspirationSec/>
+    </div>
+
+
+
+    <div class="">
+        <PopularHotelsSec />
+    </div>
+
+
+    
+
    </div>
 </template>
 
@@ -34,6 +48,8 @@ import EnjoySec from './EnjoySec.vue';
 // import HomeAlert from './HomeAlert.vue';
 // import HomeSearch from './HomeSearch.vue';
 import HomePageHeroImg from './HomePageHeroImg.vue';
+import GetInspirationSec from './GetInspirationSec.vue';
+import PopularHotelsSec from './PopularHotelsSec.vue'
 </script>
 
 <style  scoped>

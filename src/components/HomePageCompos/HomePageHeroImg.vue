@@ -25,6 +25,8 @@
             <HomeAlert />
           </div>
 
+          
+
     </div>
 
     <!-- <div class="">
@@ -35,9 +37,10 @@
 </template>
 
 <script setup>
+// import GetInspirationSec from './GetInspirationSec.vue';
 import HomeAlert from './HomeAlert.vue';
 import HomeSearch from './HomeSearch.vue';
-  </script>
+</script>
 
 <style   scoped>
  

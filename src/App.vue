@@ -2,6 +2,8 @@
 // import { RouterLink, RouterView } from 'vue-router'
 import Nav from "./components/Nav.vue"
 import HomaPage from "./components/HomePageCompos/HomePage.vue"
+
+
   
 </script>
 
