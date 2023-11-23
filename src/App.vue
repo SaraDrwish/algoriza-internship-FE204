@@ -4,7 +4,6 @@ import Nav from "./components/Nav.vue"
 import HomaPage from "./components/HomePageCompos/HomePage.vue"
 import footerlastbtm from "./components/footerlastbtm.vue";
 
-  
 </script>
 
 <template>
@@ -20,7 +19,7 @@ import footerlastbtm from "./components/footerlastbtm.vue";
         </div>
         <RouterView /> -->
 
-          <Nav/>
+          <Nav />
           <HomaPage/>
           <footerlastbtm/>   
           <RouterView />

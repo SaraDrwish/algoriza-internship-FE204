@@ -6,10 +6,8 @@
         <span class="text-dark-black text-[28px] font-[600]" >Get inspiration for your next trip</span>
       </div>
 
-
       <div class="flex  gap-[20px]  text-white">
 
-        
         <div class="flex relative flex-col ">
           <div class="  ">
             <img class=" rounded-[8px] w-[100vh/3] h-[280px] " src="../../assets/imgs/getinsp1.jpeg" alt="img1">
@@ -40,7 +38,6 @@
             </div>
           </div>
 
-
       </div>
     </div>
 
@@ -51,6 +48,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

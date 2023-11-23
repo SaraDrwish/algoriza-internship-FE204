@@ -1,33 +1,33 @@
 <template>
 
-  <div class="container " >
-       
-     <div class="  " >
+  <div class="container" >
+
+    <div class=" " >
       <HomePageHeroImg/>
     </div>
- 
-     <div class=" ">
+
+    <div class=" ">
       <EnjoySec />
     </div>
- 
+
     <div class="">
       <GetInspirationSec/>
     </div>
 
     <div class="">
-        <PopularHotelsSec />
+      <PopularHotelsSec />
     </div>
-
-    <!-- <div class="">
-        <HomeDownloadSec/>
-    </div> -->
 
     <div class="">
-        <HomeFooter />
+      <HomeDownloadSec/>
     </div>
 
-   </div>
-   
+    <div class="">
+      <HomeFooter />
+    </div>
+
+  </div>
+
 </template>
 
 
@@ -38,6 +38,7 @@
   import GetInspirationSec from './GetInspirationSec.vue';
   import PopularHotelsSec from './PopularHotelsSec.vue';
   import HomeFooter from './HomeFooter.vue';
+  import HomeDownloadSec from './HomeDownloadSec.vue';
 
 </script>
 
