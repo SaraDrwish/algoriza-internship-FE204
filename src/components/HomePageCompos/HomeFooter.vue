@@ -44,10 +44,9 @@
 
       <!-- ////////////////////////// -->
 
-      <div class="">
-
-
-      </div>
+      <!-- <div class=" ">
+        <footerlastbtm/>
+      </div> -->
 
 
         <!-- ////////////////////////// -->
@@ -56,7 +55,7 @@
 </template>
 
 <script setup>
-
+import footerlastbtm from '../footerlastbtm.vue';
 </script>
 
 <style lang="scss" scoped>

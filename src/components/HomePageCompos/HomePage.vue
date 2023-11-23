@@ -2,7 +2,9 @@
 
   <!-- <div class=" relative left-[100px] mx-auto  	 "> -->
 
-    <div class="container  ">
+          <!-- <footerlastbtm/> -->
+
+    <div class="container ">
 
     <!-- the hero home img and the text -->
 
@@ -53,6 +55,7 @@ import GetInspirationSec from './GetInspirationSec.vue';
 import PopularHotelsSec from './PopularHotelsSec.vue';
 // import HomeDownloadSec from './HomeDownloadSec.vue';
 import HomeFooter from './HomeFooter.vue';
+// import footerlastbtm from "../../components/footerlastbtm.vue";
 
 </script>
 
