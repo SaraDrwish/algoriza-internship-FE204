@@ -52,5 +52,3 @@
 <script setup>
 import NavSecndry from './NavSecndry.vue'
 </script>
-
- 

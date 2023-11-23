@@ -9,15 +9,19 @@ import footerlastbtm from "./components/footerlastbtm.vue";
 <template>
 
     <div class="  ">
-      <div class="">
-          <Nav />
-      </div>
-      <div class="flex flex-col mx-auto w-[calc(100%-100px)] items-center justify-center    ">
-          <HomePage/>
-      </div>
-      <div class="">
-          <footerlastbtm/>   
-      </div>
-      <RouterView />
+        <div class="">
+
+            <div class="">
+                <Nav />
+            </div>
+            <div class="flex flex-col mx-auto w-[calc(100%-100px)] items-center justify-center container  ">
+                <HomePage/>
+            </div>
+            <div class="">
+                <footerlastbtm/>   
+            </div>
+       
+        </div>
+        <RouterView />
     </div>
 </template>
