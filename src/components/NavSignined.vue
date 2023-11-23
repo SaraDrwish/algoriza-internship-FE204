@@ -21,12 +21,12 @@
 
         <div class=" flex relative right-0">
 
-            <div class="flex gap-[22px] w-[200px]  ">
+            <div class="flex gap-[22px] ">
               <img class="py-[10px] px-[18px] cursor-pointer " src="../assets/icons/notification2.png" alt="icons">
               <img class="cursor-pointer " src="../assets/icons/Ellipse 2.svg" alt="userimg">
              </div>
 
-             <div class="absolute right-[0px] bottom-[-210px] flex text-[15px] bg-BGC rounded-[10px]  ">
+             <!-- <div class="absolute right-[0px] bottom-[-210px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
 
                    <ul class=" flex flex-col  items-center 
                     capitalize transition ease-in duration-400
@@ -61,9 +61,9 @@
                      </a>
                      
                    </ul>
-             </div>
-        </div> 
-     
+              </div> -->
+
+          </div> 
 
       </nav>
     </header>
