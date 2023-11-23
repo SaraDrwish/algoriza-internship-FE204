@@ -9,7 +9,7 @@
 
                 <div class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
-                  <input class="flex  w-[100%]" type="text" placeholder="Where are you going ?" >
+                  <input class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
                         <!-- @click="show = !show" -->
                    <span class="flex cursor-pointer  ">
                      <svg class=" " xmlns="http://www.w3.org/2000/svg" 
@@ -40,21 +40,21 @@
 
             </div>
 
-           
+          
 
             <div class="flex gap-[10px] bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/calendar 1.svg" alt="calendar-icon">
-              <input class="text-[13px] w-full" type="text" placeholder="Check in date">
+              <input class="text-[13px] w-full" type="text" placeholder="Check in date" required >
             </div>
 
             <div class="flex gap-[10px] bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/calendar 1.svg" alt="calendar-icon">
-              <input class="text-[13px] w-full " type="text" placeholder="Check out date">
+              <input class="text-[13px] w-full " type="text" placeholder="Check out date" required >
             </div>
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/user-square 1.svg" alt="user-icon">
-              <input class="text-[13px] w-full " type="text" placeholder="Guests">
+              <input class="text-[13px] w-full " type="text" placeholder="Guests" >
             </div>
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">

@@ -23,7 +23,7 @@
     </div>
 
     <div class="">
-      <HomeFooter />
+      <HomeListFooter/>
     </div>
 
   </div>
@@ -37,8 +37,8 @@
   import HomePageHeroImg from './HomePageHeroImg.vue';
   import GetInspirationSec from './GetInspirationSec.vue';
   import PopularHotelsSec from './PopularHotelsSec.vue';
-  import HomeFooter from './HomeFooter.vue';
   import HomeDownloadSec from './HomeDownloadSec.vue';
+  import HomeListFooter from './HomeListFooter.vue';
 
 </script>
 
