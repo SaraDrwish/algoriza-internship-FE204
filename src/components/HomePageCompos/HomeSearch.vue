@@ -28,13 +28,13 @@
 
               <!-- .starting a drpodon -->
 
-              <div class="absolute top-[70px]  z-10 flex bg-inputsGray w-full  rounded-[10px] ">
-                 <ul class="flex items-center capitalize  text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
-                  <a class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+              <div class="absolute top-[70px]  z-10 flex bg-inputsGray w-full  rounded-[10px]  ">
+                 <ul class=" flex items-center capitalize transition ease-in duration-400 text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
+                  <a class="hover:transition-all   transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
                     <li class=" ">cairo</li>
                   </a>
-                  <li class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
-                  <li class=" w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
+                  <li  class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
+                  <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
                  </ul>
               </div>
 

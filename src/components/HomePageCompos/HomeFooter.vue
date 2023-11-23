@@ -51,6 +51,6 @@ import HomeListFooter from "./HomeListFooter.vue";
  
 </script>
 
-<style lang="scss" scoped>
+<style   scoped>
 
 </style>

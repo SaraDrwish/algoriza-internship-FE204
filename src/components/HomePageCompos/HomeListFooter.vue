@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="container">
+    <div class=" container">
 
       <div class="flex mb-[60px] gap-[90px]">
 
@@ -39,7 +39,7 @@
                   <li>Greece</li> 
                   <li>Maldives</li>
                   <li>Singapore</li>
-                  <a href="#"><li>See more</li></a>
+                  <a href="#" class="text-primary" ><li>See more</li></a>
               </ul>
           </div>
 
@@ -80,6 +80,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style   scoped>
 
 </style>

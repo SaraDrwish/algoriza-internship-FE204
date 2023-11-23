@@ -1,6 +1,6 @@
 <template>
-  <div class="  mb-[60px]">
-    <div class="flex flex-col gap-[24px]">
+  <div class=" container mb-[60px]">
+    <div class="flex flex-col  m-auto gap-[24px]">
 
       <div class="">
         <span class="text-dark-black text-[28px] font-[600]" >Get inspiration for your next trip</span>

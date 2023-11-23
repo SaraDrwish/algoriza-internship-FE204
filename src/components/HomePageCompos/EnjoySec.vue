@@ -1,5 +1,4 @@
-<!-- https://www.reduceimages.com/ -->
-<template>
+ <template>
   <div class=" flex flex-col gap-[30px] mb-[60px]   ">
 
      <div class=" flex flex-col gap-[16px]  ">
