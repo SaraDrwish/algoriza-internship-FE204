@@ -9,7 +9,7 @@ module.exports = {
         "dark-black": "#181818",
         "med-footer-black": "#1B1F2D",
         "light-black": "#4F4F4F",
-        "BGC": " #FFF",
+        "BGC": "#FFF",
         "inputsGray": "#F2F2F2",
         "Gray2": "#333333",
         "bordrBtnGry": "#D6D6D6",

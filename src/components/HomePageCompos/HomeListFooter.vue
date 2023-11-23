@@ -3,11 +3,11 @@
 
     <div class=" container">
 
-      <div class="flex mb-[60px] gap-[90px]">
+      <div class="flex mb-[60px] gap-[90px] h-[300px]">
 
       <!-- //////////////////// -->
       
-        <div class="flex flex-col gap-[7.5px] w-[20%]  ">
+        <div class="flex flex-col gap-[7.5px] w-[19%]  ">
            <div class="flex gap-[4px]">
             <img class="w-[24px] h-[24px]" src="../../assets//icons/bxs-plane-alt 1.svg" alt="plan"> 
             <p class="text-[18px] ">my Dream Place</p>

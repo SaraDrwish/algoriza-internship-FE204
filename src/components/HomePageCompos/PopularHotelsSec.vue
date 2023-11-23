@@ -2,15 +2,9 @@
 
   <div class=" flex flex-col mb-[60px] gap-[24px]  ">
 
-
-
-      <div class="  ">
-
+      <div class=" ">
         <span class="text-dark-black text-[28px]   font-[600] ">Popular hotels</span>
-
       </div>
-
-
 
       <div class=" flex gap-[20px] ">
 

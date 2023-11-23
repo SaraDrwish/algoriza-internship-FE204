@@ -1,30 +1,23 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+
 import Nav from "./components/Nav.vue"
-import HomaPage from "./components/HomePageCompos/HomePage.vue"
+import HomePage from "./components/HomePageCompos/HomePage.vue"
 import footerlastbtm from "./components/footerlastbtm.vue";
 
 </script>
 
 <template>
 
-    <div class=" ">
-      <!-- <div class="flex flex-col min-h-screen font-SFProDisplay "> -->
-        <!-- <div class=" container flex flex-col min-h-screen "> -->
-          <!-- <Nav/>
-          <HomaPage/>
-         </div>
-         <div class="">
-          <footerlastbtm/>
-        </div>
-        <RouterView /> -->
-
+    <div class="  ">
+      <div class="">
           <Nav />
-          <HomaPage/>
+      </div>
+      <div class="flex flex-col mx-auto w-[calc(100%-100px)] items-center justify-center    ">
+          <HomePage/>
+      </div>
+      <div class="">
           <footerlastbtm/>   
-          <RouterView />
-        </div>
-
-    <!-- </div> -->
-
+      </div>
+      <RouterView />
+    </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="    ">
+  <div class="  ">
     <div class="herosearchalertcomponnt  relative mt-[80px] h-[704px] ">
       <div class=" h-[500px] ">
               <div class="relative h-full w-full "> 
