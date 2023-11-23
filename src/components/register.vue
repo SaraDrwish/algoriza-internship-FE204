@@ -33,7 +33,7 @@
               </div>
             </div>
 
-            <input class="bg-primary text-white rounded-[6px] w-[100%] pt-[11px] pb-[12px] "  type="submit" value="register" >
+            <input class="bg-primary text-white rounded-[6px] w-[100%] pt-[11px] pb-[12px] cursor-pointer "  type="submit" value="register" >
 
            </form>
 
@@ -44,6 +44,11 @@
       </div>
 
     </div>
+
+    <div class="pt-8">
+       <footerlastbtm />
+    </div>
+              
 <!-- ////////// -->
 
   </div>
@@ -51,4 +56,5 @@
 
 <script setup>
 import NavSecndry from './NavSecndry.vue'
+import footerlastbtm from './footerlastbtm.vue';
 </script>

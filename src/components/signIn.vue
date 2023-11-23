@@ -21,16 +21,17 @@
                   <img class="w-[20px] h-[20px]" src="../assets/icons/eye 1.svg" alt="">
                 </div>
               </div>
-              <input class="bg-primary text-white rounded-[6px] w-[100%] pt-[11px] pb-[12px] "  type="submit" value="sign in" >
+              <input class="bg-primary text-white rounded-[6px] w-[100%] pt-[11px] pb-[12px] cursor-pointer "  type="submit" value="sign in" >
 
         </form>
 
         <div class="mt-[20px]">
-          <p>Don’t have an account? <a class="text-primary" href="/register"> Register </a> </p>
+          <p>Don’t have an account? <a class="text-primary" href="/register" > Register </a> </p>
         </div>
       
       </div>
 
+      <footerlastbtm class="pt-8" />
 
     </div>
   </div>
@@ -38,5 +39,6 @@
 
 <script setup>
 import NavSecndry from './NavSecndry.vue'
-import NavSignined from './NavSignined.vue'
+// import NavSignined from './NavSignined.vue'
+import footerlastbtm from './footerlastbtm.vue';
 </script>
