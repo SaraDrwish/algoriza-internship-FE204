@@ -20,9 +20,9 @@
         </div>
 
         <div class=" ">
-          <button class="bg-primary py-[10px]  px-[18px]
+          <router-link to="/register"> <button class="bg-primary py-[10px]  px-[18px]
            text-white text-[15px] font-[500]
-            leading-[20px] tracking-[0.3px] ">Register</button>
+            leading-[20px] tracking-[0.3px] ">Register</button></router-link> 
         </div>
 
       </nav>

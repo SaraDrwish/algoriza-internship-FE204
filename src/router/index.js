@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+// import HomePage from '../components/HomePageCompos/HomePage.vue';
 import Home from '../views/Home.vue';
 import Register from '../components/Register.vue';
 
@@ -8,8 +9,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
+    // {
+    //   path: '/homepage',
+    //   name: 'homepage',
+    //   component: homePage,
+    // },
     {
       path: '/signin',
       name: 'signin',
@@ -18,8 +24,14 @@ const router = createRouter({
      {
       path: '/register',
       name: 'register',
-      component: Register
+      component: Register,
     },
+
+    // {
+    //   path: '/:catchAll(.*)',
+    //   name: 'not found',
+    //   component:NotFound,
+    // },
 
   ]
 })

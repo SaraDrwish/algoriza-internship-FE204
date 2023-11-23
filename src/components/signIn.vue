@@ -3,8 +3,8 @@
 
     <div class="container m-auto flex flex-col  ">
 
-      <!-- <NavSecndry /> -->
-          <NavSignined/>
+      <NavSecndry />
+          <!-- <NavSignined/> -->
       <div class="flex flex-col items-center m-auto w-[401px]">
         <h2 class="text-[28px] mb-[40px] mt-[92px] " >Sign In</h2>
         <form class="flex flex-col gap-[44px] m-auto w-[401px] ">

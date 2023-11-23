@@ -15,7 +15,7 @@ import footerlastbtm from "./components/footerlastbtm.vue";
                 <Nav />
             </div>
             <div class="flex flex-col mx-auto w-[calc(100%-100px)] items-center justify-center container  ">
-                <HomePage/>
+               <router-link to="/" > <HomePage/> </router-link> 
             </div>
             <div class="">
                 <footerlastbtm/>   

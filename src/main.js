@@ -4,10 +4,6 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import "../src/assets/tailwind.css"
 
-// import VueDatePicker from '@vuepic/vue-datepicker';
-// import '@vuepic/vue-datepicker/dist/main.css'
-// app.component('VueDatePicker', VueDatePicker);
-
 import App from './App.vue'
 import router from './router'
 
