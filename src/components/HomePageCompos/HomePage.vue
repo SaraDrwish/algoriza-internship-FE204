@@ -37,6 +37,13 @@
         <PopularHotelsSec />
     </div>
 
+    <!-- <div class="">
+        <HomeDownloadSec/>
+    </div> -->
+
+    <div class="">
+        <HomeFooter />
+    </div>
 
     
 
@@ -49,7 +56,9 @@ import EnjoySec from './EnjoySec.vue';
 // import HomeSearch from './HomeSearch.vue';
 import HomePageHeroImg from './HomePageHeroImg.vue';
 import GetInspirationSec from './GetInspirationSec.vue';
-import PopularHotelsSec from './PopularHotelsSec.vue'
+import PopularHotelsSec from './PopularHotelsSec.vue';
+// import HomeDownloadSec from './HomeDownloadSec.vue';
+import HomeFooter from './HomeFooter.vue';
 </script>
 
 <style  scoped>
