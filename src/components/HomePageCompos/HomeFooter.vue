@@ -35,19 +35,10 @@
 
     <div class="">
 
-      <div class="">
-
-      </div>
+      <HomeListFooter/>
 
     </div>
-
-
-      <!-- ////////////////////////// -->
-
-      <!-- <div class=" ">
-        <footerlastbtm/>
-      </div> -->
-
+ 
 
         <!-- ////////////////////////// -->
 
@@ -55,7 +46,9 @@
 </template>
 
 <script setup>
-import footerlastbtm from '../footerlastbtm.vue';
+
+import HomeListFooter from "./HomeListFooter.vue";
+ 
 </script>
 
 <style lang="scss" scoped>
