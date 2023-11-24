@@ -6,19 +6,19 @@
       <NavSecndry />
 <!-- <NavSignined/> -->
 
-      <div class="flex flex-col items-center m-auto w-[401px]">
-        <h2 class="text-[28px] mb-[40px] mt-[92px] " >Sign In</h2>
+      <div class="flex flex-col items-center m-auto w-[401px]  mt-[92px] ">
+        <h2 class="text-[28px] mb-[40px]  font-[600] " >Sign In</h2>
         <form class="flex flex-col gap-[20px] m-auto w-[401px] ">
 
             <div class="flex flex-col gap-[4px] rounded-[4px]">
-              <label class="text-[14px]" >Email address</label>
+              <label class="text-dark-black font-[500] text-[14px]" >Email address</label>
               <input class=" w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px] "
                type="email" name="email" placeholder="Email" required >
             </div>
             
               <div class="flex flex-col gap-[4px] rounded-[4px]">
 
-                <label  class="text-[14px]" >Password</label>
+                <label  class="text-[14px] text-dark-black font-[500]  " >Password</label>
 
                 <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
                     bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
@@ -34,14 +34,14 @@
 
         </form>
 
-        <div class="mt-[20px]">
+        <div class="mt-[20px] text-[16px] ">
           <p>Don’t have an account? <a class="text-primary" href="/register" > Register </a> </p>
         </div>
       
       </div>
 
       <div class="absolute left-0 bottom-0 w-full " >
-        <footerlastbtm   />
+        <footerlastbtm />
       </div>
 
     </div>

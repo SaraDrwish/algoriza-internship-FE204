@@ -2,23 +2,24 @@
   <div>
 
 <!-- /////////// -->
+
    <div class="container m-auto flex flex-col ">
 
       <NavSecndry />
 
       <div class="w-[401px] m-auto flex flex-col items-center">
 
-        <h2 class="text-[28px] mb-[40px] mt-[92px]" > Register </h2>
+        <h2 class="text-[28px] mb-[40px] mt-[92px] font-[600] " > Register </h2>
 
         <form class="flex flex-col gap-[20px] m-auto w-[401px] " >
 
             <div class="flex flex-col gap-[4px]">
-                <label class="text-[14px]" >Email address</label>
+                <label class="text-dark-black font-[500]  text-[14px]" >Email address</label>
                 <input class="w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]" type="email" name="email" placeholder="Email" required >
             </div>
 
             <div class="flex flex-col gap-[4px]">
-              <label  class="text-[14px]" >Password</label>
+              <label  class="text-dark-black font-[500]  text-[14px]" >Password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
                 bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
                 <input class=" "
@@ -28,7 +29,7 @@
             </div>
 
             <div class="flex flex-col gap-[4px]">
-              <label class="text-[14px]" >Confirm password</label>
+              <label class="text-dark-black font-[500]  text-[14px]" >Confirm password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]">
                 <input class=" " type="password" name="password" placeholder="Confirm Password" required >
                 <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
@@ -41,7 +42,7 @@
 
            </form>
 
-           <div class="text-center mt-[20px]  ">
+           <div class="text-center mt-[20px] text-[16px] ">
              <p>Already have an account? <a class="text-primary" href="/signin"> Sign in </a> </p>
            </div>
           
@@ -50,7 +51,7 @@
     </div>
 
     <div class="absolute bottom-0 w-full " >
-      <footerlastbtm   />
+      <footerlastbtm />
     </div>
               
 <!-- ////////// -->
