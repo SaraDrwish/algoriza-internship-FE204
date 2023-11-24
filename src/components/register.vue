@@ -15,14 +15,14 @@
 
             <div class="flex flex-col gap-[4px]">
                 <label class="text-dark-black font-[500]  text-[14px]" >Email address</label>
-                <input class="w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]" type="email" name="email" placeholder="Email" required >
+                <input v-model="email" class="w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]" type="email" name="email" placeholder="Email" required >
             </div>
 
             <div class="flex flex-col gap-[4px]">
               <label  class="text-dark-black font-[500]  text-[14px]" >Password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
                 bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
-                <input class=" "
+                <input v-model="password" class=" "
                   type="password" name="password" placeholder="Password" required >
                 <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
@@ -31,12 +31,12 @@
             <div class="flex flex-col gap-[4px]">
               <label class="text-dark-black font-[500]  text-[14px]" >Confirm password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]">
-                <input class=" " type="password" name="password" placeholder="Confirm Password" required >
+                <input v-model="repassword" class=" " type="password" name="password" placeholder="Confirm Password" required >
                 <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
             </div>
 
-            <input class="bg-primary text-white rounded-[6px] 
+            <input @click="register" class="bg-primary text-white rounded-[6px] 
              w-[100%] pt-[11px] pb-[12px] cursor-pointer mt-[33px]  " 
              type="submit" value="Submit" >
 
@@ -60,6 +60,23 @@
 </template>
 
 <script setup>
+
 import NavSecndry from './Navs/NavSecndry.vue'
 import footerlastbtm from './footerlastbtm.vue';
+
+
+// ////////////////////////////////////////////////////////////
+
+const user = {
+    email: '',
+    password: '',
+    repassword : '',
+    submit : '',
+}
+
+const register = () => {
+  console.warn("registered")
+}
+
+
 </script>

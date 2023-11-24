@@ -9,7 +9,8 @@
       <div class="flex gap-[20px] text-white  ">
 
         <div class=" relative flex flex-col w-[calc(100%/3)]   ">
-          <div class="   ">
+          <div class=" ">
+            <div class="h-[280px] w-full  bg-black opacity-[25%] rounded-[8px] absolute top-0"> </div>
             <img class=" rounded-[8px] w-full h-[280px] " src="../../assets/imgs/getinsp1.jpeg" alt="img1">
           </div>
           <div class="flex flex-col absolute  bottom-[20px] gap-[10px]  mx-[20px] ">
@@ -19,7 +20,8 @@
         </div>
 
           <div class="flex relative flex-col w-[calc(100%/3)] ">
-            <div class="   ">
+            <div class=" ">
+              <div class="h-[280px] w-full  bg-black opacity-[25%] rounded-[8px] absolute top-0"> </div>
               <img class="rounded-[8px] w-full h-[280px]" src="../../assets/imgs/getinsp2.jpeg" alt="img1">
             </div>
             <div class="flex flex-col absolute bottom-[20px]  gap-[10px]   mx-[20px] ">
@@ -30,7 +32,9 @@
 
           <div class="flex relative flex-col  w-[calc(100%/3)] ">
             <div class=" ">
-              <img class="rounded-[8px] w-full h-[280px] " src="../../assets/imgs/gitinsp3.jpeg" alt="img1">
+              <div class="h-[280px] w-full  bg-black opacity-[25%] rounded-[8px] absolute top-0"> </div>
+              <img class="rounded-[8px] w-full h-[280px] " src="../../assets/imgs/gitinsp3.jpeg" alt="img1"> 
+
             </div>
             <div class="flex flex-col  absolute bottom-[20px]  gap-[10px]  w-[90%] mx-[20px]  ">
               <h5 class="text-[20px] " >World’s top destinations during and post covid timeline</h5>

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Register from '../components/Register.vue';
-import HomePageComposSigned from '../components/HomePageComposSigned/HomePageComposSigned.vue'
+import HomePageComposSigned from '../components/HomePageComposSigned/HomePageComposSigned.vue';
+import NotFound from '../components/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,14 +25,30 @@ const router = createRouter({
     {
       path: '/signedhome',
       name: 'signedhome',
-      component:HomePageComposSigned  ,
+      component: HomePageComposSigned,
+      children: [
+        {
+          meta:
+          { 
+           requiresVisitor: true
+          }
+        },
+      ]
     },
-
     // {
     //   path: '/:catchAll(.*)',
-    //   name: 'not found',
+    //   name: 'notfound',
     //   component:NotFound,
     // },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notfound',
+      component: NotFound,
+      meta: {
+        requiresAuth: true
+      },
+    },
+
 
   ]
 })

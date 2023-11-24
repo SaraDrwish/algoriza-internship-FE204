@@ -49,7 +49,16 @@
 </template>
 
 <script setup>
+
+
 import NavSecndry from './Navs/NavSecndry.vue';
 //import NavSignined from './NavSignined.vue';
 import footerlastbtm from './footerlastbtm.vue';
+
+// ////////////////////////////////////////////////////////////
+
+
+
+
+
 </script>
