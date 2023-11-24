@@ -26,28 +26,20 @@ const router = createRouter({
       path: '/signedhome',
       name: 'signedhome',
       component: HomePageComposSigned,
-      children: [
-        {
-          meta:
-          { 
-           requiresVisitor: true
-          }
-        },
-      ]
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'notfound',
+      component:NotFound,
     },
     // {
-    //   path: '/:catchAll(.*)',
+    //   path: '/:pathMatch(.*)*',
     //   name: 'notfound',
-    //   component:NotFound,
+    //   component: NotFound,
+    //   // meta: {
+    //   //   requiresAuth: true
+    //   // },
     // },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'notfound',
-      component: NotFound,
-      meta: {
-        requiresAuth: true
-      },
-    },
 
 
   ]

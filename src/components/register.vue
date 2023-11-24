@@ -22,7 +22,7 @@
               <label  class="text-dark-black font-[500]  text-[14px]" >Password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
                 bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
-                <input v-model="password" class=" "
+                <input v-model="password" class="w-full "
                   type="password" name="password" placeholder="Password" required >
                 <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
@@ -31,7 +31,7 @@
             <div class="flex flex-col gap-[4px]">
               <label class="text-dark-black font-[500]  text-[14px]" >Confirm password</label>
               <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]">
-                <input v-model="repassword" class=" " type="password" name="password" placeholder="Confirm Password" required >
+                <input v-model="repassword" class="w-full " type="password" name="repassword" placeholder="Confirm Password" required >
                 <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
             </div>
@@ -64,6 +64,7 @@
 import NavSecndry from './Navs/NavSecndry.vue'
 import footerlastbtm from './footerlastbtm.vue';
 
+import { ref } from 'vue';
 
 // ////////////////////////////////////////////////////////////
 
@@ -76,6 +77,7 @@ const user = {
 
 const register = () => {
   console.warn("registered")
+  console.log("registered")
 }
 
 
