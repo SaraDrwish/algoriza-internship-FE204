@@ -26,7 +26,7 @@
               <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
              </div>
 
-             <div v-if="modalActive" class="absolute right-[0px] bottom-[-210px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
+             <div v-if="modalActive" class="absolute right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
 
                    <ul class=" flex flex-col  items-center 
                     capitalize transition ease-in duration-400
@@ -57,7 +57,7 @@
 
                      <a class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
                       <img class="w-[20px] h-[20px]" src="../../assets/icons/logout 1.svg" alt="">
-                      <li class=" ">Sign out</li>
+                      <li class="  ">Sign out</li>
                      </a>
                      
                    </ul>
@@ -86,4 +86,8 @@ defineProps({
 
 
 </script>
+
+<!-- <style scoped>
+ul a li:last-child { border-bottom: none; }
+</style> -->
  
