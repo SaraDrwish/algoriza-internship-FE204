@@ -9,13 +9,12 @@
 
                 <div class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
-                  <input  
-                         @focus="showDropdown"
-                         @blur="hideDropdown"
-                         class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
-                        <!-- @click="show = !show" -->
-                   <span class="flex cursor-pointer  ">
-                     <svg class=" " xmlns="http://www.w3.org/2000/svg" 
+                  <input class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
+                    <span @click="toggleModal" class="flex cursor-pointer  ">
+                      <svg  v-show="!modalActive"  xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                          <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <svg  v-show="modalActive" xmlns="http://www.w3.org/2000/svg" 
                           width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655" 
                           stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -23,20 +22,18 @@
                     </span>
                  </div>
 
-                <!-- <svg   xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg> -->
+               
               
               </div>
 
               <!-- .starting a drpodon -->
 
-              <div class="absolute top-[70px]  z-10 flex bg-inputsGray w-full  rounded-[10px]  ">
+              <div v-if="modalActive" class="absolute top-[70px] z-10 flex bg-inputsGray w-full  rounded-[10px]  ">
                  <ul class=" flex items-center capitalize transition ease-in duration-400 text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
-                  <a class="hover:transition-all   transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                  <a class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
                     <li class=" ">cairo</li>
                   </a>
-                  <li  class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
+                  <li class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
                   <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
                  </ul>
               </div>
@@ -89,15 +86,18 @@ li:last-child { border-bottom: none; }
 
 import { ref } from 'vue';
 
-const show = ref(false);
+const modalActive = ref(null);
 
-const showdropdown = () => {
-  show.value = true;
+const toggleModal = () => {
+  modalActive.value = !modalActive.value
 }
 
-const hidedropdown = () => {
-  show.value = false;
-}
+defineProps({
+  modalActive: {
+    type: Boolean,
+    default: false,
+    }
+  })
 
 
 </script>

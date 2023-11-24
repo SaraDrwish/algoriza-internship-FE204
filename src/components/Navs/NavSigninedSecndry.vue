@@ -11,9 +11,49 @@
 
         
         <div class=" flex gap-[22px] ">
-            <img class="py-[10px] px-[18px] cursor-pointer " src="../assets/icons/notification2.png" alt="icons">
-            <img class="cursor-pointer" src="../assets/icons/Ellipse 2.svg" alt="userimg">
+            <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification2.png" alt="icons">
+            <img  @click="toggleModal" class="cursor-pointer" src="../../assets/icons/Ellipse 2.svg" alt="userimg">
         </div>
+
+        <!--  start drop  -->
+          <div v-if="modalActive" class="absolute right-[0px] bottom-[-210px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
+
+                  <ul class=" flex flex-col  items-center 
+                capitalize transition ease-in duration-400
+                text-light-black w-[100%] justify-center
+                  text-center  gap-[4px] mx-[12px] ">
+
+                  <a class="flex gap-[10px] hover:transition-all 
+                  transition ease-in duration-400 
+                  w-[100%] py-[10px] border-solid border-b-2
+                    border-bordrBtnGry cursor-pointer" href="#" >
+
+                    <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/user-square 1.svg" alt="">
+                    <li class=" ">Manage account</li>
+                  </a>
+
+                  <a class="flex gap-[10px] hover:transition-all 
+                  transition ease-in duration-400 
+                  w-[100%] py-[10px] border-solid border-b-2
+                    border-bordrBtnGry cursor-pointer" href="#" >
+                      <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/bxs-plane-take-off 1.svg" alt="">
+                      <li class=" ">My Trips</li>
+                  </a>
+
+                  <a class="flex gap-[10px]    w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                    <img class="w-[20px] h-[20px]" src="../../assets/icons/wallet-3 1.svg" alt="">
+                    <li class=" ">Reward and wallet</li>
+                  </a>
+
+                    <a class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                    <img class="w-[20px] h-[20px]" src="../../assets/icons/logout 1.svg" alt="">
+                    <li class=" ">Sign out</li>
+                    </a>
+                  
+                  </ul>
+            </div>
+
+        <!-- end drop -->
 
       </nav>
     </header>
@@ -21,5 +61,18 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
+
+const modalActive = ref(null);
+const toggleModal = () => {
+  modalActive.value = !modalActive.value
+}
+defineProps({
+  modalActive: {
+    type: Boolean,
+    default: false,
+  }
+})
+
 </script>
  
