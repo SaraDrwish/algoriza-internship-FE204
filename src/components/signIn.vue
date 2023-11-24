@@ -29,7 +29,7 @@
 
               </div>
 
-              <input class="bg-primary text-white rounded-[6px] mt-[33px] w-[100%] pt-[11px] pb-[12px] cursor-pointer " 
+              <input @click="handleLogin" class="bg-primary text-white rounded-[6px] mt-[33px] w-[100%] pt-[11px] pb-[12px] cursor-pointer " 
                type="submit" value="Sign in" >
 
         </form>
@@ -57,8 +57,15 @@ import footerlastbtm from './footerlastbtm.vue';
 
 // ////////////////////////////////////////////////////////////
 
+// import {useAuth0 }  from '@auth0/auth0-vue'
+// const {loginauth} = useAuth0()
 
-
-
+// const handleLogin = () => {
+//   loginauth({
+//     appState: {
+//       target: "/signedhome",
+//     },
+//   });
+// };
 
 </script>

@@ -11,7 +11,7 @@
 
         <h2 class="text-[28px] mb-[40px] mt-[92px] font-[600] " > Register </h2>
 
-        <form class="flex flex-col gap-[20px] m-auto w-[401px] " >
+        <form @submit.prevent="handleSubmit" class="flex flex-col gap-[20px] m-auto w-[401px] " >
 
             <div class="flex flex-col gap-[4px]">
                 <label class="text-dark-black font-[500]  text-[14px]" >Email address</label>
@@ -36,7 +36,7 @@
               </div>
             </div>
 
-            <input @click="register" class="bg-primary text-white rounded-[6px] 
+            <input   class="bg-primary text-white rounded-[6px] 
              w-[100%] pt-[11px] pb-[12px] cursor-pointer mt-[33px]  " 
              type="submit" value="Submit" >
 
@@ -65,20 +65,65 @@ import NavSecndry from './Navs/NavSecndry.vue'
 import footerlastbtm from './footerlastbtm.vue';
 
 import { ref } from 'vue';
+import axios from 'axios';
+// import './axios';
+import { authService } from '@/services/authService';
 
-// ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 
-const user = {
-    email: '',
-    password: '',
-    repassword : '',
-    submit : '',
+// const newForm = ref()
+
+//  const email = ref(email)
+   const email = ref('')
+   const password = ref('')
+   const repassword = ref('') 
+   
+
+// const handleRegister = async() => {
+  
+//   console.log("registered", email.value, password, repassword);
+ 
+//   const res = await axios.post("register", {
+//     // const res = await axios.post("http://localhost:8000/register", {
+//     email , password , repassword
+//   } )
+//     .then(
+//     res=>console.log(res)
+//   )
+//     .catch(e => console.log(e))
+
+//   console.log(res)
+//   $router.push("/login")
+// }
+
+
+const handleSubmit = async () => {
+
+
+  if(password !== repassword) {
+    alert("the password is not matching ");
+    return;
+  }
+  try {
+    await authService.handleSubmit(email, password);
+    console.log("you did registered successfuly ");
+
+    // to clear the form :
+
+    email.value = ""
+    password.value = ""
+    repassword.value = ""
+
+  }
+  catch (e){
+    console.log("registered failed  :( ", e)
+  }
+  
+ 
+
+  
 }
 
-const register = () => {
-  console.warn("registered")
-  console.log("registered")
-}
 
 
 </script>
