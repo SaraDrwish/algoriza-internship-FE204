@@ -1,11 +1,7 @@
 <template>
   <div>
-
     <div class="container m-auto flex flex-col  ">
-
       <NavSecndry />
-<!-- <NavSignined/> -->
-
       <div class="flex flex-col items-center m-auto w-[401px]  mt-[92px] ">
         <h2 class="text-[28px] mb-[40px]  font-[600] " >Sign In</h2>
         <form @submit.prevent="handleSubmit" class="flex flex-col gap-[20px] m-auto w-[401px] ">
@@ -15,11 +11,9 @@
               <input v-model="emailIn" id="emailIn" class=" w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px] "
                type="email" name="email" placeholder="Email" required >
             </div>
-            
+
               <div class="flex flex-col gap-[4px] rounded-[4px]">
-
                 <label for="passIn" class="text-[14px] text-dark-black font-[500]  " >Password</label>
-
                 <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
                     bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
                   <input v-model="passwordIn" id="passwordIn" 
@@ -28,8 +22,7 @@
                 </div>
 
               </div>
-   <!-- @click="handleLogin"   -->
-              <input  class="bg-primary text-white rounded-[6px] mt-[33px] w-[100%] pt-[11px] pb-[12px] cursor-pointer " 
+               <input  class="bg-primary text-white rounded-[6px] mt-[33px] w-[100%] pt-[11px] pb-[12px] cursor-pointer " 
                type="submit" value="Sign in" >
 
         </form>
@@ -50,29 +43,33 @@
 
 <script setup>
 
-
 import NavSecndry from './Navs/NavSecndry.vue';
-//import NavSignined from './NavSignined.vue';
 import footerlastbtm from './footerlastbtm.vue';
 import { ref } from 'vue';
-// ////////////////////////////////////////////////////////////
-
 // import {useAuth0 }  from '@auth0/auth0-vue'
-// const {loginauth} = useAuth0()
 
+
+// const {loginauth} = useAuth0()
 const emailIn = ref('');
-const passwordIn = ref('')
+const passwordIn = ref('');
 
 const handleSubmit = async () => {
+  const emailRegstord = window.localStorage.getItem('emailRegstord')
+  const passRegstored = window.localStorage.getItem('passRegstored')
 
- const emailReg = window.localStorage.getItem('email')
-  const passReg = window.localStorage.getItem('password')
+  console.log('emailIn:', emailIn.value);
+  console.log('passwordIn:', passwordIn.value);
+  console.log('emailRegstord:', emailRegstord);
+  console.log('passRegstored:', passRegstored);
 
-  if (emailIn === emailReg && passwordIn === passReg) {
-    console.log("logged successfuly ")
-  } else {
-    console.error("faild login")
-  }
+    if (emailIn.value.trim() === String(emailRegstord).trim()  && passwordIn.value.trim() === String(passRegstored).trim()) {
+      console.log("logged successfuly ")
+      // alert("logged successfuly")
+      //enter to the user homepage 
+    } else {
+      console.error("faild login")
+      alert("faild login")
+    }
   
 }
 

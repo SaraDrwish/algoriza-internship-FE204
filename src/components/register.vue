@@ -1,12 +1,8 @@
 <template>
   <div>
 
-<!-- /////////// -->
-
    <div class="container m-auto flex flex-col ">
-
       <NavSecndry />
-
       <div class="w-[401px] m-auto flex flex-col items-center">
 
         <h2 class="text-[28px] mb-[40px] mt-[92px] font-[600] " > Register </h2>
@@ -44,7 +40,6 @@
 
            <div class="text-center mt-[20px] text-[16px] ">
              <p>Already have an account? <router-link class="text-primary" to="/signin"> Sign in </router-link> </p>
-               <!-- <p>Already have an account? <a class="text-primary" href="/signin"> Sign in </a> </p> -->
            </div>
           
       </div>
@@ -55,7 +50,6 @@
       <footerlastbtm />
     </div>
               
-<!-- ////////// -->
 
   </div>
 </template>
@@ -66,62 +60,36 @@ import NavSecndry from './Navs/NavSecndry.vue'
 import footerlastbtm from './footerlastbtm.vue';
 
 import { ref } from 'vue';
-import axios from 'axios';
-// import './axios';
-// import { authService } from '@/services/authService';
-import { useAuth0 } from '@auth0/auth0-vue'
-
-
-////////////////////////////////////////////////////////////
-
-// const newForm = ref()
-
-//  const email = ref(email)
+// import axios from 'axios';
+// import { useAuth0 } from '@auth0/auth0-vue'
 
    const email = ref('')
    const password = ref('')
    const repassword = ref('') 
    
-// const handleRegister = async() => {
-  
-//   console.log("registered", email.value, password, repassword);
- 
-//   const res = await axios.post("register", {
-//     // const res = await axios.post("http://localhost:8000/register", {
-//     email , password , repassword
-//   } )
-//     .then(
-//     res=>console.log(res)
-//   )
-//     .catch(e => console.log(e))
+  const handleSubmit = async () => {
 
-//   console.log(res)
-//   $router.push("/login")
-// }
+    if( password.value !==  repassword.value ) {
+      alert("the password is not matching ");
+      return;
+    }
+    try {
 
-const handleSubmit = async () => {
+      window.localStorage.setItem('emailRegstord' , email.value)
+      window.localStorage.setItem('passRegstored', password.value)
+      // console.log( passRegstored , emailRegstord  );
+      console.log("you did registered successfuly ");
+      alert("you did registered successfuly ");
 
-  if( password.value !==  repassword.value ) {
-    alert("the password is not matching ");
-    return;
-  }
-  try {
-    // await handleSubmit(email, password );
-    window.localStorage.setItem('emailReg' , email)
-    window.localStorage.setItem('passReg', password)
-    // await useAuth0.handleSubmit(email, password);
-    console.log("you did registered successfuly ");
-    // alert("you did registered successfuly")
+      // to clear the form :
+      email.value = ""
+      password.value = ""
+      repassword.value = ""
 
-    // to clear the form :
-    email.value = ""
-    password.value = ""
-    repassword.value = ""
-
-  }
-  catch (e){
-    console.log("registered failed  ", e)
-  }
+    }
+    catch (e){
+      console.log("registered failed  ", e)
+    }
   
 
 }
