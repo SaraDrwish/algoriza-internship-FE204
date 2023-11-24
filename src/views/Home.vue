@@ -1,32 +1,44 @@
 <template>
 
-  <div class="container" >
+<div class="">
 
-    <div class=" " >
-      <HomePageHeroImg/>
+    <div class="">
+      <Nav/>
     </div>
 
-    <div class=" ">
-      <EnjoySec />
+    <div class="mx-auto w-[calc(100%-100px)] " >
+
+        <div class=" " >
+          <HomePageHeroImg/>
+        </div>
+
+        <div class=" ">
+          <EnjoySec />
+        </div>
+
+        <div class="">
+          <GetInspirationSec/>
+        </div>
+
+        <div class="">
+          <PopularHotelsSec />
+        </div>
+
+        <div class="">
+          <HomeDownloadSec/>
+        </div>
+
+        <div class="">
+          <HomeListFooter/>
+        </div>
+
     </div>
 
     <div class="">
-      <GetInspirationSec/>
+      <footerlastbtm/>
     </div>
 
-    <div class="">
-      <PopularHotelsSec />
-    </div>
-
-    <div class="">
-      <HomeDownloadSec/>
-    </div>
-
-    <div class="">
-      <HomeListFooter/>
-    </div>
-
-  </div>
+</div>
 
 </template>
 
@@ -39,11 +51,8 @@
   import PopularHotelsSec from '../components/HomePageCompos/PopularHotelsSec.vue';
   import HomeDownloadSec from '../components/HomePageCompos/HomeDownloadSec.vue';
   import HomeListFooter from '../components/HomePageCompos/HomeListFooter.vue';
+  import footerlastbtm from '../components/footerlastbtm.vue';
+  import Nav from '../components/Navs/Nav.vue'
 
 </script>
 
-
-<style  scoped>
-
-
-</style>

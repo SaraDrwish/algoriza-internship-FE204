@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// import HomePage from '../components/HomePageCompos/HomePage.vue';
 import Home from '../views/Home.vue';
 import Register from '../components/Register.vue';
 
@@ -11,11 +10,6 @@ const router = createRouter({
       name: 'home',
       component: Home,
     },
-    // {
-    //   path: '/homepage',
-    //   name: 'homepage',
-    //   component: homePage,
-    // },
     {
       path: '/signin',
       name: 'signin',
@@ -24,12 +18,7 @@ const router = createRouter({
      {
       path: '/register',
       name: 'register',
-       component: Register,
-      //  children: [
-      //   {
-      //     path: '',  
-      //     component: () => import('../components/Register.vue'),
-      //   },
+      component: Register,
     },
 
     // {

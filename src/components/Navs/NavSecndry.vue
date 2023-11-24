@@ -4,16 +4,10 @@
 
         <RouterLink :to="{name:'home'}">
           <div class="flex gap-[4px] items-center text-[16px] ">
-            <img src="../assets/icons/bxs-plane-alt 1.svg" alt="planIcon" class="text-med-footer-black">
+            <img src="../../assets/icons/bxs-plane-alt 1.svg" alt="planIcon" class="text-med-footer-black">
             <p class=" tracking-[0.36px] font-[500] text-[18px] text-med-footer-black ">my Dream Place </p>
           </div>
         </RouterLink>
-
-        
-        <div class=" flex gap-[22px] ">
-            <img class="py-[10px] px-[18px] cursor-pointer " src="../assets/icons/notification2.png" alt="icons">
-            <img class="cursor-pointer" src="../assets/icons/Ellipse 2.svg" alt="userimg">
-        </div>
 
       </nav>
     </header>

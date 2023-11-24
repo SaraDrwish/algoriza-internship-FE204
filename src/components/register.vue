@@ -8,32 +8,36 @@
 
       <div class="w-[401px] m-auto flex flex-col items-center">
 
-        <h2 class="text-[28px] mb-[40px] mt-[92px]" >Register </h2>
+        <h2 class="text-[28px] mb-[40px] mt-[92px]" > Register </h2>
 
-        <form  class="flex flex-col gap-[44px] m-auto w-[401px] " >
+        <form class="flex flex-col gap-[20px] m-auto w-[401px] " >
 
             <div class="flex flex-col gap-[4px]">
-                <label  >Email address</label>
-                <input type="email" name="email" placeholder="email" required >
+                <label class="text-[14px]" >Email address</label>
+                <input class="w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]" type="email" name="email" placeholder="Email" required >
             </div>
 
             <div class="flex flex-col gap-[4px]">
-              <label class="text-[14px]" >Password</label>
-              <div class="flex w-[100%]">
-                <input type="password" name="password" placeholder="password" required >
-                <img class="w-[20px] h-[20px]" src="../assets/icons/eye 1.svg" alt="">
+              <label  class="text-[14px]" >Password</label>
+              <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px]
+                bg-inputsGray pt-[11px] pb-[12px] px-[12px]  ">
+                <input class=" "
+                  type="password" name="password" placeholder="Password" required >
+                <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
             </div>
 
             <div class="flex flex-col gap-[4px]">
               <label class="text-[14px]" >Confirm password</label>
-              <div class="flex w-[100%] ">
-                <input type="password" name="password" placeholder="confirm password" required >
-                <img class="w-[20px] h-[20px]" src="../assets/icons/eye 1.svg" alt="">
+              <div class="flex justify-between rounded-[4px] gap-[12px] items-center w-[400px] bg-inputsGray pt-[11px] pb-[12px] px-[12px]">
+                <input class=" " type="password" name="password" placeholder="Confirm Password" required >
+                <img class="w-[20px] h-[20px] cursor-pointer " src="../assets/icons/eye 1.svg" alt="password">
               </div>
             </div>
 
-            <input class="bg-primary text-white rounded-[6px] w-[100%] pt-[11px] pb-[12px] cursor-pointer "  type="submit" value="register" >
+            <input class="bg-primary text-white rounded-[6px] 
+             w-[100%] pt-[11px] pb-[12px] cursor-pointer mt-[33px]  " 
+             type="submit" value="Submit" >
 
            </form>
 
@@ -45,8 +49,8 @@
 
     </div>
 
-    <div class="pt-8">
-       <footerlastbtm />
+    <div class="absolute bottom-0 w-full " >
+      <footerlastbtm   />
     </div>
               
 <!-- ////////// -->
@@ -55,6 +59,6 @@
 </template>
 
 <script setup>
-import NavSecndry from './NavSecndry.vue'
+import NavSecndry from './Navs/NavSecndry.vue'
 import footerlastbtm from './footerlastbtm.vue';
 </script>

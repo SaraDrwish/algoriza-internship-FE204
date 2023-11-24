@@ -1,6 +1,6 @@
 <template>
-  <div class="  ">
-    <div class="herosearchalertcomponnt  relative mt-[80px] h-[704px] ">
+  <div class="">
+    <div class="relative mt-[80px] h-[704px] ">
       <div class=" h-[500px] ">
               <div class="relative h-full w-full "> 
                 <div class="rounded-[10px] overflow-hidden bg-black opacity-30  h-full w-full absolute "> </div> 
