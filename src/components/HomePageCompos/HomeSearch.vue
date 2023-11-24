@@ -9,7 +9,10 @@
 
                 <div class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
-                  <input class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
+                  <input  
+                         @focus="showDropdown"
+                         @blur="hideDropdown"
+                         class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
                         <!-- @click="show = !show" -->
                    <span class="flex cursor-pointer  ">
                      <svg class=" " xmlns="http://www.w3.org/2000/svg" 
@@ -84,18 +87,17 @@ li:last-child { border-bottom: none; }
 
 <script setup>
 
-// import { ref, onMounted } from "vue";
- 
-  //  function:
-  // {
-  //   const usersToggle = ref(false);
+import { ref } from 'vue';
 
-  //   const showUsers = () => {
-  //     usersToggle.value = !usersToggle.value;
-  //   };
+const show = ref(false);
 
-  //   return { showUsers, usersToggle };
-  // }
+const showdropdown = () => {
+  show.value = true;
+}
+
+const hidedropdown = () => {
+  show.value = false;
+}
 
 
 </script>
