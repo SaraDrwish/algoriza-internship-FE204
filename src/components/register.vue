@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class=" h-[100vh] ">
 
-   <div class="container m-auto flex flex-col ">
+   <div class=" m-auto flex flex-col ">
       <NavSecndry />
       <div class="w-[401px] m-auto flex flex-col items-center">
 
@@ -46,11 +46,8 @@
 
     </div>
 
-    <div class="absolute bottom-0 w-full " >
-      <footerlastbtm />
-    </div>
+      <footerlastbtm  class="absolute  bottom-0 w-[100%] " />
               
-
   </div>
 </template>
 

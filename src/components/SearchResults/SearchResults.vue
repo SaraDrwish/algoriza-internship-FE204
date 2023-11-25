@@ -119,22 +119,22 @@
 
   <!-- /////////////////////end body/////////////////////// -->
 
-    <div class=" bg-blue-500 mb-[70px]  h-[72px] ">
-      <div class="  relative " >
-        <HomeAlert class=" left-0 top-[0px]  "  />
+    <div class=" bg-blue-500 mb-[70px] h-[72px] ">
+      <div class="relative" >
+        <HomeAlert class="left-0 top-[0px]"  />
       </div>
     </div>
 
-    <div class=" bg-blue-400  ">
-      <div class="bottom-0   ">
-        <HomeListFooter  />
+    <div class="bg-blue-400 ">
+      <div class="bottom-0">
+        <HomeListFooter />
       </div>
     </div>
 
   </div>
 
   <div class="relative bottom-0 left-0 w-full ">
-    <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
+    <footerlastbtm  class="absolute left-0 bottom-0 w-[100%] " />
   </div>
 
 </template>
