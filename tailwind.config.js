@@ -21,6 +21,7 @@ module.exports = {
         "borderserbox": "#E0E0E0",
         "srchRed": "#EB5757",
         "srchGrn": "#219653",
+        "paginatiopntextcolr": "#9E9E9E",
         
         
       }
