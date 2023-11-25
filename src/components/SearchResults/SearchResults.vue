@@ -77,7 +77,7 @@
  
 
   <!-- ////////////////////start body//////////////////////// -->
-<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] p-2 "> 
+<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] "> 
 
   <div class="flex bg-yellow-900 p-2 mb-[96px]">
 
@@ -92,7 +92,7 @@
 
 
 
-    <div class="flex justify-between bg-gray-400 p-2">
+    <div class="flex justify-between bg-gray-800 p-2">
 
         <h2>Melbourne : 2,582 search results found</h2>
         <div class="">
@@ -119,13 +119,15 @@
 
   <!-- /////////////////////end body/////////////////////// -->
 
-    <div class=" bg-blue-500 mb-[70px] h-[72px] ">
-      <div class="relative" >
-        <HomeAlert class="left-0 top-[0px]"  />
-      </div>
-    </div>
 
-    <div class="bg-blue-400 ">
+  <!-- <div class=" relative  top-0 mb-[70px] h-[72px]  " > -->
+    <div class=" relative top-0  w-full bg-blue-800 mb-[70px] h-[72px] ">
+        <HomeAlert class=" top-[0%]   "  />
+    </div>
+  <!-- </div> -->
+
+
+    <div class=" bg-blue-400 ">
       <div class="bottom-0">
         <HomeListFooter />
       </div>
@@ -134,7 +136,7 @@
   </div>
 
   <div class="relative bottom-0 left-0 w-full ">
-    <footerlastbtm  class="absolute left-0 bottom-0 w-[100%] " />
+    <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
   </div>
 
 </template>
