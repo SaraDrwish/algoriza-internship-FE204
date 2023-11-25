@@ -119,16 +119,16 @@
 
   <!-- /////////////////////end body/////////////////////// -->
 
-    <div class=" bg-blue-500 p-2 ">
-
-      <div class="mb-[70px] relative " >
-        <HomeAlert class="w-full left-0 top-[0px] m-auto"  />
+    <div class=" bg-blue-500 mb-[70px]  h-[72px] ">
+      <div class="  relative " >
+        <HomeAlert class=" left-0 top-[0px]  "  />
       </div>
+    </div>
 
-      <div class="bottom-0 mt-[72px] ">
+    <div class=" bg-blue-400  ">
+      <div class="bottom-0   ">
         <HomeListFooter  />
       </div>
-
     </div>
 
   </div>
@@ -140,7 +140,6 @@
 </template>
 
 <script setup>
-// import NavSignined from '../Navs/NavSignined.vue';
 import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
