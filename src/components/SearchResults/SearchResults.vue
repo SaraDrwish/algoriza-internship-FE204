@@ -1,27 +1,159 @@
 <template>
-  <div>
-    
-    <div class="blueNavsign relative top-0 
-           h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2 
-          ">
-      <!-- <div class="blueNavsign relative top-0 bg-blue-400 h-[200px] w-full "> -->
-      <div >
-        <NavSignined  class="bg-transparent shadow-none  " />
-      </div>
+
+  <header class="text-white mb-[104px] ">
+
+    <div class="blueNavsign relative top-0 text-white  h-[200px] w-full  bg-gradient-to-b from-laniergrad1 to-laniergrad2    "> 
+       
+<!-- //////// -->
+
+   <nav class=" mx-auto sm:flex-row flex shrink-0 items-center justify-between h-[68px] w-[calc(100%-100px)]  ">
+
+          <RouterLink :to="{ name: 'signedhome' }">
+            <div class="flex gap-[4px] items-center text-[16px] text-white  ">
+              <img src="../../assets/icons/wtiplan.svg" alt="planIconwit"  >
+              <p class=" tracking-[0.36px] font-[500] text-[18px]  ">my Dream Place </p>
+            </div>
+          </RouterLink>
+
+          <div class=" text-white ">
+            <ul class=" inline-flex tracking-[0.36px] text-[16px] items-start gap-[48px]  ">
+              <a href="/"><li>Home</li></a>
+              <a href="#"><li>Discover</li></a>
+              <a href="#"><li>Activities</li></a>
+              <a href="#"><li>About</li></a>
+              <a href="#"><li>Contact</li></a>
+            </ul>
+          </div>
+
+          <div class=" flex relative right-0">
+
+              <div class="flex gap-[22px] ">
+                <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification 1.svg" alt="iconswt">
+                <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
+               </div>
+
+               <div v-if="modalActive" class="absolute z-10 right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
+                     <ul class=" flex flex-col  items-center 
+                    capitalize transition ease-in duration-400
+                    text-light-black w-[100%] justify-center
+                     text-center  gap-[4px] mx-[12px] ">
+                      <a class="flex gap-[10px] hover:transition-all 
+                      transition ease-in duration-400 
+                      w-[100%] py-[10px] border-solid border-b-2
+                       border-bordrBtnGry cursor-pointer" href="#" >
+                       <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/user-square 1.svg" alt="">
+                       <li class=" ">Manage account</li>
+                      </a>
+                      <a class="flex gap-[10px] hover:transition-all 
+                      transition ease-in duration-400 
+                      w-[100%] py-[10px] border-solid border-b-2
+                       border-bordrBtnGry cursor-pointer" href="#" >
+                         <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/bxs-plane-take-off 1.svg" alt="">
+                         <li class=" ">My Trips</li>
+                      </a>
+                      <a class="flex gap-[10px]    w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                       <img class="w-[20px] h-[20px]" src="../../assets/icons/wallet-3 1.svg" alt="">
+                       <li class=" ">Reward and wallet</li>
+                      </a>
+                       <RouterLink :to="{ name: 'home' }" class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                        <img class="w-[20px] h-[20px]" src="../../assets/icons/logout 1.svg" alt="">
+                        <li class="">Sign out</li>
+                       </RouterLink>
+                     </ul>
+                </div>
+
+            </div> 
+
+        </nav>
+
+<!-- //////// -->
+
+    <!-- //////////start search////////// -->
+              <div class=" absolute mx-auto left-[205px]  bottom-[-15%]">
+                  <HomeSearch/>
+              </div>
+      <!-- //////////end search///////// -->
+
     </div>
+   
+  </header>
+ 
+
+  <!-- ////////////////////start body//////////////////////// -->
+<div class="p-1 bg-green-400 m-auto w-[calc(100vw-200px)] "> 
+
+  <div class="flex bg-yellow-900 p-2">
+
+  <div class="flex-2 w-[295px]  bg-yellow-200 p-2">
+    
 
   </div>
+
+    <!-- end flex 2-->
+
+  <div class="flex-1 bg-yellow-500 p-2 ">
+
+  <div class="">
+
+    <h2>Melbourne : 2,582 search results found</h2>
+  </div>
+
+</div>
+
+<!-- end flex 1 -->
+
+</div>
+
+<!-- /////////////////////end body/////////////////////// -->
+
+<div class="   m-auto w-[90%]">
+
+   <div class=" " >
+      <HomeAlert  class=" bottom-[40%]" />
+    </div>
+
+    <div class="  ">
+      <HomeListFooter />
+    </div>
+
+</div>
+
+
+
+  </div>
+
+  <div class="absolute bottom-0 w-full ">
+    <footerlastbtm />
+  </div>
+
 </template>
 
 <script setup>
-import NavSignined from '../Navs/NavSignined.vue'
+// import NavSignined from '../Navs/NavSignined.vue';
+import HomeSearch from '../HomePageCompos/HomeSearch.vue';
+import HomeAlert from '../HomePageCompos/HomeAlert.vue';
+import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
+import footerlastbtm from '../footerlastbtm.vue';
+
+
+import { ref } from 'vue';
+
+const modalActive = ref(null);
+const toggleModal = () => {
+  modalActive.value = !modalActive.value
+}
+defineProps({
+  modalActive: {
+    type: Boolean,
+    default: false,
+  },
+
+})
+
+
+
 </script>
 
-
-<style scoped>
-.blueNavsign{
-background: linear-gradient(180deg, #2969BF 0%, #144E9D 100%);
-}
-</style>
+ 
 
  

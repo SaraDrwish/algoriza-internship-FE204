@@ -16,7 +16,7 @@
         </div>
 
         <!--  start drop  -->
-          <div v-if="modalActive" class="absolute right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
+          <div v-if="modalActive" class="absolute z-10 right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
 
                   <ul class=" flex flex-col  items-center 
                   capitalize transition ease-in duration-400

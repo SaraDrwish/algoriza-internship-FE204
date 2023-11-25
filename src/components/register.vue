@@ -68,19 +68,15 @@ import { ref } from 'vue';
    const repassword = ref('') 
    
   const handleSubmit = async () => {
-
     if( password.value !==  repassword.value ) {
       alert("the password is not matching ");
       return;
     }
     try {
-
       window.localStorage.setItem('emailRegstord' , email.value)
       window.localStorage.setItem('passRegstored', password.value)
-      // console.log( passRegstored , emailRegstord  );
       console.log("you did registered successfuly ");
       alert("you did registered successfuly ");
-
       // to clear the form :
       email.value = ""
       password.value = ""

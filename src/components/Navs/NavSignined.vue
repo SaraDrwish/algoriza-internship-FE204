@@ -23,6 +23,7 @@
 
             <div class="flex gap-[22px] ">
               <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification2.png" alt="icons">
+              <!-- <slot   /> -->
               <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
              </div>
 
@@ -72,6 +73,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
+import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 
 const modalActive = ref(null);
 const toggleModal = () => {
@@ -81,8 +83,14 @@ defineProps({
   modalActive: {
     type: Boolean,
     default: false,
-  }
+  },
+  // togglNotific: {
+  //   type: String
+  // },
+
 })
+
+
 
 
 </script>

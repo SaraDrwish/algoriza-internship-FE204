@@ -33,8 +33,8 @@
 import { RouterLink } from 'vue-router';
 </script>
 
-<style  >
-
+<!-- <style  > -->
+ <style scoped >  
   nav p{
     transition: all 0.3s ease-in;
   }

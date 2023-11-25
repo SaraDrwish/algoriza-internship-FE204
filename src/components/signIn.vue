@@ -58,17 +58,14 @@ const handleSubmit = async () => {
   const emailRegstord = window.localStorage.getItem('emailRegstord')
   const passRegstored = window.localStorage.getItem('passRegstored')
 
+  if (emailIn.value === emailRegstord   && passwordIn.value ===  passRegstored ) {
+    console.log("logged successfuly ")
+    router.push('/signedhome');
+  } else {
+    console.error("faild login")
+    alert("faild login")
+  }
 
-    if (emailIn.value.trim() === String(emailRegstord).trim()  && passwordIn.value.trim() === String(passRegstored).trim()) {
-      console.log("logged successfuly ")
-       
-            router.push('/signedhome');
-    
-    } else {
-      console.error("faild login")
-      alert("faild login")
-    }
-  
 }
 
 </script>
