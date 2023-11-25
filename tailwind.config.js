@@ -15,7 +15,14 @@ module.exports = {
         "bordrBtnGry": "#D6D6D6",
         "footerlastbtm": "#EBEBEB",
         "laniergrad1":"#2969BF",
-        "laniergrad2":"#144E9D",
+        "laniergrad2": "#144E9D",
+        "sortText": "#828282",
+        "bordersr": "#BDBDBD",
+        "borderserbox": "#E0E0E0",
+        "srchRed": "#EB5757",
+        "srchGrn": "#219653",
+        
+        
       }
       
     },
