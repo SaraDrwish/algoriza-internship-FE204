@@ -3,6 +3,8 @@ import Home from '../views/Home.vue';
 import Register from '../components/Register.vue';
 import HomePageComposSigned from '../components/HomePageComposSigned/HomePageComposSigned.vue';
 import NotFound from '../components/NotFound.vue';
+import SearchResults from '../components/SearchResults/SearchResults.vue';
+import ProdDetails from '../components/ProdDetailscompo/ProductDetail.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/signedhome',
       name: 'signedhome',
       component: HomePageComposSigned,
+    },
+     {
+      path: '/searchres',
+      name: 'searchres',
+      component:  SearchResults ,
+    },
+    {
+      path: '/prodetails',
+      name: 'prodetails',
+      component:  ProdDetails ,
     },
     {
       path: '/:catchAll(.*)',

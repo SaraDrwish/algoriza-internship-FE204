@@ -13,7 +13,9 @@ module.exports = {
         "inputsGray": "#F2F2F2",
         "Gray2": "#333333",
         "bordrBtnGry": "#D6D6D6",
-        "footerlastbtm":"#EBEBEB",
+        "footerlastbtm": "#EBEBEB",
+        "laniergrad1":"#2969BF",
+        "laniergrad2":"#144E9D",
       }
       
     },

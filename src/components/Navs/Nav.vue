@@ -33,25 +33,20 @@
 import { RouterLink } from 'vue-router';
 </script>
 
-<style scoped>
- 
-  * {
-   font-family: SF Pro Display;
-   font-style: normal;
-  }
-  p{
+<style  >
+
+  nav p{
     transition: all 0.3s ease-in;
   }
-  a{
+  nav a{
     transition: all 0.3s ease;
   }
-  ul a:hover 
+  nav ul a:hover 
   {
     color: var(--primary);
   }
-  button  {
+  nav button  {
     transition: all 0.3s ease;
 }
-
 
 </style>

@@ -2,7 +2,7 @@
   <div class="">
 
     <div class="">
-      <NavSignined />
+        <NavSignined   />
     </div>
 
     <div class="mx-auto w-[calc(100%-100px)] ">
