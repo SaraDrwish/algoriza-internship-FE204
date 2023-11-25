@@ -1,5 +1,5 @@
 <template >
-  <div>
+  
       <div class="flex items-center rounded-[8px] absolute top-[582px]  
           h-[72px] py-[20px]
           pl-[24px] gap-[19px] w-full bg-yellow-color ">
@@ -8,7 +8,7 @@
         </div>
         <p>Check the latest COVID-19 restrictions before you travel .  <a href="#" class="text-primary"> Learn more </a> </p>
       </div>
-  </div>
+ 
 </template>
 
 <script setup>

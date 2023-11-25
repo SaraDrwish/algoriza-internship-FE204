@@ -1,12 +1,12 @@
-<template>
+<template   >
 
-  <header class="text-white mb-[104px] ">
+  <header class="text-white mb-[104px]  ">
 
-    <div class="blueNavsign relative top-0 text-white  h-[200px] w-full  bg-gradient-to-b from-laniergrad1 to-laniergrad2    "> 
+    <div class="relative top-0 text-white h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2 "> 
        
 <!-- //////// -->
 
-   <nav class=" mx-auto sm:flex-row flex shrink-0 items-center justify-between h-[68px] w-[calc(100%-100px)]  ">
+   <nav class=" mx-auto flex items-center justify-between h-[68px] w-[calc(100%-100px)]  ">
 
           <RouterLink :to="{ name: 'signedhome' }">
             <div class="flex gap-[4px] items-center text-[16px] text-white  ">
@@ -14,7 +14,6 @@
               <p class=" tracking-[0.36px] font-[500] text-[18px]  ">my Dream Place </p>
             </div>
           </RouterLink>
-
           <div class=" text-white ">
             <ul class=" inline-flex tracking-[0.36px] text-[16px] items-start gap-[48px]  ">
               <a href="/"><li>Home</li></a>
@@ -24,14 +23,11 @@
               <a href="#"><li>Contact</li></a>
             </ul>
           </div>
-
           <div class=" flex relative right-0">
-
               <div class="flex gap-[22px] ">
                 <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification 1.svg" alt="iconswt">
                 <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
                </div>
-
                <div v-if="modalActive" class="absolute z-10 right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
                      <ul class=" flex flex-col  items-center 
                     capitalize transition ease-in duration-400
@@ -69,7 +65,8 @@
 <!-- //////// -->
 
     <!-- //////////start search////////// -->
-              <div class=" absolute mx-auto left-[205px]  bottom-[-15%]">
+              <div class="absolute left-[85px] bottom-[-15%]">
+                <!-- <div class="absolute left-[105px] bottom-[-15%]"> -->
                   <HomeSearch/>
               </div>
       <!-- //////////end search///////// -->
@@ -80,9 +77,9 @@
  
 
   <!-- ////////////////////start body//////////////////////// -->
-<div class="p-1 bg-green-400 m-auto w-[calc(100vw-200px)] "> 
+<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] p-2 "> 
 
-  <div class="flex bg-yellow-900 p-2">
+  <div class="flex bg-yellow-900 p-2 mb-[96px]">
 
   <div class="flex-2 w-[295px]  bg-yellow-200 p-2">
     
@@ -93,37 +90,51 @@
 
   <div class="flex-1 bg-yellow-500 p-2 ">
 
-  <div class="">
 
-    <h2>Melbourne : 2,582 search results found</h2>
-  </div>
 
-</div>
+    <div class="flex justify-between bg-gray-400 p-2">
 
-<!-- end flex 1 -->
+        <h2>Melbourne : 2,582 search results found</h2>
+        <div class="">
+                
+        </div>
 
-</div>
-
-<!-- /////////////////////end body/////////////////////// -->
-
-<div class="   m-auto w-[90%]">
-
-   <div class=" " >
-      <HomeAlert  class=" bottom-[40%]" />
     </div>
 
-    <div class="  ">
-      <HomeListFooter />
+
+    <div class="bg-red-500 p-2">
+
+
+
     </div>
 
-</div>
 
 
 
   </div>
 
-  <div class="absolute bottom-0 w-full ">
-    <footerlastbtm />
+  <!-- end flex 1 -->
+
+  </div>
+
+  <!-- /////////////////////end body/////////////////////// -->
+
+    <div class=" bg-blue-500 p-2 ">
+
+      <div class="mb-[70px] relative " >
+        <HomeAlert class="w-full left-0 top-[0px] m-auto"  />
+      </div>
+
+      <div class="bottom-0 mt-[72px] ">
+        <HomeListFooter  />
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="relative bottom-0 left-0 w-full ">
+    <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
   </div>
 
 </template>
@@ -137,6 +148,11 @@ import footerlastbtm from '../footerlastbtm.vue';
 
 
 import { ref } from 'vue';
+
+
+// import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+// import { ChevronDownIcon } from '@heroicons/vue'
+// import { TwDropdownMenu, TwButton } from "vue3-tailwind"
 
 const modalActive = ref(null);
 const toggleModal = () => {
@@ -154,6 +170,3 @@ defineProps({
 
 </script>
 
- 
-
- 
