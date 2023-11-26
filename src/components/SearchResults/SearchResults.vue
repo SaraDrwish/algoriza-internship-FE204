@@ -77,9 +77,11 @@
 
   <!-- ////////////////////start body//////////////////////// -->
 
-<div class=" relative bg-green-400 m-auto w-[calc(100vw-200px)] "> 
+<div class=" relative m-auto w-[calc(100vw-200px)] "> 
+  <!-- <div class=" relative bg-green-400 m-auto w-[calc(100vw-200px)] ">  -->
 
-  <div class="flex bg-yellow-100 mb-[96px] gap-[30px]">
+  <div class="flex  mb-[96px] gap-[30px]">
+    <!-- <div class="flex bg-pink-100 mb-[96px] gap-[30px]"> -->
 
   <div class="leftbox flex flex-col gap-[20px] flex-2  ">
     
@@ -221,7 +223,7 @@
 
 
 
-    <div class="flex items-center justify-between  mb-[24px]">
+    <div class="flex items-center justify-between  mb-[24px]  ">
 
         <h2 class="text-[24px] font-[600] text-dark-black">Melbourne : 2,582 search results found</h2>
           <div class="flex items-center w-[190px] gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
@@ -251,7 +253,12 @@
 
 <!-- start cards -->
 
-     <div class="flex flex-col gap-[24px]">
+
+
+  <div class="flex flex-col  gap-[24px]  ">
+
+<!-- ///////crd 1 -->
+<!-- ///////////// -->
            <div class="flex gap-[24px] w-[100%]  rounded-[5px] 
            border-solid border-2 border-borderserbox  py-[20px] pl-[20px] pr-[24px] ">
               <div class="flex-2  rounded-[5px] ">
@@ -289,14 +296,10 @@
                 </div>
               </div>
            </div>
-        </div>
-
-
+ 
 <!-- ////// -->
 
-
-    <div class=" flex flex-col gap-[24px]">
-           <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+      <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
           <div class="flex-2  rounded-[5px] ">
             <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/222.png" alt="12">
           </div>
@@ -327,12 +330,11 @@
             </div>
           </div>
        </div>
-    </div>
+ 
 
     <!-- //////// -->
-
-   <div class="flex flex-col gap-[24px]">
-             <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+ 
+        <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
             <div class="flex-2  rounded-[5px] ">
               <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/333.png" alt="333">
             </div>
@@ -367,11 +369,50 @@
               </div>
             </div>
          </div>
+ 
+     
+    <!-- ////// -->
+
+ 
+             <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+            <div class="flex-2  rounded-[5px] ">
+              <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/444.png" alt="12">
+            </div>
+            <div class="flex flex-1 ">
+              <div class=" flex-1 p-2">
+                <p class="text-[20px] font-[500]">Julia Dens Resort</p>
+                <div class="flex gap-[12px] mb-[17px]">
+                  <span class="flex"> 
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/srhv.svg" alt="strhf">
+                  </span>
+                  <span class="text-[14px] text-light-black"> 4.5 (1200 Reviews)</span>
+                </div>
+                <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
+                <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
+                  and a late checkout. Gym included. Flexible cancellation applies</p>
+                <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+              </div>
+              <div class="flex items-end flex-col flex-2 text-right justify-end ">
+               
+                <div class="flex gap-[8px] font-[500]  items-center  ">
+                  <span class="text-[20px]">$120</span>
+                </div>
+                <p class="mt-[6px]"> Includes taxes and fees </p>
+              </div>
+            </div>
+         </div>
+
+<!-- end cards -->
+
       </div>
 
+      <!-- //////// -->
 
-    <!-- /////// -->
-     
+
 
     <div class="mt-[56px] flex gap-[8px] m-auto text-center items-center justify-center ">
 
@@ -435,7 +476,7 @@
         <HomeAlert class=" top-[unset] "  />
     </div>
 
-    <div class=" bg-blue-400 ">
+    <div class=" ">
       <div class="bottom-0">
         <HomeListFooter />
       </div>
