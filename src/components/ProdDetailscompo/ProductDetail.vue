@@ -1,13 +1,13 @@
 <template>
-  <div   >
+
     <!-- <div class="h-[100vh] " > -->
 
-    <div class="mb-[92px]">
+    <div class="mb-[92px] top-[unset] ">
       <!-- <div class=" "> -->
-      <NavSignined   />
+      <NavSignined  class="" />
     </div>
 
-  <div class="relative bottom-0 m-auto w-[calc(100%-100px)] bg-orange-400 p-2  " >  
+  <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)] bg-orange-400 p-2  " >  
 
 
       <div class="bg-pink-600 p-2   ">
@@ -41,7 +41,7 @@
 
       </div>
 
-      <div class="relative bottom-[0px] w-[full] bg-green-500 p-1">
+      <div class="relative top-[unset] bottom-[0px] w-[full] bg-green-500 p-1">
           <div class="top-[unset] h-[72px] w-full mb-[70px]">
             <HomeAlert class=" top-[unset] "  />
           </div>
@@ -57,7 +57,7 @@
   </div>
 
 
-  </div>
+
 </template>
 
 <script setup>
