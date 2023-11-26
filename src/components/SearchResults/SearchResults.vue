@@ -79,9 +79,9 @@
 
 <div class="  bg-green-400 m-auto w-[calc(100vw-200px)] "> 
 
-  <div class="flex bg-yellow-900 mb-[96px]">
+  <div class="flex bg-yellow-100 mb-[96px] gap-[30px]">
 
-  <div class="leftbox flex flex-col gap-[20px] flex-2 w-[295px]  bg-yellow-200 p-2">
+  <div class="leftbox flex flex-col gap-[20px] flex-2  ">
     
     <div class="bg-inputsGray py-[20px]  px-[18px] rounded-[6px] ">
       <p class="text-[18px] text-dark-black mb-[16px] ">Search by property name</p>
@@ -103,7 +103,7 @@
               <li class="flex justify-between items-center ">
                 <div class="flex gap-[8px] items-center ">
                   <!-- <label class=" "> -->
-                    <input type="checkbox" class="rounded-[15px]   border-bordersr w-[20px] h-[20px]" checked="checked">
+                    <input type="checkbox" class="rounded-[15px] border-bordersr w-[20px] h-[20px]" checked="checked">
                     <span> $ 0 - $ 200 </span>
                   <!-- </label> -->
                 </div>
@@ -217,11 +217,11 @@
 
     <!-- end flex 2-->
 
-  <div class="flex-1 bg-yellow-500 p-2 ">
+  <div class="flex-1  ">
 
 
 
-    <div class="flex items-center justify-between bg-gray-400 mb-[24px]">
+    <div class="flex items-center justify-between  mb-[24px]">
 
         <h2 class="text-[24px] font-[600] text-dark-black">Melbourne : 2,582 search results found</h2>
           <div class="flex items-center w-[190px] gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
@@ -251,7 +251,7 @@
 
 <!-- start cards -->
 
-     <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
+     <div class="flex flex-col gap-[24px]">
            <div class="flex gap-[24px] w-[100%]  rounded-[5px] 
            border-solid border-2 border-borderserbox  py-[20px] pl-[20px] pr-[24px] ">
               <div class="flex-2  rounded-[5px] ">
@@ -295,7 +295,7 @@
 <!-- ////// -->
 
 
-    <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
+    <div class=" flex flex-col gap-[24px]">
            <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
           <div class="flex-2  rounded-[5px] ">
             <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/222.png" alt="12">
@@ -331,7 +331,7 @@
 
     <!-- //////// -->
 
-   <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
+   <div class="flex flex-col gap-[24px]">
              <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
             <div class="flex-2  rounded-[5px] ">
               <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/333.png" alt="333">
@@ -377,25 +377,6 @@
 
       <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white  ">
 
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 68 68" fill="none">
-          <g filter="url(#filter0_d_25_579)">
-            <path d="M26 50C20.3431 50 17.5147 50 15.7574 48.2426C14 46.4853 14 43.6569 14 38L14 22C14 16.3431 14 13.5147 15.7574 11.7574C17.5147 10 20.3431 10 26 10H42C47.6569 10 50.4853 10 52.2426 11.7574C54 13.5147 54 16.3431 54 22L54 38C54 43.6569 54 46.4853 52.2426 48.2426C50.4853 50 47.6569 50 42 50H26Z" fill="white" shape-rendering="crispEdges"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M32.7524 29.7831L37.2502 25.8391C37.5831 25.5468 37.5831 25.0754 37.2502 24.7831C37.0916 24.6435 36.8752 24.565 36.6496 24.565C36.4239 24.565 36.2075 24.6435 36.0489 24.7831L30.9504 29.2544C30.6165 29.5463 30.6165 30.0184 30.9504 30.3104L36.0487 34.7816C36.2075 34.9212 36.4239 34.9998 36.6496 34.9998C36.8752 34.9998 37.0916 34.9212 37.2504 34.7816C37.5831 34.4893 37.5831 34.0178 37.25 33.7256L32.7524 29.7831Z" fill="#C5C5C5"/>
-          </g>
-          <defs>
-            <filter id="filter0_d_25_579" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="4"/>
-              <feGaussianBlur stdDeviation="7"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_25_579"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_579" result="shape"/>
-            </filter>
-          </defs>
-        </svg> -->
-
         <img class="w-[40px] h-[40px] rounded-[6px] " src="../../assets/icons/Arrow.svg" alt="leftarr">
  
       </div>
@@ -440,9 +421,6 @@
     </div>
 
   <!-- end cards -->
-
-
-
 
 
   </div>
