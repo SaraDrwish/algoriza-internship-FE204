@@ -136,9 +136,11 @@ const currentDate = new Date().toISOString().split("T")[0];
 const dropdownOptions = ref([]);
 
 
-
-const  fetchCountries  = async (query) => {
-  queryTimeOut()
+const fetchCountries = async (query) => {
+  
+  // clearTimeout(queryTimeOut.value)
+  //   queryTimeOut.value = setTimeout({options }, 300)
+  
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
@@ -156,11 +158,15 @@ const  fetchCountries  = async (query) => {
   }
 }
 
+
 const getSearchContsResults = async () => {
+   
   const countrs = await fetchCountries(searchQuery.value);
   if (countrs) {
     dropdownOptions.value = countrs;
   }
+
+   
 };
 
 const selectCountry = (country) => {
