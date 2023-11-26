@@ -120,6 +120,13 @@ const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
 
+defineProps({
+  modalActive: {
+    type: Boolean,
+    default: false,
+  }
+})
+
 const searchQuery = ref("");
 
 const checkInDate = ref("");
@@ -127,7 +134,6 @@ const checkOutDate = ref("");
 const guests = ref("");
 const rooms = ref("");
 
-const queryTimeOut = ref(null);
 const currentDate = new Date().toISOString().split("T")[0];
 
 const dropdownOptions = ref([]);
@@ -149,7 +155,7 @@ const fetchCountries = async (query) => {
     return response.data.data;
    } catch (error) {
     console.error(error);
-    // return null
+    return null
   }
 }
 
@@ -177,48 +183,48 @@ const selectCountry = (country) => {
   toggleModal();
 };
 
-// /////////////////////////
-
-defineProps({
-  modalActive: {
-    type: Boolean,
-    default: false,
-    }
-  })
-
 
 const handleSubmit = () => {
-
     if (!isAuthen.value) {
     router.push('/signin');
     return;
   }
 
-  console.log("Search Query:", searchQuery.value);
-  console.log("Check In Date:", checkInDate.value);
-  console.log("Check Out Date:", checkOutDate.value);
-  console.log("Guests:", guests.value);
-  console.log("Rooms:", rooms.value);
 
-    try {
-      window.localStorage.setItem('searchQuery ',  searchQuery.value)
-      window.localStorage.setItem('checkInDate ', checkInDate.value)
-      window.localStorage.setItem('checkOutDate ', checkOutDate.value)
-      window.localStorage.setItem('rooms ', rooms.value)
-      window.localStorage.setItem('checkInDate ', guests.value)
+
+  
+    if (validateForm()) {
+      window.localStorage.setItem('selectedCountry', searchQuery.value);
+      router.push('/searchres');
+    } else {
+      console.error("Form validation failed");
+       
+    }
+  }
+
+  const validateForm = () => {
+    // Implement your form validation logic here
+    // Check if the required inputs (dates, guests, rooms, etc.) are filled
+
+    // Example validation (modify as needed)
+    if (
+      searchQuery.value.trim() === "" ||
+      checkInDate.value === "" ||
+      checkOutDate.value === "" ||
+      guests.value === "" ||
+      rooms.value === ""
+    ) {
+      console.log(" you failed send the data search ")
+      return false;  
+
+    }
 
     console.log(" you successfuly send the data search ")
-    router.push('/searchres');
-
-    }
-    catch (e) {
-      console.log("search failed  ", e)
-    }
+    return true; 
+ 
 
 }
 
- 
-///////
 
 
 </script>
