@@ -1,7 +1,7 @@
 <template>
   <div class="">
         <div class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
-           <form action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+           <form @submit.prevent  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
            
             <div class="bigsearchdropdnbox relative w-[286px] text-[13px]">
 
@@ -29,12 +29,13 @@
               <!-- .starting a drpodon -->
 
               <div v-if="modalActive" class="absolute top-[70px] z-10 flex bg-inputsGray w-full  rounded-[10px]  ">
-                 <ul v-if="rapidapiApiSearchRes" class=" flex items-center capitalize transition ease-in duration-400 text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
-                  <a v-for="searchresult in rapidapiApiSearchRes" :key="searchresult.id"
-                   @click="selectCity(searchresult.city_name) " 
+                 
+                <ul v-if="rapidapiApiSearchRes" class=" flex items-center capitalize transition ease-in duration-400 text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
+                  <a  v-for="searchresult in rapidapiApiSearchRes" :key="searchresult.id"
+                   @click="selectCity(searchresult.city_name)" 
                    class="hover:transition-all transition ease-in duration-400 hover:text-primary
                     w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
-                    <li   > {{ searchresult.city_name }} </li>
+                    <li> {{ searchresult.city_name }} </li>
                   </a>
                   <li class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
                   <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
@@ -57,15 +58,15 @@
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/user-square 1.svg" alt="user-icon">
-              <input class="text-[13px] w-full " type="text" placeholder="Guests" >
+              <input v-model="guests" class="text-[13px] w-full " type="number" placeholder="Guests" >
             </div>
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/single_bed_FILL0_wght400_GRAD0_opsz24 1.svg" alt="single_bed">
-              <input class="text-[13px] w-full " type="text" placeholder="Rooms">
+              <input v-model="rooms" class="text-[13px] w-full " type="number" placeholder="Rooms">
             </div>
           
-            <input class="flex tracking-[0.3px] w-[137px] justify-center bg-primary text-[15px] text-white  
+            <input @click="handleSubmit" class="flex tracking-[0.3px] w-[137px] justify-center bg-primary text-[15px] text-white  
              cursor-pointer py-[12px] px-[18px]
              rounded-[6px]" type="submit" value="Search">
 
@@ -85,6 +86,17 @@ li:last-child { border-bottom: none; }
 input[type=date] {
       
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
  
 </style>
 
@@ -98,17 +110,29 @@ input[type=date] {
 
 import { ref } from 'vue';
 import axios from 'axios'
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter()
 
 const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
 
-const rapidapiApiKey = "";
+// const rapidapiApiKey = "";
 const rapidapiApiSearchRes = ref(null);
+
 const searchQuery = ref("");
+
+const checkInDate = ref("");
+const checkOutDate = ref("");
+const guests = ref("");
+const rooms = ref("");
+
 const queryTimeOut = ref(null);
 const searchErr = ref(null);
+const currentDate = new Date().toISOString().split("T")[0];
 
 const getSearchResults = () => {
   clearTimeout(queryTimeOut.value)
@@ -116,21 +140,34 @@ const getSearchResults = () => {
     if (searchQuery.value !== "") {
       try {
        const result = await
-          // axios.get(`https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination?access_token${rapidapiApiKey}`)
+         axios.get(`https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels`, {
 
-          axios.get(`https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination`);
-
+             params: {
+                  dest_id: '-2092174',
+                  search_type: 'CITY',
+                  arrival_date: '<REQUIRED>',
+                  departure_date: '<REQUIRED>',
+                  adults: '1',
+                  children_age: '0,17',
+                  room_qty: '1',
+                  page_number: '1',
+                  languagecode: 'en-us',
+                  currency_code: 'AED',
+                },
+                headers: {
+                  'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+                  'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+                  }
+              }
+          );
+          
         // //////////////////////////////not sur//////////////////////////////////
-
-        // rapidapiApiSearchRes.value = result.data.country;
-        // rapidapiApiSearchRes.value = result.data.search_type;
-        rapidapiApiSearchRes.value = result.data.city_name;
-        
+        rapidapiApiSearchRes.value = result.data[4];
 
         console.log(rapidapiApiSearchRes.value)
       }
-      catch {
-        console.log("error search , no res");
+      catch(e) {
+        console.log("error search , no res" , e);
         searchErr.value = true;
      }
       return;
@@ -146,57 +183,55 @@ defineProps({
   })
 
 
+const selectCity = (city) => {
+  // Handle city selection logic (you may want to set the selected city to the input field)
+  searchQuery.value = city;
+  toggleModal();
+};
+
+
+const handleSubmit  = () => {
+  console.log("Search Query:", searchQuery.value);
+  console.log("Check In Date:", checkInDate.value);
+  console.log("Check Out Date:", checkOutDate.value);
+  console.log("Guests:", guests.value);
+  console.log("Rooms:", rooms.value);
+
+ // here should insure from the login 
+    // if ( signin !== register ) {
+    //   console.log("log in nedded")
+    //   return;
+    // }
+    try {
+      window.localStorage.setItem('searchQuery ',  searchQuery.value)
+      window.localStorage.setItem('checkInDate ', checkInDate.value)
+      window.localStorage.setItem('checkOutDate ', checkOutDate.value)
+      window.localStorage.setItem('rooms ', rooms.value)
+      window.localStorage.setItem('checkInDate ', guests.value)
+    
+      console.log("you did saved the search data successfuly ");
+
+      // to clear the form :
+      // searchQuery.value = ""
+      // checkInDate.value = ""
+      // checkOutDate.value = ""
+      // rooms.value = ""
+      // guests.value = ""
+
+    console.log(" you successfuly send the data search ")
+    router.push('/searchres');
+
+    }
+    catch (e) {
+      console.log("search failed  ", e)
+    }
+
+
+}
 
 
 // ////////
-
-// const options = {
-//   method: 'GET',
-//   url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
-//   params: {
-//     dest_id: '-2092174',
-//     search_type: 'CITY',
-//     arrival_date: '<REQUIRED>',
-//     departure_date: '<REQUIRED>',
-//     adults: '1',
-//     children_age: '0,17',
-//     room_qty: '1',
-//     page_number: '1',
-//     languagecode: 'en-us',
-//     currency_code: 'AED'
-//   },
-//   headers: {
-//     'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-//     'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-//   }
-// };
-
-// try {
-//   const response = await axios.request(options);
-//   console.log(response.data);
-// } catch (error) {
-//   console.error(error);
-// }
-
-// //////
-
-// const options = {
-//   method: 'GET',
-//   url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-//   params: { query: 'cairo' },
-//   headers: {
-//     'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-//     'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-//   }
-// };
-// try {
-//   const response = await axios.request(options);
-//   console.log(response.data);
-// } catch (error) {
-//   console.error(error);
-// }
-
-
+ 
 ///////
 
 

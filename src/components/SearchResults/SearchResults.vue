@@ -66,7 +66,7 @@
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%]">
-                  <HomeSearch/>
+                  <HomeSearch />
               </div>
       <!-- //////////end search///////// -->
 
@@ -74,7 +74,6 @@
    
   </header>
  
-
   <!-- ////////////////////start body//////////////////////// -->
 
 <div class=" relative m-auto w-[calc(100vw-200px)] "> 
@@ -157,10 +156,7 @@
                 </div>
               </li>
 
-
             </ul>
-            
-      
             
           </div>
           <div class="flex my-[20px] gap-[99px]">
@@ -175,8 +171,6 @@
          </div>
        </div>
     </div>
-
-
 
         <div class="flex flex-col  border-solid border-2 border-borderserbox rounded-[6px] ">
           <div class="bg-inputsGray p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Rating</div>
@@ -213,14 +207,12 @@
         </div>
 
 
-
     <!-- end box yellow -->
   </div>   
 
     <!-- end flex 2-->
 
   <div class="flex-1  ">
-
 
 
     <div class="flex items-center justify-between  mb-[24px]  ">
@@ -328,9 +320,8 @@
           </div>
        </div>
  
-
     <!-- //////// -->
- 
+
         <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
             <div class="flex-2  rounded-[5px] ">
               <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/333.png" alt="333">
