@@ -53,7 +53,6 @@
               <img src="../../assets/icons/calendar 1.svg" alt="calendar-icon">
               
               <input v-model="checkOutDate" class="text-[13px] w-full" type="date" :min="checkInDate"  placeholder="Check out date" required >
-                <!-- <input class="text-[13px] w-full " type="text" onfocus="(this.type='date')" id="dateout"  placeholder="Check out date" required > -->
             </div>
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
@@ -116,12 +115,10 @@ import { isAuthen } from '../auth';
 const router = useRouter()
 
 const modalActive = ref(null);
+
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
-
-// const rapidapiApiKey = "";
-const rapidapiApiSearchRes = ref(null);
 
 const searchQuery = ref("");
 
@@ -135,16 +132,12 @@ const currentDate = new Date().toISOString().split("T")[0];
 
 const dropdownOptions = ref([]);
 
-
 const fetchCountries = async (query) => {
-  
-  // clearTimeout(queryTimeOut.value)
-  //   queryTimeOut.value = setTimeout({options }, 300)
   
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-    params: { query: 'cairo' },
+    params: { query  },
     headers: {
       'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
@@ -153,27 +146,36 @@ const fetchCountries = async (query) => {
   try {
     const response = await axios.request(options);
     console.log(response.data);
-  } catch (error) {
+    return response.data.data;
+   } catch (error) {
     console.error(error);
+    // return null
   }
 }
 
-
 const getSearchContsResults = async () => {
-   
-  const countrs = await fetchCountries(searchQuery.value);
-  if (countrs) {
-    dropdownOptions.value = countrs;
+
+  dropdownOptions.value = [];
+    
+  if (searchQuery.value.trim() !== "") {
+    const countrs = await fetchCountries(searchQuery.value);
+
+    if (countrs && countrs.length > 0) {
+      dropdownOptions.value = countrs;
+    } else {
+      dropdownOptions.value = [{ id: -1, name: 'No matching cities found' }];
+      console.log("No matching cities found")
+    }
   }
 
-   
+  modalActive.value = true;
+ 
 };
 
 const selectCountry = (country) => {
   searchQuery.value = country.name;
   toggleModal();
 };
-
 
 // /////////////////////////
 
@@ -184,7 +186,6 @@ defineProps({
     }
   })
 
- 
 
 const handleSubmit = () => {
 
@@ -199,24 +200,12 @@ const handleSubmit = () => {
   console.log("Guests:", guests.value);
   console.log("Rooms:", rooms.value);
 
- // here should insure from the login 
-    // if ( signin !== register ) {
-    //   console.log("log in nedded")
-    //   return;
-    // }
     try {
       window.localStorage.setItem('searchQuery ',  searchQuery.value)
       window.localStorage.setItem('checkInDate ', checkInDate.value)
       window.localStorage.setItem('checkOutDate ', checkOutDate.value)
       window.localStorage.setItem('rooms ', rooms.value)
       window.localStorage.setItem('checkInDate ', guests.value)
-
-      // to clear the form :
-      // searchQuery.value = ""
-      // checkInDate.value = ""
-      // checkOutDate.value = ""
-      // rooms.value = ""
-      // guests.value = ""
 
     console.log(" you successfuly send the data search ")
     router.push('/searchres');
@@ -226,11 +215,8 @@ const handleSubmit = () => {
       console.log("search failed  ", e)
     }
 
-
 }
 
-
-// ////////
  
 ///////
 
