@@ -77,7 +77,7 @@
 
   <!-- ////////////////////start body//////////////////////// -->
 
-<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] "> 
+<div class=" relative bg-green-400 m-auto w-[calc(100vw-200px)] "> 
 
   <div class="flex bg-yellow-100 mb-[96px] gap-[30px]">
 
@@ -431,8 +431,8 @@
 
   <!-- /////////////////////end body/////////////////////// -->
 
-    <div class=" relative top-0  w-full bg-blue-800 mb-[70px] h-[72px] ">
-        <HomeAlert class=" top-[0%]   "  />
+    <div class="top-[unset] h-[72px] w-full mb-[70px]">
+        <HomeAlert class=" top-[unset] "  />
     </div>
 
     <div class=" bg-blue-400 ">
