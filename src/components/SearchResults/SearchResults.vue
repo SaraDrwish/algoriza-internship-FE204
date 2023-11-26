@@ -66,9 +66,13 @@
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
-                  <HomeSearch  @selectCountry="selectCountry" >
-                    {{ selectCountry }}
-                  </HomeSearch>
+                   <HomeSearch
+                      :selectedCountry="selectedCountry"
+                      :checkin="checkInDate"
+                      :checkout="checkOutDate"
+                      :guests="guests"
+                      :rooms="rooms"
+                    />
               </div>
       <!-- //////////end search///////// -->
 
@@ -477,7 +481,7 @@ import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
 import footerlastbtm from '../footerlastbtm.vue';
-
+import { toRefs } from 'vue';
 
 import { ref, defineProps } from 'vue';
 import axios from 'axios';
@@ -485,58 +489,97 @@ import axios from 'axios';
 
 const modalActiveSerch = ref(false);
 
-const modalActive = ref(null);
+// const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
+
+// const { modalActive, newProp } = defineProps(['modalActive', 'newProp']);
+
+// const { modalActive, newProp } = defineProps({
+//   modalActive: {
+//     type: Boolean,
+//     default: false,
+//   },
+//   newProp: {
+//     type: String,
+//     default: 'defaultValue',
+//   },
+// });
+
+// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms"]);
+
+
+
+// const props = defineProps({
+//   modalActive: {
+//     type: Boolean,
+//     default: false,
+//   },
+//   ...toRefs(toRefs(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "newProp"])),
+// });
+
+
+// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms" , "modalActive"]);
+const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "modalActive"]);
+
 defineProps({
+  selectedCountry:String,
+  checkInDate: String,
+  checkOutDate: String,
+  guests: Number,
+  rooms: Number,
   modalActive: {
     type: Boolean,
     default: false,
-  },
+  }
+  
+});
 
-})
+
+
+// defineProps({
+//   modalActive: {
+//     type: Boolean,
+//     default: false,
+//   },
+
+// })
 
 // /////////////////////
 
-// const selectedCountry = localStorage.getItem('selectedCountry');
-// const checkin = localStorage.getItem('checkInDate');
-// const checkout = localStorage.getItem('checkOutDate');
-// const guests = localStorage.getItem('guests');
-// const rooms = localStorage.getItem('rooms');
 
+const selectedCountry = localStorage.getItem("selectedCountry") || "";
+const checkin = localStorage.getItem("checkInDate") || "";
+const checkout = localStorage.getItem("checkOutDate") || "";
+const guests = localStorage.getItem("guests") || "";
+const rooms = localStorage.getItem("rooms") || "";
 
-const searchData = ref({
-  // selectedCountry: '',
-  // checkin: '',
-  // checkOut: '',
-  // guests: '',
-  // rooms: '',
-    selectedCountry :localStorage.getItem('selectedCountry'),
-    checkin :localStorage.getItem('checkInDate'),
-    checkout: localStorage.getItem('checkOutDate'),
-    guests: localStorage.getItem('guests'),
-    rooms :localStorage.getItem('rooms'),
-});
+   
+
+// const searchData = ref({
+//   // selectedCountry: '',
+//   // checkin: '',
+//   // checkOut: '',
+//   // guests: '',
+//   // rooms: '',
+//     selectedCountry :localStorage.getItem('selectedCountry'),
+//     checkin :localStorage.getItem('checkInDate'),
+//     checkout: localStorage.getItem('checkOutDate'),
+//     guests: localStorage.getItem('guests'),
+//     rooms :localStorage.getItem('rooms'),
+// });
 
 // Your existing script setup code for the SearchResults page
 
-const selectCountry = (country) => {
-  // Update the search parameters with the selected country data
-  searchData.value.selectedCountry = country.name;
-  searchData.value.checkin = country.name;
-  searchData.value.checkout = country.name;
-  searchData.value.guests = country.name;
-  searchData.value.rooms = country.name;
-
-  // You may set other fields like check-in, check-out, guests, rooms as needed
-  // Example:
-  // searchData.value.checkIn = // set your value
-  // searchData.value.checkOut = // set your value
-  // searchData.value.guests = // set your value
-  // searchData.value.rooms = // set your value
-
-}
+// const selectCountry = (country) => {
+//    searchData.value.selectedCountry = country.name;
+//   searchData.value.checkin = country.name;
+//   searchData.value.checkout = country.name;
+//   searchData.value.guests = country.name;
+//   searchData.value.rooms = country.name;
+ 
+// }
 
 // if (checkin && checkout ) {
 
