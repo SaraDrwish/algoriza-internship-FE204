@@ -22,7 +22,8 @@ module.exports = {
         "srchRed": "#EB5757",
         "srchGrn": "#219653",
         "paginatiopntextcolr": "#9E9E9E",
-        "orngressearchbox":"#F2994A",
+        "orngressearchbox": "#F2994A",
+        "bggraynstedpage" : "#F4F4F4"
         
         
       }

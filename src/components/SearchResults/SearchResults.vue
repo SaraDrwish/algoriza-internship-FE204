@@ -251,13 +251,10 @@
  
     </div>
 
-<!-- start cards -->
-
-
+  <!-- start cards -->
 
   <div class="flex flex-col  gap-[24px]  ">
 
-<!-- ///////crd 1 -->
 <!-- ///////////// -->
            <div class="flex gap-[24px] w-[100%]  rounded-[5px] 
            border-solid border-2 border-borderserbox  py-[20px] pl-[20px] pr-[24px] ">
@@ -368,13 +365,10 @@
                 
               </div>
             </div>
-         </div>
- 
-     
+        </div>
     <!-- ////// -->
 
- 
-             <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+      <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
             <div class="flex-2  rounded-[5px] ">
               <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/444.png" alt="12">
             </div>
@@ -397,33 +391,29 @@
                 <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
               </div>
               <div class="flex items-end flex-col flex-2 text-right justify-end ">
-               
+            
                 <div class="flex gap-[8px] font-[500]  items-center  ">
                   <span class="text-[20px]">$120</span>
                 </div>
                 <p class="mt-[6px]"> Includes taxes and fees </p>
               </div>
             </div>
-         </div>
+        </div>
 
 <!-- end cards -->
 
-      </div>
+    </div>
 
       <!-- //////// -->
-
-
 
     <div class="mt-[56px] flex gap-[8px] m-auto text-center items-center justify-center ">
 
       <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white  ">
-
         <img class="w-[40px] h-[40px] rounded-[6px] " src="../../assets/icons/Arrow.svg" alt="leftarr">
- 
       </div>
 
       <div class="flex ">
-        <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-primary text-white  
+        <div class="active rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-primary text-white  
         text-[16px] py-[9px] text-center">1</div>
         <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white text-paginatiopntextcolr 
          text-[16px] py-[9px] text-center">2</div>
@@ -436,7 +426,7 @@
       </div>
 
 
-      <div class="rounded-[6px] w-[40px] h-[41px] text-center  bg-white cursor-pointer shadow-md">
+      <div class="rounded-[6px] w-[40px] h-[41px] text-center  cursor-pointer flex items-center justify-center">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 68 68" fill="none">
           <g filter="url(#filter0_d_25_592)">
@@ -462,7 +452,6 @@
     </div>
 
   <!-- end cards -->
-
 
   </div>
 
