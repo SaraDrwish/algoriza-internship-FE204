@@ -4,7 +4,7 @@
 
     <div class="relative top-0 text-white h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2 "> 
        
-<!-- //////// -->
+<!-- ///start nav///// -->
 
    <nav class=" mx-auto flex items-center justify-between h-[68px] w-[calc(100%-100px)]  ">
 
@@ -62,11 +62,10 @@
 
         </nav>
 
-<!-- //////// -->
+<!-- ////end nav//// -->
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%]">
-                <!-- <div class="absolute left-[105px] bottom-[-15%]"> -->
                   <HomeSearch/>
               </div>
       <!-- //////////end search///////// -->
@@ -77,24 +76,26 @@
  
 
   <!-- ////////////////////start body//////////////////////// -->
-<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] "> 
+
+<div class="  bg-green-400 m-auto p-1 w-[calc(100vw-200px)] "> 
 
   <div class="flex bg-yellow-900 p-2 mb-[96px]">
 
-  <div class="flex flex-col gap-[20px] flex-2 w-[295px]  bg-yellow-200 p-2">
+  <div class="leftbox flex flex-col gap-[20px] flex-2 w-[295px]  bg-yellow-200 p-2">
     
     <div class="bg-inputsGray py-[20px]  px-[18px] rounded-[6px] ">
       <p class="text-[18px] text-dark-black mb-[16px] ">Search by property name</p>
-      <div class="flex gap-[10px] items-center pt-[11px] pb-[12px] px-[12px] justify-center  border-solid border-2 border-borderserbox rounded-[4px]">
-        <img class="w-[20px] h-[20px] " src="../../assets/icons/search 1.svg" alt="search">
-        <input class=" bg-white text-light-black "  type="text" placeholder="eg. Beach westpalm">
+      <div class="flex gap-[10px] items-center pt-[11px] pb-[12px] 
+      px-[12px] justify-center bg-white border-solid border-2 border-borderserbox rounded-[4px]">
+        <img class="w-[20px] h-[20px]  " src="../../assets/icons/search 1.svg" alt="search">
+        <input class="bg-white text-light-black "  type="text" placeholder="eg. Beach westpalm">
       </div>
     </div>
 
     <div class="">
        <p class="mb-[20px] text-[18px] font-[600]">Filter by</p>
        <div class="flex flex-col  border-solid border-2 border-borderserbox rounded-[6px] ">
-         <div class="bg-inputsGray p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Your budget per day</div>
+         <div class="bg-inputsGray  p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Your budget per day</div>
          <div class="flex flex-col p-[18px]">
           <div class="">
             <ul>
@@ -120,10 +121,31 @@
           <div class="bg-inputsGray p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Rating</div>
           <div class="flex flex-col p-[18px]">
           <div class="">
-            <p>Show only ratings more than</p>
-            <ul>
-              <li></li>
-            </ul>
+            <p class="mb-[8px]">Show only ratings more than</p>
+             <div class=" ">
+               <ul class="flex ">
+                 <li class=" flex  items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                   <span>1</span> 
+                   <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                 </li>
+                 <li class=" flex items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                   <span>2</span> 
+                   <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                 </li>
+                 <li class=" flex gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                   <span>3</span> 
+                   <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                 </li>
+                 <li class=" flex items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                   <span>4</span> 
+                   <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                </li>
+                <li class="flex gap-[1px] items-center justify-center px-[14px] py-[9px] border-solid border-2 border-borderserbox " >
+                  <span>5</span> 
+                  <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+               </li>
+               </ul>
+             </div>
           </div>
 
           </div>
@@ -170,7 +192,7 @@
 
 <!-- start cards -->
 
-     <div class="bg-red-800 p-2 flex flex-col gap-[24px]">
+     <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
            <div class="flex gap-[24px] w-[100%]  rounded-[5px] 
            border-solid border-2 border-borderserbox  py-[20px] pl-[20px] pr-[24px] ">
               <div class="flex-2  rounded-[5px] ">
@@ -194,14 +216,17 @@
                     and a late checkout. Gym included. Flexible cancellation applies</p>
                   <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
                 </div>
-                <div class="flex items-end flex-col flex-2 text-right justify-end   ">
+                <div class="flex items-end flex-col flex-2 text-right justify-between   ">
                   <p class="text-[13px] bg-srchRed py-[4px] px-[8px] mb-[64px] rounded-[6px] font-[500] text-white" >Book now and receive 15% off</p>
                   <p class="text-[13px] bg-srchGrn mb-[29px]  py-[4px] px-[8px] rounded-[6px]  font-[500] text-white" >5% off</p>
-                  <div class="flex gap-[8px] font-[500]  items-center  ">
-                    <span class="text-srchRed text-[14px] line-through ">$150</span>
-                    <span class="text-[20px]">$130</span>
+                  <div class="flex flex-col items-end  ">
+                   <div class="flex gap-[8px] font-[500]  items-center  ">
+                      <span class="text-srchRed text-[14px] line-through ">$150</span>
+                      <span class="text-[20px]">$130</span>
+                    </div>
+                    <p class="mt-[6px]"> Includes taxes and fees </p>
                   </div>
-                  <p class="mt-[6px]"> Includes taxes and fees </p>
+                  
                 </div>
               </div>
            </div>
@@ -211,10 +236,10 @@
 <!-- ////// -->
 
 
-    <div class="bg-red-800 p-2 flex flex-col gap-[24px]">
+    <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
            <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
           <div class="flex-2  rounded-[5px] ">
-            <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/12.png" alt="12">
+            <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/222.png" alt="12">
           </div>
           <div class="flex flex-1 ">
             <div class=" flex-1 p-2">
@@ -237,13 +262,54 @@
             <div class="flex items-end flex-col flex-2 text-right justify-end ">
                
               <div class="flex gap-[8px] font-[500]  items-center  ">
-                <span class="text-[20px]">$130</span>
+                <span class="text-[20px]">$250</span>
               </div>
               <p class="mt-[6px]"> Includes taxes and fees </p>
             </div>
           </div>
        </div>
     </div>
+
+    <!-- //////// -->
+
+   <div class="bg-red-400 p-2 flex flex-col gap-[24px]">
+             <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+            <div class="flex-2  rounded-[5px] ">
+              <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/333.png" alt="333">
+            </div>
+            <div class="flex flex-1 ">
+              <div class=" flex-1 p-2">
+                <p class="text-[20px] font-[500]">Julia Dens Resort</p>
+                <div class="flex gap-[12px] mb-[17px]">
+                  <span class="flex"> 
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
+                    <img src="../../assets/icons/srhv.svg" alt="strhf">
+                  </span>
+                  <span class="text-[14px] text-light-black"> 4.5 (1200 Reviews)</span>
+                </div>
+                <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
+                <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
+                  and a late checkout. Gym included. Flexible cancellation applies</p>
+                <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+              </div>
+              <div class="flex items-end flex-col flex-2 text-right justify-between  ">
+                <p class="text-[13px] bg-orngressearchbox  py-[4px] px-[8px] 
+                mb-[64px] rounded-[6px] font-[500] text-white" >Receive 30% discount on a restaurant</p>
+                <div class="flex flex-col items-end">
+                  <div class="flex gap-[8px] font-[500]  items-center  ">
+                    <span class="text-[20px]">$300</span>
+                  </div>
+                  <p class="mt-[6px]"> Includes taxes and fees </p> 
+                </div>
+                
+              </div>
+            </div>
+         </div>
+      </div>
+
 
     <!-- /////// -->
      
@@ -289,15 +355,15 @@
       </div>
 
 
-      <div class="rounded-[6px] cursor-pointer shadow-md">
+      <div class="rounded-[6px] w-[40px] h-[41px] text-center  bg-white cursor-pointer shadow-md">
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 68 68" fill="none">
           <g filter="url(#filter0_d_25_592)">
             <path d="M42 50C47.6569 50 50.4853 50 52.2426 48.2426C54 46.4853 54 43.6569 54 38L54 22C54 16.3431 54 13.5147 52.2426 11.7574C50.4853 10 47.6569 10 42 10H26C20.3431 10 17.5147 10 15.7574 11.7574C14 13.5147 14 16.3431 14 22L14 38C14 43.6569 14 46.4853 15.7574 48.2426C17.5147 50 20.3431 50 26 50H42Z" fill="white" shape-rendering="crispEdges"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M35.2476 29.7831L30.7498 25.8391C30.4169 25.5468 30.4169 25.0754 30.7498 24.7831C30.9084 24.6435 31.1248 24.565 31.3504 24.565C31.5761 24.565 31.7925 24.6435 31.9511 24.7831L37.0496 29.2544C37.3835 29.5463 37.3835 30.0184 37.0496 30.3104L31.9513 34.7816C31.7925 34.9212 31.5761 34.9998 31.3504 34.9998C31.1248 34.9998 30.9084 34.9212 30.7496 34.7816C30.4169 34.4893 30.4169 34.0178 30.75 33.7256L35.2476 29.7831Z" fill="#2F80ED"/>
           </g>
           <defs>
-            <filter id="filter0_d_25_592" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <filter id="filter0_d_25_592" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
               <feFlood flood-opacity="0" result="BackgroundImageFix"/>
               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
               <feOffset dy="4"/>
@@ -355,11 +421,6 @@ import footerlastbtm from '../footerlastbtm.vue';
 
 import { ref } from 'vue';
 
-
-// import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-// import { ChevronDownIcon } from '@heroicons/vue'
-// import { TwDropdownMenu, TwButton } from "vue3-tailwind"
-
 const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
@@ -376,3 +437,15 @@ defineProps({
 
 </script>
 
+<style scoped>
+input{
+  /* background: unset; */
+  background-color: unset !important;
+}
+button{
+    transition: all 0.3s ease-in;
+}
+.leftbox button:hover {
+   background-color: unset;
+ }
+</style>
