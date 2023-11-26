@@ -77,9 +77,9 @@
 
   <!-- ////////////////////start body//////////////////////// -->
 
-<div class="  bg-green-400 m-auto p-1 w-[calc(100vw-200px)] "> 
+<div class="  bg-green-400 m-auto w-[calc(100vw-200px)] "> 
 
-  <div class="flex bg-yellow-900 p-2 mb-[96px]">
+  <div class="flex bg-yellow-900 mb-[96px]">
 
   <div class="leftbox flex flex-col gap-[20px] flex-2 w-[295px]  bg-yellow-200 p-2">
     
@@ -98,17 +98,76 @@
          <div class="bg-inputsGray  p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Your budget per day</div>
          <div class="flex flex-col p-[18px]">
           <div class="">
-            <ul>
-              <li></li>
+             <ul class="flex flex-col gap-[14px]">
+
+              <li class="flex justify-between items-center ">
+                <div class="flex gap-[8px] items-center ">
+                  <!-- <label class=" "> -->
+                    <input type="checkbox" class="rounded-[15px]   border-bordersr w-[20px] h-[20px]" checked="checked">
+                    <span> $ 0 - $ 200 </span>
+                  <!-- </label> -->
+                </div>
+
+                <div class="">
+                  <label >200</label>
+                </div>
+              </li>
+
+              <li class="flex justify-between items-center ">
+                <div class="flex gap-[8px] items-center ">
+                    <input type="checkbox" class="rounded-[15px] bg-bordersr border-bordersr w-[20px] h-[20px] " >
+                    <span>$ 200 - $ 500</span>
+                </div>
+                <div class="">
+                  <label >100</label>
+                </div>
+              </li>
+
+              <li class="flex justify-between items-center ">
+                <div class="flex gap-[8px] items-center " >
+                    <input type="checkbox" class="rounded-[15px] bg-bordersr border-bordersr w-[20px] h-[20px] " >
+                    <span>$ 500 - $ 1,000</span>
+                </div>
+                <div class="">
+                  <label >15</label>
+                </div>
+              </li>
+
+              <li class="flex justify-between items-center ">
+                <div class="flex gap-[8px] items-center">
+                    <input type="checkbox" class="rounded-[15px] bg-bordersr border-bordersr w-[20px] h-[20px] " >
+                    <span>$ 1,000 - $ 2,000</span>
+                </div>
+                <div class="">
+                  <label >12</label>
+                </div>
+              </li>
+
+              <li class="flex justify-between items-center ">
+                <div class="flex gap-[8px] items-center">
+                  <!-- <label class=" "> -->
+                    <input type="checkbox" class="rounded-[15px] bg-bordersr border-bordersr w-[20px] h-[20px] ">
+                    <span>$ 2,000 - $ 5,000</span>
+                  <!-- </label> -->
+                </div>
+                <div class="">
+                  <label >230</label>
+                </div>
+              </li>
+
+
             </ul>
+            
+      
+            
           </div>
-          <div class="flex my-[20px]">
+          <div class="flex my-[20px] gap-[99px]">
             <p>Set your own budget</p>
-            <img src="" alt="">
+            <img src="../../assets/icons/switcer.svg" alt="swicher1">
           </div>
            <div class="flex gap-[35px] mt-[15px]">
-            <button>Min budget</button>
-            <button>Max budget</button>
+            <button class="border-solid border-1 pt-[11px] pb-[12px] px-[12px] border-borderserbox">Min budget</button>
+            <button class="border-solid border-1 pt-[11px] pb-[12px] px-[12px] border-borderserbox">Max budget</button>
           </div>
 
          </div>
