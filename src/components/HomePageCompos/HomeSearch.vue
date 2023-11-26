@@ -202,25 +202,38 @@ const handleSubmit = () => {
     }
   }
 
-  const validateForm = () => {
-    // Implement your form validation logic here
-    // Check if the required inputs (dates, guests, rooms, etc.) are filled
-
-    // Example validation (modify as needed)
+const validateForm = () => {
+    
     if (
-      searchQuery.value.trim() === "" ||
-      checkInDate.value === "" ||
-      checkOutDate.value === "" ||
-      guests.value === "" ||
-      rooms.value === ""
+    searchQuery.value.trim() === "" ||
+    checkInDate.value === "" ||
+    checkOutDate.value === "" ||
+    guests.value === "" ||
+    rooms.value === ""
     ) {
-      console.log(" you failed send the data search ")
-      return false;  
+    console.log("failed sending the inputs vals ")
+    return false;  
+  }
 
-    }
+  // Check if the check-out date is not before a day from the check-in date
+  const minCheckOutDate = new Date(checkInDate.value);
+     minCheckOutDate.setDate(minCheckOutDate.getDate() + 1);
+     if (checkOutDate.value < minCheckOutDate.toISOString().split("T")[0]) {
+      console.error("Check-out date cannot be before a day from the check-in date");
+      alert("your check out must be after one day from your check in date ")
+      return false; 
+  }
 
-    console.log(" you successfuly send the data search ")
-    return true; 
+  // Check if the rooms are within the allowed range (1 to 100)
+  // const numRooms = parseInt(rooms.value);
+  // if (isNaN(numRooms) || numRooms < 1 || numRooms > 100) {
+  //   console.error("Number of rooms must be between 1 and 100");
+  //   return false; 
+  // }
+
+
+
+  return true; 
  
 
 }
