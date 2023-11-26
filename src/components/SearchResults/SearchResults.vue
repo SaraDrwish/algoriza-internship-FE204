@@ -477,7 +477,9 @@ import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
 import footerlastbtm from '../footerlastbtm.vue';
 
 
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
+import axios from 'axios';
+
 
 const modalActiveSerch = ref(false);
 
@@ -493,6 +495,68 @@ defineProps({
 
 })
 
+// /////////////////////
+
+const selectedCountry = localStorage.getItem('selectedCountry');
+const checkin = localStorage.getItem('checkInDate');
+const checkout = localStorage.getItem('checkOutDate');
+const guests = localStorage.getItem('guests');
+const rooms = localStorage.getItem('rooms');
+
+if (checkin && checkout ) {
+
+  hotelSearchFunction(checkin, checkout);
+   
+} else {
+  console.error('Error: Arrival date or departure date not found in local storage.');
+}
+
+
+// /////////////////////
+
+
+
+const fetchHotels = async () => {
+  const options = {
+    method: 'GET',
+    url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
+    params: {
+      dest_id: '-2092174',
+      search_type: 'CITY',
+      arrival_date: '<REQUIRED>',
+      departure_date: '<REQUIRED>',
+      adults: '1',
+      children_age: '0,17',
+      room_qty: '1',
+      page_number: '1',
+      languagecode: 'en-us',
+      currency_code: 'AED',
+    },
+    headers: {
+      'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com',
+    },
+  };
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+
+    // Handle the response  component's 
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+
+// ////////
+
+onMounted(() => {
+  fetchHotels();
+});
+
+// ////////
 
 
 </script>

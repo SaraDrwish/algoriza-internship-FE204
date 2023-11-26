@@ -9,7 +9,7 @@
 
                 <div class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
-                  <input v-model="searchQuery"
+                  <input  v-model="searchQuery"
                     @input="getSearchContsResults"
                     class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
                     <span @click="toggleModal" class="flex cursor-pointer  ">
@@ -32,13 +32,12 @@
                  
                 <ul v-if="dropdownOptions.length > 0 " class=" flex items-center capitalize transition ease-in duration-400 text-light-black w-full justify-center text-center flex-col gap-[4px] mx-[12px] ">
                   <a  v-for="searchresult in dropdownOptions " :key="searchresult.id"
-                   @click="selectCountry(searchresult.name)" 
+                   @click="selectCountry(searchresult)" 
                    class="hover:transition-all transition ease-in duration-400 hover:text-primary
                     w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
-                    <li> {{ searchresult.name }} </li>
+                    <li   > {{ searchresult.name }} </li>
                   </a>
-                  <li class="hover:transition-all transition ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Giza</li>
-                  <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li>
+                   <!-- <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li> -->
                  </ul>
               </div>
 
@@ -128,7 +127,6 @@ defineProps({
 })
 
 const searchQuery = ref("");
-
 const checkInDate = ref("");
 const checkOutDate = ref("");
 const guests = ref("");
@@ -165,6 +163,7 @@ const getSearchContsResults = async () => {
     
   if (searchQuery.value.trim() !== "") {
     const countrs = await fetchCountries(searchQuery.value);
+    
 
     if (countrs && countrs.length > 0) {
       dropdownOptions.value = countrs;
@@ -172,7 +171,8 @@ const getSearchContsResults = async () => {
       dropdownOptions.value = [{ id: -1, name: 'No matching cities found' }];
       console.log("No matching cities found")
     }
-  }
+
+   }
 
   modalActive.value = true;
  
@@ -180,7 +180,7 @@ const getSearchContsResults = async () => {
 
 const selectCountry = (country) => {
   searchQuery.value = country.name;
-  toggleModal();
+  modalActive.value = false; 
 };
 
 
@@ -195,6 +195,10 @@ const handleSubmit = () => {
   
     if (validateForm()) {
       window.localStorage.setItem('selectedCountry', searchQuery.value);
+      window.localStorage.setItem('checkInDate', checkInDate.value);
+      window.localStorage.setItem('checkOutDate', checkOutDate.value);
+      window.localStorage.setItem('guests', guests.value);
+      window.localStorage.setItem('rooms', rooms.value);
       router.push('/searchres');
     } else {
       console.error("Form validation failed");
@@ -215,7 +219,6 @@ const validateForm = () => {
     return false;  
   }
 
-  // Check if the check-out date is not before a day from the check-in date
   const minCheckOutDate = new Date(checkInDate.value);
      minCheckOutDate.setDate(minCheckOutDate.getDate() + 1);
      if (checkOutDate.value < minCheckOutDate.toISOString().split("T")[0]) {
@@ -224,18 +227,8 @@ const validateForm = () => {
       return false; 
   }
 
-  // Check if the rooms are within the allowed range (1 to 100)
-  // const numRooms = parseInt(rooms.value);
-  // if (isNaN(numRooms) || numRooms < 1 || numRooms > 100) {
-  //   console.error("Number of rooms must be between 1 and 100");
-  //   return false; 
-  // }
-
-
-
   return true; 
  
-
 }
 
 
