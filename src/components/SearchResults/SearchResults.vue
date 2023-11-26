@@ -122,25 +122,25 @@
           <div class="flex flex-col p-[18px]">
           <div class="">
             <p class="mb-[8px]">Show only ratings more than</p>
-             <div class=" ">
-               <ul class="flex ">
-                 <li class=" flex  items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+             <div class="rounded-[5px] ">
+               <ul class="flex border-solid border-2 border-borderserbox  rounded-[5px] ">
+                 <li class=" flex  items-center justify-center gap-[1px] p-[14px]  " >
                    <span>1</span> 
                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
                  </li>
-                 <li class=" flex items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                 <li class=" flex items-center justify-center gap-[1px] p-[14px]  border-solid border-l-2 border-borderserbox " >
                    <span>2</span> 
                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
                  </li>
-                 <li class=" flex gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                 <li class=" flex gap-[1px] p-[14px]  border-solid border-l-2 border-borderserbox " >
                    <span>3</span> 
                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
                  </li>
-                 <li class=" flex items-center justify-center gap-[1px] py-[14px] pl-[14px] pr-[9px] border-solid border-2 border-borderserbox " >
+                 <li class=" flex items-center justify-center gap-[1px] p-[14px]  border-solid border-l-2 border-borderserbox " >
                    <span>4</span> 
                    <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
                 </li>
-                <li class="flex gap-[1px] items-center justify-center px-[14px] py-[9px] border-solid border-2 border-borderserbox " >
+                <li class="flex gap-[1px] items-center justify-center px-[14px] border-solid border-l-2 border-borderserbox " >
                   <span>5</span> 
                   <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
                </li>
