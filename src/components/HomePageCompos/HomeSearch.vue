@@ -111,7 +111,7 @@ input[type=number] {
 import { ref } from 'vue';
 import axios from 'axios'
 import { useRouter } from 'vue-router';
-
+import { isAuthen } from '../auth';
 
 const router = useRouter()
 
@@ -133,6 +133,9 @@ const rooms = ref("");
 const queryTimeOut = ref(null);
 const searchErr = ref(null);
 const currentDate = new Date().toISOString().split("T")[0];
+
+
+
 
 const getSearchResults = () => {
   clearTimeout(queryTimeOut.value)
@@ -190,7 +193,13 @@ const selectCity = (city) => {
 };
 
 
-const handleSubmit  = () => {
+const handleSubmit = () => {
+
+    if (!isAuthen.value) {
+    router.push('/signin');
+    return;
+  }
+
   console.log("Search Query:", searchQuery.value);
   console.log("Check In Date:", checkInDate.value);
   console.log("Check Out Date:", checkOutDate.value);
@@ -208,8 +217,6 @@ const handleSubmit  = () => {
       window.localStorage.setItem('checkOutDate ', checkOutDate.value)
       window.localStorage.setItem('rooms ', rooms.value)
       window.localStorage.setItem('checkInDate ', guests.value)
-    
-      console.log("you did saved the search data successfuly ");
 
       // to clear the form :
       // searchQuery.value = ""

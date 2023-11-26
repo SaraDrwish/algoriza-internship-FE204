@@ -46,13 +46,17 @@
 import NavSecndry from './Navs/NavSecndry.vue';
 import footerlastbtm from './footerlastbtm.vue';
 import { ref } from 'vue';
-// import {useAuth0 }  from '@auth0/auth0-vue'
 import { useRouter } from 'vue-router';
+import { SignIn } from '../components/auth';
 
+// import {useAuth0 }  from '@auth0/auth0-vue'
 // const {loginauth} = useAuth0()
+
 const router = useRouter();
 const emailIn = ref('');
 const passwordIn = ref('');
+
+
 
 const handleSubmit = async () => {
   const emailRegstord = window.localStorage.getItem('emailRegstord')
@@ -60,6 +64,7 @@ const handleSubmit = async () => {
 
   if (emailIn.value === emailRegstord   && passwordIn.value ===  passRegstored ) {
     console.log("logged successfuly ")
+    SignIn()
     router.push('/signedhome');
   } else {
     console.error("faild login")

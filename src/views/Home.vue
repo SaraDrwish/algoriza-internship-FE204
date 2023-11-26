@@ -1,6 +1,6 @@
 <template>
 
-<div class="">
+<div class="app" id="app">
 
     <div class="">
       <Nav/>
@@ -52,7 +52,7 @@
   import HomeDownloadSec from '../components/HomePageCompos/HomeDownloadSec.vue';
   import HomeListFooter from '../components/HomePageCompos/HomeListFooter.vue';
   import footerlastbtm from '../components/footerlastbtm.vue';
-  import Nav from '../components/Navs/Nav.vue'
+  import Nav from '../components/Navs/Nav.vue';
 
 </script>
 
