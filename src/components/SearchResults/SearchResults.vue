@@ -65,7 +65,7 @@
 <!-- ////end nav//// -->
 
     <!-- //////////start search////////// -->
-              <div class="absolute left-[85px] bottom-[-15%]">
+              <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
                   <HomeSearch />
               </div>
       <!-- //////////end search///////// -->
@@ -478,6 +478,8 @@ import footerlastbtm from '../footerlastbtm.vue';
 
 
 import { ref } from 'vue';
+
+const modalActiveSerch = ref(false);
 
 const modalActive = ref(null);
 const toggleModal = () => {
