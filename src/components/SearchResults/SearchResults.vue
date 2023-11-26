@@ -81,10 +81,58 @@
 
   <div class="flex bg-yellow-900 p-2 mb-[96px]">
 
-  <div class="flex-2 w-[295px]  bg-yellow-200 p-2">
+  <div class="flex flex-col gap-[20px] flex-2 w-[295px]  bg-yellow-200 p-2">
     
+    <div class="bg-inputsGray py-[20px]  px-[18px] rounded-[6px] ">
+      <p class="text-[18px] text-dark-black mb-[16px] ">Search by property name</p>
+      <div class="flex gap-[10px] items-center pt-[11px] pb-[12px] px-[12px] justify-center  border-solid border-2 border-borderserbox rounded-[4px]">
+        <img class="w-[20px] h-[20px] " src="../../assets/icons/search 1.svg" alt="search">
+        <input class=" bg-white text-light-black "  type="text" placeholder="eg. Beach westpalm">
+      </div>
+    </div>
 
-  </div>
+    <div class="">
+       <p class="mb-[20px] text-[18px] font-[600]">Filter by</p>
+       <div class="flex flex-col  border-solid border-2 border-borderserbox rounded-[6px] ">
+         <div class="bg-inputsGray p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Your budget per day</div>
+         <div class="flex flex-col p-[18px]">
+          <div class="">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div class="flex my-[20px]">
+            <p>Set your own budget</p>
+            <img src="" alt="">
+          </div>
+           <div class="flex gap-[35px] mt-[15px]">
+            <button>Min budget</button>
+            <button>Max budget</button>
+          </div>
+
+         </div>
+       </div>
+    </div>
+
+
+
+        <div class="flex flex-col  border-solid border-2 border-borderserbox rounded-[6px] ">
+          <div class="bg-inputsGray p-[18px] text-[16px] font-[500] rounded-t-[6px] ">Rating</div>
+          <div class="flex flex-col p-[18px]">
+          <div class="">
+            <p>Show only ratings more than</p>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+
+          </div>
+        </div>
+
+
+
+    <!-- end box yellow -->
+  </div>   
 
     <!-- end flex 2-->
 
@@ -123,8 +171,8 @@
 <!-- start cards -->
 
      <div class="bg-red-800 p-2 flex flex-col gap-[24px]">
-           <div class="flex gap-[24px] w-[100%] bg-gray-200 rounded-[5px] border-solid border-1
-          border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+           <div class="flex gap-[24px] w-[100%]  rounded-[5px] 
+           border-solid border-2 border-borderserbox  py-[20px] pl-[20px] pr-[24px] ">
               <div class="flex-2  rounded-[5px] ">
                 <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/12.png" alt="12">
               </div>
@@ -164,8 +212,7 @@
 
 
     <div class="bg-red-800 p-2 flex flex-col gap-[24px]">
-           <div class="flex gap-[24px] bg-gray-200 rounded-[5px] border-solid border-1
-            border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
+           <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
           <div class="flex-2  rounded-[5px] ">
             <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/12.png" alt="12">
           </div>
