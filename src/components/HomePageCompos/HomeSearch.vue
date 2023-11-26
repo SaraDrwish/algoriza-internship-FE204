@@ -1,7 +1,7 @@
 <template>
   <div class="">
         <div class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
-           <form @submit.prevent  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+           <form @submit.prevent="handleSubmit"  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
            
             <div class="bigsearchdropdnbox relative w-[286px] text-[13px]">
 
@@ -11,7 +11,7 @@
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
                   <input  v-model="searchQuery"
                     @input="getSearchContsResults"
-                    class="flex  w-[100%]" type="text" placeholder="Where are you going ?" required>
+                    class="flex w-[100%]" type="text" placeholder="Where are you going ?" required>
                     <span @click="toggleModal" class="flex cursor-pointer  ">
                       <svg  v-show="!modalActive"  xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
                           <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -163,8 +163,7 @@ const getSearchContsResults = async () => {
     
   if (searchQuery.value.trim() !== "") {
     const countrs = await fetchCountries(searchQuery.value);
-    
-
+  
     if (countrs && countrs.length > 0) {
       dropdownOptions.value = countrs;
     } else {
@@ -189,8 +188,6 @@ const handleSubmit = () => {
     router.push('/signin');
     return;
   }
-
-
 
   
     if (validateForm()) {

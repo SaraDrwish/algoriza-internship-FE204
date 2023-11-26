@@ -66,7 +66,9 @@
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
-                  <HomeSearch />
+                  <HomeSearch  @selectCountry="selectCountry" >
+                    {{ selectCountry }}
+                  </HomeSearch>
               </div>
       <!-- //////////end search///////// -->
 
@@ -497,19 +499,52 @@ defineProps({
 
 // /////////////////////
 
-const selectedCountry = localStorage.getItem('selectedCountry');
-const checkin = localStorage.getItem('checkInDate');
-const checkout = localStorage.getItem('checkOutDate');
-const guests = localStorage.getItem('guests');
-const rooms = localStorage.getItem('rooms');
+// const selectedCountry = localStorage.getItem('selectedCountry');
+// const checkin = localStorage.getItem('checkInDate');
+// const checkout = localStorage.getItem('checkOutDate');
+// const guests = localStorage.getItem('guests');
+// const rooms = localStorage.getItem('rooms');
 
-if (checkin && checkout ) {
 
-  hotelSearchFunction(checkin, checkout);
-   
-} else {
-  console.error('Error: Arrival date or departure date not found in local storage.');
+const searchData = ref({
+  // selectedCountry: '',
+  // checkin: '',
+  // checkOut: '',
+  // guests: '',
+  // rooms: '',
+    selectedCountry :localStorage.getItem('selectedCountry'),
+    checkin :localStorage.getItem('checkInDate'),
+    checkout: localStorage.getItem('checkOutDate'),
+    guests: localStorage.getItem('guests'),
+    rooms :localStorage.getItem('rooms'),
+});
+
+// Your existing script setup code for the SearchResults page
+
+const selectCountry = (country) => {
+  // Update the search parameters with the selected country data
+  searchData.value.selectedCountry = country.name;
+  searchData.value.checkin = country.name;
+  searchData.value.checkout = country.name;
+  searchData.value.guests = country.name;
+  searchData.value.rooms = country.name;
+
+  // You may set other fields like check-in, check-out, guests, rooms as needed
+  // Example:
+  // searchData.value.checkIn = // set your value
+  // searchData.value.checkOut = // set your value
+  // searchData.value.guests = // set your value
+  // searchData.value.rooms = // set your value
+
 }
+
+// if (checkin && checkout ) {
+
+//   hotelSearchFunction(checkin, checkout);
+   
+// } else {
+//   console.error('Error: Arrival date or departure date not found in local storage.');
+// }
 
 
 // /////////////////////
@@ -552,9 +587,9 @@ const fetchHotels = async () => {
 
 // ////////
 
-onMounted(() => {
-  fetchHotels();
-});
+// onMounted(() => {
+//   fetchHotels();
+// });
 
 // ////////
 
