@@ -66,31 +66,13 @@
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
-                   <!-- <HomeSearch
-                      :selectedCountry="selectedCountry"
-                      :checkin="checkInDate"
-                      :checkout="checkOutDate"
-                      :guests="guests"
-                      :rooms="rooms"
-                    /> -->
-
-                     <!-- <HomeSearch 
-                      :enableInputs="false"
-                      :searchQuery="city"
-                      :checkInDate="checkin"
-                      :checkOutDate="checkout"
-                      :guests="guests"
-                      :rooms="rooms"
-                      /> -->
-
                         <HomeSearch 
                         :searchQuery="city"
                         :checkInDate="checkin"
                         :checkOutDate="checkout"
                         :guests="guests"
                         :rooms="rooms"
-                        />
-                      
+                        />  
               </div>
       <!-- //////////end search///////// -->
 
@@ -509,33 +491,25 @@ import footerlastbtm from '../footerlastbtm.vue';
 import { ref, defineProps } from 'vue';
 import axios from 'axios';
 
-// import { useRouter } from 'vue-router';
-// const router = useRouter()
-
-const routes = [
-
-  {
-    path: '/searchres',
-    name: 'searchres',
-    component: () => import('@/path/to/SearchResults.vue'),
-    props: route => ({
-      city: route.query.city,
-      checkin: route.query.checkin,
-      checkout: route.query.checkout,
-      guests: route.query.guests,
-      rooms: route.query.rooms,
-    }),
-  },
-];
-
-
+// const routes = [
+//   {
+//     path: '/searchres',
+//     name: 'searchres',
+//     component: () => import('@/path/to/SearchResults.vue'),
+//     props: route => ({
+//       city: route.query.city,
+//       checkin: route.query.checkin,
+//       checkout: route.query.checkout,
+//       guests: route.query.guests,
+//       rooms: route.query.rooms,
+//     }),
+//   },
+// ];
 
 const modalActiveSerch = ref(false);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
-
-// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "modalActive"]);
 
 const props = defineProps({
   city: String,
@@ -549,47 +523,39 @@ const props = defineProps({
   }
 });
 
-// const selectedCountry = localStorage.getItem("selectedCountry") || "";
-// const checkin = localStorage.getItem("checkInDate") || "";
-// const checkout = localStorage.getItem("checkOutDate") || "";
-// const guests = localStorage.getItem("guests") || "";
-// const rooms = localStorage.getItem("rooms") || "";
 
 // /////////////////////
 
 
-const fetchHotels = async () => {
-  const options = {
-    method: 'GET',
-    url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
-    params: {
-      dest_id: '-2092174',
-      search_type: 'CITY',
-      arrival_date: '<REQUIRED>',
-      departure_date: '<REQUIRED>',
-      adults: '1',
-      children_age: '0,17',
-      room_qty: '1',
-      page_number: '1',
-      languagecode: 'en-us',
-      currency_code: 'AED',
-    },
-    headers: {
-      'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com',
-    },
-  };
+const searchHotels = async () => {
+  
   try {
-    const response = await axios.request(options);
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
+
+    const url = 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=CITY&arrival_date=%3CREQUIRED%3E&departure_date=%3CREQUIRED%3E&adults=1&children_age=0%2C17&room_qty=1&page_number=1&languagecode=en-us&currency_code=AED';
+    const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+          'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+        }
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+  catch(e) {
+    console.log(e)
   }
+
 }
 
-
-// ////////
-
+// ////////////
 
 </script>
 
@@ -601,6 +567,6 @@ button{
     transition: all 0.3s ease-in;
 }
 .leftbox button:hover {
-   background-color: unset;
- }
+  background-color: unset;
+}
 </style>
