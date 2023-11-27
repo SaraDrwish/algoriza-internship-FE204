@@ -528,33 +528,80 @@ const props = defineProps({
 
 
 const searchHotels = async () => {
+  // const url = 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=CITY&arrival_date=%3CREQUIRED%3E&departure_date=%3CREQUIRED%3E&adults=1&children_age=0%2C17&room_qty=1&page_number=1&languagecode=en-us&currency_code=AED';
+
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+  //     'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+  //   }
+  // };
+
+  // try {
+  //   const response = await fetch(url, options);
+  //   const result = await response.json(); 
+
+  //   if (result.status === true) {
+  //     const hotels = result.data.hotels;
+
+  //     hotels.forEach((hotel) => {
+  //       const hotelName = hotel.property.name;
+  //       const rate = hotel.reviewScore;
+  //       const reviews = hotel.reviewCount;
+  //       const price = hotel.property.priceBreakdown.currentPrice;
+  //       const discount = hotel.property.priceBreakdown.discount;
+
+  //       console.log(`Hotel Name: ${hotelName}`);
+  //       console.log(`Rate: ${rate}`);
+  //       console.log(`Reviews: ${reviews}`);
+  //       console.log(`Price: ${price}`);
+  //       console.log(`Discount: ${discount}`);
+  //       console.log('------------------------');
+  //     });
+  //   } else {
+  //     console.error('API call unsuccessful. Error message:', result.message);
+  //   }
+  // } catch (error) {
+  //   console.error('Error fetching data from API:', error);
+  // }
+
+  // ///////////
+
   
-  try {
-
-    const url = 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=CITY&arrival_date=%3CREQUIRED%3E&departure_date=%3CREQUIRED%3E&adults=1&children_age=0%2C17&room_qty=1&page_number=1&languagecode=en-us&currency_code=AED';
-    const options = {
-        method: 'GET',
-        headers: {
-          'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-          'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-        }
-      };
-
-      try {
-        const response = await fetch(url, options);
-        const result = await response.text();
-        console.log(result);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-  catch(e) {
-    console.log(e)
+const options = {
+  method: 'GET',
+  url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
+  params: {
+    dest_id: '20123249',
+    search_type: ' city',
+    arrival_date: '2023-11-28',
+    departure_date: '2023-11-30',
+    adults: '1',
+    children_age: '0,17',
+    room_qty: '1',
+    page_number: '1',
+    languagecode: 'en-us',
+    currency_code: 'AED'
+  },
+  headers: {
+    'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+    'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
   }
+};
+
+try {
+  const response = await axios.request(options);
+  console.log("response.data search results : ", response.data);
+} catch (error) {
+  console.error("error search results page: " , error);
+}
+  // ////////////
 
 }
 
+
+// window.addEventListener('load', searchHotels);
 // ////////////
 
 </script>
