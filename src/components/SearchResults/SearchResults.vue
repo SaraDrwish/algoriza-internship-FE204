@@ -481,50 +481,19 @@ import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
 import footerlastbtm from '../footerlastbtm.vue';
-import { toRefs } from 'vue';
-
 import { ref, defineProps } from 'vue';
 import axios from 'axios';
 
 
 const modalActiveSerch = ref(false);
-
-// const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
 
-// const { modalActive, newProp } = defineProps(['modalActive', 'newProp']);
+// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "modalActive"]);
 
-// const { modalActive, newProp } = defineProps({
-//   modalActive: {
-//     type: Boolean,
-//     default: false,
-//   },
-//   newProp: {
-//     type: String,
-//     default: 'defaultValue',
-//   },
-// });
-
-// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms"]);
-
-
-
-// const props = defineProps({
-//   modalActive: {
-//     type: Boolean,
-//     default: false,
-//   },
-//   ...toRefs(toRefs(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "newProp"])),
-// });
-
-
-// const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms" , "modalActive"]);
-const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "modalActive"]);
-
-defineProps({
-  selectedCountry:String,
+const props = defineProps({
+  selectedCountry: String,
   checkInDate: String,
   checkOutDate: String,
   guests: Number,
@@ -533,21 +502,7 @@ defineProps({
     type: Boolean,
     default: false,
   }
-  
 });
-
-
-
-// defineProps({
-//   modalActive: {
-//     type: Boolean,
-//     default: false,
-//   },
-
-// })
-
-// /////////////////////
-
 
 const selectedCountry = localStorage.getItem("selectedCountry") || "";
 const checkin = localStorage.getItem("checkInDate") || "";
@@ -555,43 +510,7 @@ const checkout = localStorage.getItem("checkOutDate") || "";
 const guests = localStorage.getItem("guests") || "";
 const rooms = localStorage.getItem("rooms") || "";
 
-   
-
-// const searchData = ref({
-//   // selectedCountry: '',
-//   // checkin: '',
-//   // checkOut: '',
-//   // guests: '',
-//   // rooms: '',
-//     selectedCountry :localStorage.getItem('selectedCountry'),
-//     checkin :localStorage.getItem('checkInDate'),
-//     checkout: localStorage.getItem('checkOutDate'),
-//     guests: localStorage.getItem('guests'),
-//     rooms :localStorage.getItem('rooms'),
-// });
-
-// Your existing script setup code for the SearchResults page
-
-// const selectCountry = (country) => {
-//    searchData.value.selectedCountry = country.name;
-//   searchData.value.checkin = country.name;
-//   searchData.value.checkout = country.name;
-//   searchData.value.guests = country.name;
-//   searchData.value.rooms = country.name;
- 
-// }
-
-// if (checkin && checkout ) {
-
-//   hotelSearchFunction(checkin, checkout);
-   
-// } else {
-//   console.error('Error: Arrival date or departure date not found in local storage.');
-// }
-
-
 // /////////////////////
-
 
 
 const fetchHotels = async () => {
@@ -618,21 +537,11 @@ const fetchHotels = async () => {
   try {
     const response = await axios.request(options);
     console.log(response.data);
-
-    // Handle the response  component's 
-
   } catch (error) {
     console.error(error);
   }
 }
 
-
-
-// ////////
-
-// onMounted(() => {
-//   fetchHotels();
-// });
 
 // ////////
 
@@ -641,7 +550,6 @@ const fetchHotels = async () => {
 
 <style scoped>
 input{
-  /* background: unset; */
   background-color: unset !important;
 }
 button{

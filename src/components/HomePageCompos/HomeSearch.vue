@@ -1,7 +1,7 @@
 <template>
   <div class="">
         <div class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
-           <form @submit.prevent="handleSubmit"  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+           <form @submit.prevent  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
            
             <div class="bigsearchdropdnbox relative w-[286px] text-[13px]">
 
@@ -37,7 +37,6 @@
                     w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
                     <li   > {{ searchresult.name }} </li>
                   </a>
-                   <!-- <li class=" hover:transition-all ease-in duration-400 hover:text-primary w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer ">Aswan</li> -->
                  </ul>
               </div>
 
@@ -64,7 +63,8 @@
               <input v-model="rooms" class="text-[13px] w-full " type="number" placeholder="Rooms">
             </div>
           
-            <input @click="handleSubmit" class="flex tracking-[0.3px] w-[137px] justify-center bg-primary text-[15px] text-white  
+            <input @click="handleSubmit"      
+             class="flex tracking-[0.3px] w-[137px] justify-center bg-primary text-[15px] text-white  
              cursor-pointer py-[12px] px-[18px]
              rounded-[6px]" type="submit" value="Search">
 
@@ -79,23 +79,33 @@
 input[type="submit"] {
   transition: all 0.3s ease;
 }
-li:last-child { border-bottom: none; }
 
-input[type=date] {
-      
-}
+li:last-child { border-bottom: none; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+
+input[type="date"]{
+  display: flex;
+  flex-direction: row-reverse  ; 
+  /* background: url("../../assets/icons/calendar\ 1.svg"); */
+  /* background-position: left center; */
+  /* background-repeat: no-repeat; */
+  position: relative;
+}
+ 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* display: none;
+    -webkit-appearance: none; */
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
 }
 
- 
 </style>
 
 <script setup>
