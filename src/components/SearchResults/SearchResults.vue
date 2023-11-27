@@ -477,6 +477,13 @@
 </template>
 
 <script setup>
+
+//  we will use these endpoints:
+// - Search Hotels
+// - Get Sort By
+// - Get Hotel Details
+
+
 import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';

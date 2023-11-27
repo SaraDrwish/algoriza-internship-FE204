@@ -91,15 +91,10 @@ input::-webkit-inner-spin-button {
 input[type="date"]{
   display: flex;
   flex-direction: row-reverse  ; 
-  /* background: url("../../assets/icons/calendar\ 1.svg"); */
-  /* background-position: left center; */
-  /* background-repeat: no-repeat; */
   position: relative;
 }
- 
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-    /* display: none;
-    -webkit-appearance: none; */
     opacity: 0;
     width: 100%;
     position: absolute;
@@ -109,12 +104,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 </style>
 
 <script setup>
-
-//  we will use these endpoints:
-// - Search Hotel Destination
-// - Search Hotels
-// - Get Sort By
-// - Get Hotel Details
 
 import { ref } from 'vue';
 import axios from 'axios'
@@ -146,8 +135,32 @@ const currentDate = new Date().toISOString().split("T")[0];
 
 const dropdownOptions = ref([]);
 
+const id = ref(null)
+// const timout = ref(null)
+// clearTimeout( fetchCountries.value);
+
 const fetchCountries = async (query) => {
-  
+
+  // timout.value= setTimeout( { 
+  //   const options = {
+  //     method: 'GET',
+  //     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
+  //     params: { query },
+  //     headers: {
+  //       'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+  //       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+  //     }
+  //   }
+  //   try {
+  //     const response = await axios.request(options)
+  //     console.log(response.data)
+  //     return response.data.data
+  //   } catch(error) {
+  //     console.error(error)
+  //     return null;
+  //   }
+  // }, 200)
+
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
@@ -165,6 +178,7 @@ const fetchCountries = async (query) => {
     console.error(error);
     return null
   }
+
 }
 
 const getSearchContsResults = async () => {
@@ -188,6 +202,7 @@ const getSearchContsResults = async () => {
 };
 
 const selectCountry = (country) => {
+  console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
   searchQuery.value = country.name;
   modalActive.value = false; 
 };
@@ -206,7 +221,22 @@ const handleSubmit = () => {
       window.localStorage.setItem('checkOutDate', checkOutDate.value);
       window.localStorage.setItem('guests', guests.value);
       window.localStorage.setItem('rooms', rooms.value);
-      router.push('/searchres');
+
+      console.log(" searchQuery.dest_id:::",
+        searchQuery.dest_id, " -- ",
+        id, searchQuery.value.dest_id, "--  ",
+         
+      )  
+      // router.push('/searchres');
+      router.push({
+        name: "searchres",
+        params: { id: searchQuery.id },
+        query: {
+          id: searchQuery.dest_id,
+        }
+      
+    });
+
     } else {
       console.error("Form validation failed");
        

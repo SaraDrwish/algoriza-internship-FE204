@@ -30,11 +30,13 @@ const router = createRouter({
       component: HomePageComposSigned,
     },
      {
-      path: '/searchres',
+      // path: '/searchres',
+      path: '/searchres/:id',
       name: 'searchres',
       component:  SearchResults ,
     },
     {
+      // path: '/prodetails/:id',
       path: '/prodetails',
       name: 'prodetails',
       component:  ProdDetails ,
