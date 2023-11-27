@@ -66,13 +66,31 @@
 
     <!-- //////////start search////////// -->
               <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
-                   <HomeSearch
+                   <!-- <HomeSearch
                       :selectedCountry="selectedCountry"
                       :checkin="checkInDate"
                       :checkout="checkOutDate"
                       :guests="guests"
                       :rooms="rooms"
-                    />
+                    /> -->
+
+                     <!-- <HomeSearch 
+                      :enableInputs="false"
+                      :searchQuery="city"
+                      :checkInDate="checkin"
+                      :checkOutDate="checkout"
+                      :guests="guests"
+                      :rooms="rooms"
+                      /> -->
+
+                        <HomeSearch 
+                        :searchQuery="city"
+                        :checkInDate="checkin"
+                        :checkOutDate="checkout"
+                        :guests="guests"
+                        :rooms="rooms"
+                        />
+                      
               </div>
       <!-- //////////end search///////// -->
 
@@ -491,6 +509,26 @@ import footerlastbtm from '../footerlastbtm.vue';
 import { ref, defineProps } from 'vue';
 import axios from 'axios';
 
+// import { useRouter } from 'vue-router';
+// const router = useRouter()
+
+const routes = [
+
+  {
+    path: '/searchres',
+    name: 'searchres',
+    component: () => import('@/path/to/SearchResults.vue'),
+    props: route => ({
+      city: route.query.city,
+      checkin: route.query.checkin,
+      checkout: route.query.checkout,
+      guests: route.query.guests,
+      rooms: route.query.rooms,
+    }),
+  },
+];
+
+
 
 const modalActiveSerch = ref(false);
 const toggleModal = () => {
@@ -500,7 +538,7 @@ const toggleModal = () => {
 // const props = defineProps(["selectedCountry", "checkInDate", "checkOutDate", "guests", "rooms", "modalActive"]);
 
 const props = defineProps({
-  selectedCountry: String,
+  city: String,
   checkInDate: String,
   checkOutDate: String,
   guests: Number,
@@ -511,11 +549,11 @@ const props = defineProps({
   }
 });
 
-const selectedCountry = localStorage.getItem("selectedCountry") || "";
-const checkin = localStorage.getItem("checkInDate") || "";
-const checkout = localStorage.getItem("checkOutDate") || "";
-const guests = localStorage.getItem("guests") || "";
-const rooms = localStorage.getItem("rooms") || "";
+// const selectedCountry = localStorage.getItem("selectedCountry") || "";
+// const checkin = localStorage.getItem("checkInDate") || "";
+// const checkout = localStorage.getItem("checkOutDate") || "";
+// const guests = localStorage.getItem("guests") || "";
+// const rooms = localStorage.getItem("rooms") || "";
 
 // /////////////////////
 

@@ -15,7 +15,8 @@
 
               <!--  -->
               <div class="absolute top-[468px]   "> 
-                <HomeSearch />
+                <HomeSearch    />
+                  <!-- <HomeSearch  :enableInputs="true" /> -->
               </div>
               <!--  -->
 

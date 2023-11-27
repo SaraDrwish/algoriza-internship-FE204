@@ -1,13 +1,13 @@
 <template>
   <div class="">
-        <div class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
-           <form @submit.prevent  action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+        <div  class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
+           <form  @submit.prevent   action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
            
-            <div class="bigsearchdropdnbox relative w-[286px] text-[13px]">
+            <div    class="bigsearchdropdnbox relative w-[286px] text-[13px]">
 
-              <div class="flex bg-inputsGray   rounded-[4px]  ">
+              <div  class="flex bg-inputsGray   rounded-[4px]  ">
 
-                <div class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
+                <div  class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
                   <input  v-model="searchQuery"
                     @input="getSearchContsResults"
@@ -112,6 +112,7 @@ import { isAuthen } from '../auth';
 
 const router = useRouter()
 
+
 const modalActive = ref(null);
 
 const toggleModal = () => {
@@ -122,7 +123,10 @@ defineProps({
   modalActive: {
     type: Boolean,
     default: false,
-  }
+  },
+  // enableInputs: {
+  //    type: Boolean,
+  // }
 })
 
 const searchQuery = ref("");
@@ -132,34 +136,10 @@ const guests = ref("");
 const rooms = ref("");
 
 const currentDate = new Date().toISOString().split("T")[0];
-
 const dropdownOptions = ref([]);
-
 const id = ref(null)
-// const timout = ref(null)
-// clearTimeout( fetchCountries.value);
 
 const fetchCountries = async (query) => {
-
-  // timout.value= setTimeout( { 
-  //   const options = {
-  //     method: 'GET',
-  //     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-  //     params: { query },
-  //     headers: {
-  //       'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-  //       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-  //     }
-  //   }
-  //   try {
-  //     const response = await axios.request(options)
-  //     console.log(response.data)
-  //     return response.data.data
-  //   } catch(error) {
-  //     console.error(error)
-  //     return null;
-  //   }
-  // }, 200)
 
   const options = {
     method: 'GET',
@@ -194,21 +174,16 @@ const getSearchContsResults = async () => {
       dropdownOptions.value = [{ id: -1, name: 'No matching cities found' }];
       console.log("No matching cities found")
     }
-
-   }
-
+  }
   modalActive.value = true;
  
 };
 
 const selectCountry = (country) => {
   console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
-  // id = country.dest_id;
-  // console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
   searchQuery.value = country.name;
   modalActive.value = false; 
 };
-
 
 const handleSubmit = () => {
     if (!isAuthen.value) {
@@ -216,23 +191,35 @@ const handleSubmit = () => {
     return;
   }
 
+  const saveSearchParamsToLocalStorage = () => {
+    window.localStorage.setItem('selectedCountry', searchQuery.value);
+    window.localStorage.setItem('checkInDate', checkInDate.value);
+    window.localStorage.setItem('checkOutDate', checkOutDate.value);
+    window.localStorage.setItem('guests', guests.value);
+    window.localStorage.setItem('rooms', rooms.value);
+  };
   
     if (validateForm()) {
-      window.localStorage.setItem('selectedCountry', searchQuery.value);
-      window.localStorage.setItem('checkInDate', checkInDate.value);
-      window.localStorage.setItem('checkOutDate', checkOutDate.value);
-      // window.localStorage.setItem('guests', guests.value);
-      // window.localStorage.setItem('rooms', rooms.value);
+      
+      saveSearchParamsToLocalStorage();
 
       // router.push('/searchres');
       router.push({
+        // name: 'searchres',
+        // params: { id:  id  },
+        // query: {
+        //   id: searchQuery.dest_id,
+        // }
+
         name: 'searchres',
-        // params: { id: selectCountry.id },
-        params: { id: id.value},
+        params: { id: id },
         query: {
-          id: searchQuery.dest_id,
-          // preview:true
-        }
+          city: searchQuery.value,
+          checkin: checkInDate.value,
+          checkout: checkOutDate.value,
+          guests: guests.value,
+          rooms: rooms.value,
+        },
       
     });
 
