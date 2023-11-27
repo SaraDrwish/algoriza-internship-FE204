@@ -203,6 +203,8 @@ const getSearchContsResults = async () => {
 
 const selectCountry = (country) => {
   console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
+  // id = country.dest_id;
+  // console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
   searchQuery.value = country.name;
   modalActive.value = false; 
 };
@@ -219,20 +221,17 @@ const handleSubmit = () => {
       window.localStorage.setItem('selectedCountry', searchQuery.value);
       window.localStorage.setItem('checkInDate', checkInDate.value);
       window.localStorage.setItem('checkOutDate', checkOutDate.value);
-      window.localStorage.setItem('guests', guests.value);
-      window.localStorage.setItem('rooms', rooms.value);
+      // window.localStorage.setItem('guests', guests.value);
+      // window.localStorage.setItem('rooms', rooms.value);
 
-      console.log(" searchQuery.dest_id:::",
-        searchQuery.dest_id, " -- ",
-        id, searchQuery.value.dest_id, "--  ",
-         
-      )  
       // router.push('/searchres');
       router.push({
-        name: "searchres",
-        params: { id: searchQuery.id },
+        name: 'searchres',
+        // params: { id: selectCountry.id },
+        params: { id: id.value},
         query: {
           id: searchQuery.dest_id,
+          // preview:true
         }
       
     });
