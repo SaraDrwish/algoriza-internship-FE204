@@ -5,6 +5,9 @@ import HomePageComposSigned from '../components/HomePageComposSigned/HomePageCom
 import NotFound from '../components/NotFound.vue';
 import SearchResults from '../components/SearchResults/SearchResults.vue';
 import ProdDetails from '../components/ProdDetailscompo/ProductDetail.vue';
+import Checkout from '../components/CheckoutCompo/Checkout.vue';
+import MyTrips from '../components/MyTripsCompo/MyTrips.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +43,16 @@ const router = createRouter({
       path: '/prodetails',
       name: 'prodetails',
       component:  ProdDetails ,
+    },
+    {
+      path: '/checkout',
+      name: 'checkout',
+      component:  Checkout  ,
+    },
+    {
+      path: '/mytrips',
+      name: 'mytrips',
+      component:  MyTrips  ,
     },
     {
       path: '/:catchAll(.*)',

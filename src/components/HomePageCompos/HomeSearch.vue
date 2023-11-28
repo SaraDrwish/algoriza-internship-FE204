@@ -108,7 +108,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 import { ref } from 'vue';
 import axios from 'axios'
 import { useRouter } from 'vue-router';
-import { isAuthen } from '../auth';
+// import { isAuthen } from '../auth';
 
 const router = useRouter()
 
@@ -144,7 +144,7 @@ const fetchCountries = async (query) => {
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-    params: { query  },
+    params: { query: 'egypt'  },
     headers: {
       'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
@@ -186,10 +186,10 @@ const selectCountry = (country) => {
 };
 
 const handleSubmit = () => {
-    if (!isAuthen.value) {
-    router.push('/signin');
-    return;
-  }
+  // if (!isAuthen.value) { }
+    // router.push('/signin');
+    // return;
+  // }
 
   const saveSearchParamsToLocalStorage = () => {
     window.localStorage.setItem('selectedCountry', searchQuery.value);
@@ -226,7 +226,8 @@ const handleSubmit = () => {
     } else {
       console.error("Form validation failed");
        
-    }
+}
+    
   }
 
 const validateForm = () => {
