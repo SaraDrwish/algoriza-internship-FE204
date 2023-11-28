@@ -3,7 +3,6 @@
 
     <div class="flex flex-col gap-[20px]">
 
-
       <div class="bg-inputsGray py-[20px]  px-[18px] rounded-[6px]   ">
         <p class="text-[18px] text-dark-black mb-[16px] ">Search by property name</p>
         <div class="flex gap-[10px] items-center pt-[11px] pb-[12px] 
@@ -23,10 +22,8 @@
 
                 <li class="flex justify-between items-center ">
                   <div class="flex gap-[8px] items-center ">
-                    <!-- <label class=" "> -->
                       <input type="checkbox" class="rounded-[15px] border-bordersr w-[20px] h-[20px]" checked="checked">
                       <span> $ 0 - $ 200 </span>
-                    <!-- </label> -->
                   </div>
 
                 </li>
@@ -57,10 +54,8 @@
 
                 <li class="flex justify-between items-center ">
                   <div class="flex gap-[8px] items-center">
-                    <!-- <label class=" "> -->
                       <input type="checkbox" class="rounded-[15px] bg-bordersr border-bordersr w-[20px] h-[20px] ">
                       <span>$ 2,000 - $ 5,000</span>
-                    <!-- </label> -->
                   </div>
 
                 </li>
@@ -107,18 +102,17 @@
                   <li class="flex gap-[1px] items-center justify-center px-[14px] border-solid border-l-2 border-borderserbox " >
                     <span>5</span> 
                     <img src="../../assets/icons/star-s-fill 4fl.svg" alt="str">
-                 </li>
+                  </li>
                  </ul>
                </div>
             </div>
 
-            </div>
-          </div>
+        </div>
+      </div>
 
       <!-- end box  -->
 
     </div>
-
 
   </div>
 </template>
@@ -135,5 +129,3 @@ input{
   background-color: unset;
 }
 </style>
-
- 

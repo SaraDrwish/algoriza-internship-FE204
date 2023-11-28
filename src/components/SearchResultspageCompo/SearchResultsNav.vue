@@ -61,7 +61,9 @@
 </template>
 
 <script setup>
-
+import { ref } from 'vue';
+const modalActive = ref(null);
+const toggleModal = () => {
+  modalActive.value = !modalActive.value
+}
 </script>
-
- 

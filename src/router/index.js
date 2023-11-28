@@ -3,7 +3,7 @@ import Home from '../views/Home.vue';
 import Register from '../components/Register.vue';
 import HomePageComposSigned from '../components/HomePageComposSigned/HomePageComposSigned.vue';
 import NotFound from '../components/NotFound.vue';
-import SearchResults from '../components/SearchResults/SearchResults.vue';
+import SearchResults from '../components/SearchResultspageCompo/SearchResults.vue';
 import ProdDetails from '../components/ProdDetailscompo/ProductDetail.vue';
 import Checkout from '../components/CheckoutCompo/Checkout.vue';
 import MyTrips from '../components/MyTripsCompo/MyTrips.vue'

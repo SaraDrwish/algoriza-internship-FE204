@@ -112,7 +112,6 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
-
 const modalActive = ref(null);
 
 const toggleModal = () => {
@@ -167,7 +166,6 @@ const getSearchContsResults = async () => {
     
   if (searchQuery.value.trim() !== "") {
     const countrs = await fetchCountries(searchQuery.value);
-  
     if (countrs && countrs.length > 0) {
       dropdownOptions.value = countrs;
     } else {
@@ -180,7 +178,7 @@ const getSearchContsResults = async () => {
 };
 
 const selectCountry = (country) => {
-  console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
+  // console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
   searchQuery.value = country.name;
   modalActive.value = false; 
 };
@@ -225,8 +223,7 @@ const handleSubmit = () => {
 
     } else {
       console.error("Form validation failed");
-       
-}
+    }
     
   }
 
@@ -252,10 +249,8 @@ const validateForm = () => {
   }
 
   return true; 
- 
+
 }
-
-
 
 </script>
 

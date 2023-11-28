@@ -47,7 +47,7 @@ import NavSecndry from './Navs/NavSecndry.vue';
 import footerlastbtm from './footerlastbtm.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { SignIn } from '../components/auth';
+import { SignIn } from '../auth';
 
 // import {useAuth0 }  from '@auth0/auth0-vue'
 // const {loginauth} = useAuth0()

@@ -9,9 +9,7 @@
                   <div class="flex-2  rounded-[5px] ">
                     <img class="w-[285px] h-[200px] rounded-[5px] " src="../../assets/imgs/12.png" alt="12">
                   </div>
-                  <!-- <div class="flex flex-1 bg-orange-500 "    > -->
-                    <div class="flex flex-1 bg-orange-500 "  v-for="hotel in searchResults" :key="hotel.hotel_id"  >
-                    
+                    <div class="flex flex-1 bg-orange-500 "  v-for="hotel in searchResults" :key="hotel.hotel_id"  >                    
                     <div class=" flex-1 p-2">
                       <p class="text-[20px] font-[500]">  {{ hotel.checkoutDate }} Julia Dens Resort</p>
                       <div class="flex gap-[12px] mb-[17px]">

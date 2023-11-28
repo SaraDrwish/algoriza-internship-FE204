@@ -1,9 +1,9 @@
-<template   >
+<template >
 
   <header class="text-white mb-[104px]  ">
 
     <div class="relative top-0 text-white h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2 "> 
-       
+    
     <!-- ///start nav///// -->
 
     <SearchResultsNavVue />
@@ -11,14 +11,14 @@
     <!-- ////end nav//// -->
 
     <!-- //////////start search////////// -->
-      <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
-                <HomeSearch 
-                :searchQuery="city"
-                :checkInDate="checkin"
-                :checkOutDate="checkout"
-                :guests="guests"
-                :rooms="rooms"
-                />  
+    <div class="absolute left-[85px] bottom-[-15%] text-Gray2">
+      <HomeSearch 
+                  :searchQuery="city"
+                  :checkInDate="checkin"
+                  :checkOutDate="checkout"
+                  :guests="guests"
+                  :rooms="rooms"
+        />  
       </div>
       <!-- //////////end search///////// -->
 
@@ -34,7 +34,7 @@
  
     <div class="leftbox flex flex-col gap-[20px] flex-2  ">
 
-      <SearchResultsLeftSideVue />
+    <SearchResultsLeftSideVue />
 
     </div>
 
@@ -42,25 +42,25 @@
 
   <div class="flex-1  ">
 
-    
-       <SearchResultsRightSidTop />
+    <SearchResultsRightSidTop />
     
   <!-- start cards -->
 
   <!-- ///////// -->
   
-  <SearchResultsRightDonSide/>
+    <SearchResultsRightDonSide/>
  
   <!-- //////// -->
 
   <!-- end cards -->
-
 
     <div class="mt-[56px] flex gap-[8px] m-auto text-center items-center justify-center ">
 
       <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white  ">
         <img class="w-[40px] h-[40px] rounded-[6px] " src="../../assets/icons/Arrow.svg" alt="leftarr">
       </div>
+
+<!-- ------start pagination ------  -->
 
       <div class="flex ">
         <div class="active rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-primary text-white  
@@ -75,6 +75,7 @@
           text-[16px] py-[9px] text-center">20</div>
       </div>
 
+<!-- ------end pagination ------  -->
 
       <div class="rounded-[6px] w-[40px] h-[41px] text-center  cursor-pointer flex items-center justify-center">
 
@@ -124,7 +125,7 @@
   </div>
 
   <div class="relative bottom-0 left-0 w-full ">
-    <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
+        <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
   </div>
 
 </template>
@@ -135,7 +136,6 @@
 // - Search Hotels
 // - Get Sort By
 // - Get Hotel Details
-
 
 import HomeSearch from '../HomePageCompos/HomeSearch.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
@@ -165,10 +165,10 @@ import SearchResultsNavVue from './SearchResultsNav.vue';
 //   },
 // ];
 
-const modalActiveSerch = ref(false);
-const toggleModal = () => {
-  modalActive.value = !modalActive.value
-}
+// const modalActiveSerch = ref(false);
+// const toggleModal = () => {
+//   modalActive.value = !modalActive.value
+// }
 
 const props = defineProps({
   city: String,
@@ -183,7 +183,6 @@ const props = defineProps({
 });
 
 
-
 // /////////////////////
 
 const searchResults = ref(null);
@@ -194,7 +193,6 @@ onMounted(async () => {
 });
 
 const fetchSearchResults = async () => {
-
   
   const options = {
     method: 'GET',
@@ -216,61 +214,16 @@ const fetchSearchResults = async () => {
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
     }
 
-
   };
 
   try {
     const response = await axios.request(options);
     console.log("response.data",response.data);
-    // console.log("searchResults", searchResults)
-    // console.log("searchResults.hotels", searchResults.hotels);
   } catch (error) {
     console.error(error);
   }
 
-  //  return {
-  //   status: true,
-  // data: {
-  //     hotels: generateMockHotels(),
-  //    },  
-  // };
-
-
 };
-
-// const generateMockHotels = () => {
-//   return [
-//     {
-//       hotel_id: 1,
-//       property: {
-//         name: 'Mock Hotel 1',
-//         priceBreakdown: {
-//           currentPrice: 100,
-//           discount: 10,
-//         },
-//       },
-//       reviewScore: 8.5,
-//       reviewCount: 150,
-//     },
-//     {
-//       hotel_id: 2,
-//       property: {
-//         name: 'Mock Hotel 2',
-//         priceBreakdown: {
-//           currentPrice: 120,
-//           discount: 15,
-//         },
-//       },
-//       reviewScore: 9.0,
-//       reviewCount: 200,
-//     },
-//     // Add more mock hotels as needed
-//   ];
-// }
-
-// ////////////////////
-
-// }
 
 // window.addEventListener('load', searchHotels);
 
@@ -283,7 +236,7 @@ input{
   background-color: unset !important;
 }
 button{
-    transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 </style>

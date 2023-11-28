@@ -17,12 +17,12 @@
 
                    <div @click="toggleModalSerch" class="flex cursor-pointer  ">
                       <svg  v-show="!modalActiveSerch"  xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
-                          <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                       <svg  v-show="modalActiveSerch" xmlns="http://www.w3.org/2000/svg" 
-                          width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655" 
-                          stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655" 
+                            stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </div>
                
@@ -38,7 +38,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+const modalActiveSerch = ref(false);
+const toggleModalSerch = () => {
+  modalActiveSerch.value = !modalActiveSerch.value
+}
 </script>
 
  
