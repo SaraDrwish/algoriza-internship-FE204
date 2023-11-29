@@ -1,6 +1,14 @@
 <template>
   <div class="">
 
+    <div  class=" ">
+      <!-- <div  @click="hideLoading" class=" "> -->
+       <!-- <WelcomeCard :loading="loadingVisible" /> -->
+         <WelcomeCard  />
+      <!-- <WelcomeCard  /> -->
+    </div>
+    
+
     <div class="">
         <NavSignined   />
     </div>
@@ -50,7 +58,14 @@ import PopularHotelsSec from '../HomePageCompos/PopularHotelsSec.vue';
 import HomeDownloadSec from '../HomePageCompos/HomeDownloadSec.vue';
 import HomeListFooter from '../HomePageCompos/HomeListFooter.vue';
 import footerlastbtm from '../footerlastbtm.vue';
-import NavSignined from '../Navs/NavSignined.vue'
+import NavSignined from '../Navs/NavSignined.vue';
+import WelcomeCard from './WelcomeCard.vue';
+
+
+// const loadingVisible = ref(true);
+// const hideLoading = () => {
+//   loadingVisible.value = false;
+// };
 
 </script>
 
