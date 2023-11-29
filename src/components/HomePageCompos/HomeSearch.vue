@@ -44,13 +44,13 @@
 
             <div class="flex gap-[10px] bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img  src="../../assets/icons/calendar 1.svg" alt="calendar-icon">
-              <input v-model="checkInDate" class="text-[13px] w-full" type="date" :min="currentDate" placeholder="Check in date" required >
+              <input v-model="checkInDate" name="checkInDate" class="text-[13px] w-full" type="date" :min="currentDate" placeholder="Check in date" required >
             </div>
 
             <div class="flex gap-[10px] bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
               <img src="../../assets/icons/calendar 1.svg" alt="calendar-icon">
               
-              <input v-model="checkOutDate" class="text-[13px] w-full" type="date" :min="checkInDate"  placeholder="Check out date" required >
+              <input v-model="checkOutDate" name="checkOutDate" class="text-[13px] w-full" type="date" :min="checkInDate"  placeholder="Check out date" required >
             </div>
 
             <div class="flex gap-[10px]  bg-inputsGray rounded-[4px] pt-[11px] pb-[12px] px-[12px]">
@@ -134,6 +134,8 @@ const checkOutDate = ref("");
 const guests = ref("");
 const rooms = ref("");
 
+// import fetchSearchResults from "../SearchResultspageCompo/SearchResults.vue"
+
 const currentDate = new Date().toISOString().split("T")[0];
 const dropdownOptions = ref([]);
 const id = ref(null)
@@ -143,9 +145,9 @@ const fetchCountries = async (query) => {
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-    params: { query: 'egypt'  },
+    params: { query: 'egypt' },
     headers: {
-      'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
+      'X-RapidAPI-Key': '52d9ce7503mshb0dfbdcfb3bcaf8p12dfabjsn97b7216b41ea',
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
     }
   };
@@ -217,8 +219,8 @@ const handleSubmit = () => {
           city: searchQuery.value,
           checkin: checkInDate.value,
           checkout: checkOutDate.value,
-          guests: guests.value,
-          rooms: rooms.value,
+          // guests: guests.value,
+          // rooms: rooms.value,
         },
       
     });
@@ -253,6 +255,15 @@ const validateForm = () => {
   return true; 
 
 }
+
+
+
+
+// ////////
+
+
+
+// ///////
 
 </script>
 

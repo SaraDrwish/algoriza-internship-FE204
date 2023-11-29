@@ -60,7 +60,6 @@ const handleSubmit = async () => {
   if (emailIn.value === emailRegstord && passwordIn.value ===  passRegstored ) {
     console.log("logged successfuly ");
     const userToken =  generateToken();
-    // const userToken = await authService.generateToken(emailIn.value);
     localStorage.setItem('userToken', userToken);
     SignIn()
     router.push('/signedhome');

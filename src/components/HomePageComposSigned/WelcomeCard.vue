@@ -1,5 +1,5 @@
 <template>
-    <div v-if="loading" class=" relative z-10  ">
+    <div v-if="!loading" class=" relative z-10 bg-welcomeGray ">
     <div class="absolute left-[40%] mt-[2%] max-w-[400px] px-[24px] pb-[28px] pt-[50px] max-h-[500px] 
     flex flex-col text-center gap-[45px] bg-white rounded-[10px]  "> 
     
@@ -41,3 +41,9 @@ const hideComponent = () => {
 // });
 
 </script>
+
+<style scoped>
+.color{
+  color: #FFF;
+}
+</style>

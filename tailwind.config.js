@@ -24,7 +24,9 @@ module.exports = {
         "paginatiopntextcolr": "#9E9E9E",
         "orngressearchbox": "#F2994A",
         "bggraynstedpage": "#F4F4F4",
-        "welcomeBlue" : "#2F80ED4D",
+        "welcomeBlue": "#2F80ED4D",
+        "welcomeGray": "#808080",
+        "checkoutText1": "#1A1A1A",
         
       }
       

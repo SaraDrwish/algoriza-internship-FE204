@@ -187,38 +187,69 @@ onMounted(async () => {
   searchResults.value = await fetchSearchResults();
 });
 
-const fetchSearchResults = async () => {
-  
-  const options = {
-    method: 'GET',
-    url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
-    params: {
-      dest_id: '20123249',
-      search_type: ' city',
-      arrival_date: '2023-11-28',
-      departure_date: '2023-11-30',
+// const fetchSearchResults = async () => {
+
+//   const options = {
+//     method: 'GET',
+//     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels',
+//     params: {
+//     dest_id: '-2092174',
+//     search_type: 'CITY',
+//     arrival_date:  ,
+//     departure_date:  ,
+//     adults: '1',
+//     children_age: '0,17',
+//     room_qty: '1',
+//     page_number: '1',
+//     languagecode: 'en-us',
+//     currency_code: 'AED'
+//     },
+//     headers: {
+//       'X-RapidAPI-Key': '52d9ce7503mshb0dfbdcfb3bcaf8p12dfabjsn97b7216b41ea',
+//       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com',
+//     },
+
+//   }
+
+//   try {
+//     const response = await axios.request(options);
+//     console.log("response.data",response.data);
+//   } catch (error) {
+//     console.error("error" , error);
+//   }
+
+// };
+
+
+const handleSearch = async () => {
+
+  if (!checkInDate.value || !checkOutDate.value) {
+    alert('Please select both arrival and departure dates.');
+    return;
+  }
+
+  try {
+    const response = await fetchHotelData({
+      dest_id: '-2092174',
+      search_type: 'CITY',
+      arrival_date: checkInDate.value,
+      departure_date: checkOutDate.value,
       adults: '1',
       children_age: '0,17',
       room_qty: '1',
       page_number: '1',
       languagecode: 'en-us',
-      currency_code: 'AED'
-    },
-    headers: {
-      'X-RapidAPI-Key': '6326864156mshfdb62e53dcfd7bfp168784jsn4365b4c7f478',
-      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-    }
+      currency_code: 'AED',
+    });
 
-  };
-
-  try {
-    const response = await axios.request(options);
-    console.log("response.data",response.data);
+    console.log(response);
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching hotel data:', error);
   }
-
 };
+
+
+// /////////////////////////////////////////////////////////////////////////
 
 // window.addEventListener('load', searchHotels);
 

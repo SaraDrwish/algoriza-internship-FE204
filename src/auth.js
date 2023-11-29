@@ -1,18 +1,6 @@
 import { ref } from 'vue';
 export const isAuthen = ref(false);
-// export const SignIn = () => {
-//   isAuthen.value = true;
-// };
-// export const logout = () => {
-//   isAuthent.value = false;
-// };
-// export const authService = {
-//   checkUserSignIn() {
-//     const userToken = localStorage.getItem('userToken');
-//     return !!userToken; 
-//   },
-// };
-// ////////////////////
+ 
 const userTokenKey = 'userToken';
 
 export const generateToken = () => {
@@ -32,7 +20,6 @@ export const SignIn = () => {
     const userToken = generateToken();
     localStorage.setItem(userTokenKey, userToken);
     isAuthen.value = true;
-    // console.log("userToken::" , userToken)   
   } 
 };
 export const logout = () => {
@@ -45,6 +32,5 @@ export const authService = {
     return !!userToken; 
   },
 
-  
 };
 
