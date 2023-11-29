@@ -121,9 +121,9 @@
 
 </script>
 
-<style>
+<style scoped >
 input{
-  background-color: unset !important;
+  background-color: unset !important ;
 }
 .leftbox button:hover {
   background-color: unset;

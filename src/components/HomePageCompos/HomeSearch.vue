@@ -108,7 +108,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 import { ref } from 'vue';
 import axios from 'axios'
 import { useRouter } from 'vue-router';
-// import { isAuthen } from '../auth';
+import { isAuthen } from '../../auth';
 
 const router = useRouter()
 
@@ -178,16 +178,18 @@ const getSearchContsResults = async () => {
 };
 
 const selectCountry = (country) => {
-  // console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
+  console.log(country, "::cty nam::", country.city_name, "id::", country.dest_id)
   searchQuery.value = country.name;
   modalActive.value = false; 
 };
 
 const handleSubmit = () => {
-  // if (!isAuthen.value) { }
-    // router.push('/signin');
-    // return;
-  // }
+
+  if (!isAuthen.value) { 
+    router.push('/signin');
+    return;
+   }
+  
 
   const saveSearchParamsToLocalStorage = () => {
     window.localStorage.setItem('selectedCountry', searchQuery.value);
