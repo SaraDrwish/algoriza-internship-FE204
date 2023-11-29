@@ -64,7 +64,7 @@ import { ref, onMounted } from 'vue';
 //   loading.value = true;
 // };
 
-import { authService } from '../../auth';
+import { SignIn ,authService } from '../../auth';
 
 const loading = ref(true);
 
