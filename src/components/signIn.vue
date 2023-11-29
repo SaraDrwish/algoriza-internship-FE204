@@ -48,22 +48,20 @@ import footerlastbtm from './footerlastbtm.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { SignIn } from '../auth';
-
-// import {useAuth0 }  from '@auth0/auth0-vue'
-// const {loginauth} = useAuth0()
+import { authService  } from '../auth';
 
 const router = useRouter();
 const emailIn = ref('');
 const passwordIn = ref('');
-
-
 
 const handleSubmit = async () => {
   const emailRegstord = window.localStorage.getItem('emailRegstord')
   const passRegstored = window.localStorage.getItem('passRegstored')
 
   if (emailIn.value === emailRegstord   && passwordIn.value ===  passRegstored ) {
-    console.log("logged successfuly ")
+    console.log("logged successfuly ");
+    const userToken = await authService.generateToken(emailIn.value);
+    localStorage.setItem('userToken', userToken);
     SignIn()
     router.push('/signedhome');
   } else {

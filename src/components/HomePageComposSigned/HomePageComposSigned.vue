@@ -1,11 +1,8 @@
 <template>
-  <div class="">
+  <div   class="">
 
-    <div  class=" ">
-      <!-- <div  @click="hideLoading" class=" "> -->
-       <!-- <WelcomeCard :loading="loadingVisible" /> -->
+    <div v-if="isSignedIn && loading"  class=" ">
          <WelcomeCard  />
-      <!-- <WelcomeCard  /> -->
     </div>
     
 
@@ -13,7 +10,7 @@
         <NavSignined   />
     </div>
 
-    <div class="mx-auto w-[calc(100%-100px)] ">
+    <div v-if="!loading" class="mx-auto w-[calc(100%-100px)] ">
 
       <div class=" ">
         <HomePageHeroImg />
@@ -61,11 +58,27 @@ import footerlastbtm from '../footerlastbtm.vue';
 import NavSignined from '../Navs/NavSignined.vue';
 import WelcomeCard from './WelcomeCard.vue';
 
+import { ref, onMounted } from 'vue';
 
-// const loadingVisible = ref(true);
-// const hideLoading = () => {
-//   loadingVisible.value = false;
+// const hideComponent = () => {
+//   loading.value = true;
 // };
+
+import { authService } from '../../auth';
+
+const loading = ref(true);
+
+const isSignedIn = ref(false);
+
+// const hideComponent = WelcomeCard.hideComponent; 
+
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false;
+    isSignedIn.value = authService.checkUserSignIn();
+  }, 2000);
+});
+
 
 </script>
 

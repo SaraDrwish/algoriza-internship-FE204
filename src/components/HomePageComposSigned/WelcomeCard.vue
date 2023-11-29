@@ -1,8 +1,5 @@
 <template>
-  <!-- <div  class=" relative z-10  "> -->
-    <div v-if="!loading" class=" relative z-10  ">
-    <!-- <div class=" relative z-10  w-[90vw] h-[90vh] bg-transparent "> -->
-
+    <div v-if="loading" class=" relative z-10  ">
     <div class="absolute left-[40%] mt-[2%] max-w-[400px] px-[24px] pb-[28px] pt-[50px] max-h-[500px] 
     flex flex-col text-center gap-[45px] bg-white rounded-[10px]  "> 
     
@@ -16,7 +13,7 @@
       </div>
       
       <div class="">
-        <button class="w-full py-[12px] px-[18px] bg-primary text-white text-[15px] " >Get Started</button>
+        <button @click="hideComponent" class="w-full py-[12px] px-[18px] bg-primary text-white text-[15px] " >Get Started</button>
       </div>
     </div>
 
@@ -24,19 +21,23 @@
 </template>
 
 <script setup>
-// import { ref  } from 'vue';
+
 import { ref, onMounted } from 'vue';
+import { authService } from '../../auth';
 
 const loading = ref(true);
 
-// export { WelcomeCard };
-// export { loading };
-onMounted(() => {
-  loading.value = false; 
-})
+onMounted(async () => {
+  await authService.simulatedAsyncCheck();
+  loading.value = true;
+});
+
+const hideComponent = () => {
+  loading.value = true;
+};
+
+// onMounted(() => {
+//   loading.value = false;
+// });
 
 </script>
-
-<style  scoped>
-
-</style>
