@@ -28,7 +28,7 @@
             <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
             <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
               and a late checkout. Gym included. Flexible cancellation applies</p>
-            <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+            <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
           </div>
           <div class="flex items-end flex-col flex-2 text-right justify-between   ">
             <p class="text-[13px] bg-srchRed py-[4px] px-[8px] mb-[64px] rounded-[6px] font-[500] text-white" >Book now and receive 15% off</p>
@@ -67,7 +67,7 @@
         <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
         <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
           and a late checkout. Gym included. Flexible cancellation applies</p>
-        <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+        <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
       </div>
       <div class="flex items-end flex-col flex-2 text-right justify-end ">
       
@@ -139,7 +139,7 @@
           <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
           <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
             and a late checkout. Gym included. Flexible cancellation applies</p>
-          <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+          <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
         </div>
         <div class="flex items-end flex-col flex-2 text-right justify-end ">
     
@@ -173,7 +173,7 @@
               <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
               <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
                 and a late checkout. Gym included. Flexible cancellation applies</p>
-              <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+              <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
             </div>
             <div class="flex items-end flex-col flex-2 text-right justify-end ">
     
@@ -244,7 +244,7 @@
               <p class="text-[13px] font-[500] mb-[4px] ">Live a little and celbrate with champagne</p>
               <p class="text-[13px]   ">Reats include a glass of French champagne, parking 
                 and a late checkout. Gym included. Flexible cancellation applies</p>
-              <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+              <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
             </div>
             <div class="flex items-end flex-col flex-2 text-right justify-between   ">
               <p class="text-[13px] bg-orngressearchbox
@@ -291,7 +291,7 @@
               <p class="text-[13px]   ">Reats include a glass of French 
                 champagne, parking and a late checkout.
                  Gym included. Flexible cancellation applies</p>
-              <button class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
+              <button @click="handleBotton" class="mt-[18px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]">See availability</button>
             </div>
             <div class="flex items-end flex-col flex-2 text-right justify-end   ">
               <p class="text-[13px] bg-srchGrn mb-[29px]  py-[4px] px-[8px] rounded-[6px]  font-[500] text-white" >15% off</p>
@@ -320,6 +320,14 @@
 
 <script setup>
 
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
+const handleBotton = () => {
+  
+    router.push('/prodetails');
+     
+}
 // /////////////////////
 
 // const searchResults = ref(null);

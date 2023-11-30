@@ -75,35 +75,6 @@
 </template>
 
 
-<style scoped >
-
-input[type="submit"] {
-  transition: all 0.3s ease;
-}
-
-li:last-child { border-bottom: none; }
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="date"]{
-  display: flex;
-  flex-direction: row-reverse  ; 
-  position: relative;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-    width: 100%;
-    position: absolute;
-    cursor: pointer;
-}
-
-</style>
-
 <script setup>
 
 import { ref } from 'vue';
@@ -124,9 +95,7 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  // enableInputs: {
-  //    type: Boolean,
-  // }
+   
 })
 
 const searchQuery = ref("");
@@ -146,7 +115,7 @@ const fetchCountries = async (query) => {
   const options = {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination',
-    params: { query: 'egypt' },
+    params: { query  },
     headers: {
       'X-RapidAPI-Key': '52d9ce7503mshb0dfbdcfb3bcaf8p12dfabjsn97b7216b41ea',
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
@@ -237,9 +206,9 @@ const validateForm = () => {
     if (
     searchQuery.value.trim() === "" ||
     checkInDate.value === "" ||
-    checkOutDate.value === "" ||
-    guests.value === "" ||
-    rooms.value === ""
+    checkOutDate.value === ""
+    // guests.value === "" ||
+    // rooms.value === ""
     ) {
     console.log("failed sending the inputs vals ")
     return false;  
@@ -259,12 +228,39 @@ const validateForm = () => {
 
 
 
-
-// ////////
-
-
-
 // ///////
 
 </script>
+
+
+
+<style scoped >
+input[type="submit"] {
+  transition: all 0.3s ease;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"] {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+</style>
+
 
