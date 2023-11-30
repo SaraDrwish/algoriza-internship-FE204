@@ -11,25 +11,20 @@
 
       <div class="bg-pink-600 flex flex-col p-2 mb-[172px] gap-[30px] ">
 
-        <!-- <div class="bg-pink-900 p-2 flex h-[452px] gap-[20px] "> -->
-        <div class="bg-pink-900 p-2 flex   ">
+        <div class="bg-pink-900   flex h-[452px] gap-[20px] ">
 
-          <div class=" w-[68%] bg-purple-800 p-2 flex-2  ">
-            <!-- <div class="  bg-slate-400 p-2"> -->
-              <img src="../../assets/imgs/d1.png" alt="d1">
-            <!-- </div> -->
+          <div class=" h-[452px] w-[68%]   flex-2  ">
+              <img class="rounded-[5px] w-[100%] h-[100%] " src="../../assets/imgs/d1.png" alt="d1">
           </div>
 
-          <div class=" w-[32%] bg-purple-400 p-2 flex flex-col flex-1 justify-between  gap-[16px]  ">
+          <div class=" w-[32%]  flex flex-col flex-1 justify-between  gap-[16px]  ">
 
-            <!-- <div class="flex   mb-[16px] bg-slate-900 p-2 "> -->
-              <div class="   ">
-                <img class=" " src="../../assets/imgs/d2.png" alt="d2">
+              <div class=" h-[218px] ">
+                <img class="rounded-[5px] w-[100%] h-[100%] " src="../../assets/imgs/d2.png" alt="d2">
               </div>
-              <div class="   ">
-                <img class="  " src="../../assets/imgs/d3.png" alt="d3">
+              <div class=" h-[218px]  ">
+                <img class=" rounded-[5px] w-[100%] h-[100%] " src="../../assets/imgs/d3.png" alt="d3">
               </div>
-            <!-- </div> -->
 
           </div>
 
@@ -57,8 +52,8 @@
               </span>
               <span class="text-[14px] text-light-black"> 4.5 (1200 Reviews)</span>
             </div>
-            <div class="flex gap-[6px] ">
-              <img class="w-[20px] h-[20px]" src="../../assets/icons/location2.svg" alt="locationPD">
+            <div class="flex gap-[6px]  ">
+              <img class="w-[20px] h-[20px] " src="../../assets/icons/location2.svg" alt="locationPD">
               <span class="text-[14px] text-Gray2 ">Lorem ipsum road, Tantruim-2322, Melbourne, Australia</span>
             </div>
             <!-- /////// -->
@@ -76,14 +71,14 @@
           <div class="flex flex-col flex-1 bg-green-100 p-2 gap-[35px] ">
 
             <div class="">
-              <img src="../../assets/imgs/locationmap1.png" alt="">
+              <img class=" rounded-[6px]" src="../../assets/imgs/locationmap1.png" alt="locationmap1">
             </div>
             <div class="  bg-green-300 p-2 gap-[22px]">
               <p class="text-[18px] font-[500] ">Explore the area</p>
               <ul class="flex flex-col justify-between bg-blue-200 p-2" >
                 <li class="flex bg-orange-100 p-2">
                   <div class="flex text-left items-start">
-                      <img src="../../assets/icons/bxs-plane-alt 2.svg" alt="bxs-plane-alt 2.svg">
+                      <img  src="../../assets/icons/bxs-plane-alt 2.svg" alt="bxs-plane-alt 2.svg">
                       <span>Hotel Penselvenyia</span>
                   </div>
                   <div class="text-right items-end">
