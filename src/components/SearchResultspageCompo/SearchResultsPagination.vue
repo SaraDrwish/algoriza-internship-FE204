@@ -3,14 +3,11 @@
 
     <div class="mt-[56px] flex gap-[8px] m-auto text-center items-center justify-center ">
 
-      <div class="flex items-center justify-center  "    >
-
+      <div class="flex items-center justify-center "  >
 
         <div class=" cursor-pointer flex items-center justify-center m-auto text-center pt-2  " 
-         @click="changePage(currentPage - 1)"
-        >
-          <!-- <img class="w-[40px] h-[40px] rounded-[6px] " src="../../assets/icons/Arrow.svg" alt="leftarr"> -->
-
+         @click="changePage(currentPage - 1)" >
+       
          <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
           <g filter="url(#filter0_d_25_579)">
             <path d="M26 50C20.3431 50 17.5147 50 15.7574 48.2426C14 46.4853 14 43.6569 14 38L14 22C14 16.3431 14 13.5147 15.7574 11.7574C17.5147 10 20.3431 10 26 10H42C47.6569 10 50.4853 10 52.2426 11.7574C54 13.5147 54 16.3431 54 22L54 38C54 43.6569 54 46.4853 52.2426 48.2426C50.4853 50 47.6569 50 42 50H26Z" fill="white" shape-rendering="crispEdges"/>
@@ -31,11 +28,6 @@
         </svg>
 
       </div>
-        
-                <!-- v-for="pageNumber in totalPages"
-                :key="pageNumber"
-                @click="changePage(pageNumber)"
-                :class="{ 'active-page': currentPage === pageNumber }" -->
 
         <div class="flex  "  v-for="pn in totalPages" :key="pn"  >
 
@@ -45,19 +37,12 @@
           'bg-white text-paginatiopntextcolr ': currentPage !== pn }"
           class="rounded-[6px] cursor-pointer w-[40px] h-[41px]  
           text-[16px] py-[9px] text-center" >{{ pn }}</div>
-
-          <!-- <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white text-paginatiopntextcolr 
-            text-[16px] py-[9px] text-center">....</div>
-          <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white text-paginatiopntextcolr
-            text-[16px] py-[9px] text-center">20</div> -->
-
           </div>
 
 
         <div class=" cursor-pointer text-center  flex items-center justify-center pt-2  " 
-        @click="changePage(currentPage + 1)"
-        >
-
+        @click="changePage(currentPage + 1) "  >
+        
          <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
           <g filter="url(#filter0_d_25_592)">
             <path d="M42 50C47.6569 50 50.4853 50 52.2426 48.2426C54 46.4853 54 43.6569 54 38L54 22C54 16.3431 54 13.5147 52.2426 11.7574C50.4853 10 47.6569 10 42 10H26C20.3431 10 17.5147 10 15.7574 11.7574C14 13.5147 14 16.3431 14 22L14 38C14 43.6569 14 46.4853 15.7574 48.2426C17.5147 50 20.3431 50 26 50H42Z" fill="white" shape-rendering="crispEdges"/>
@@ -81,7 +66,6 @@
 
     </div>
 
-
     </div>
 
 
@@ -96,7 +80,6 @@ import { ref, onMounted } from 'vue';
 const currentPage = ref(1); // Starting from page 1
 const totalPages = ref(1); // Initial value,updated based on API response
 
-
 const fetchTotalPages = async () => {
   //  API call to get total pages
   // For demonstration, using a setTimeout to simulate an asynchronous API call
@@ -104,7 +87,6 @@ const fetchTotalPages = async () => {
     totalPages.value = 4; // total pages from your API
   }, 500);
 };
-
 const changePage = (pageNumber) => {
    if (pageNumber >= 1 && pageNumber <= totalPages.value) {
     currentPage.value = pageNumber;
@@ -118,9 +100,3 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
-/* .active{
-  background: rgb(40, 144, 255);
-  color: white;
-} */
-</style>
