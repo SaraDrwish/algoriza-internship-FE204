@@ -1,11 +1,12 @@
 <template>
   <div class="">
-        <div  class=" relative left-[105px] w-[calc(100%-205px)]  h-[64px]  ">
-           <form  @submit.prevent   action="#" class=" flex rounded-[8px]  gap-[15px] shadow-lg bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
+        <div  class=" relative w-[calc(100%-105px)] left-[7%] mx-auto h-[64px]  ">
+           <form @submit.prevent action="#" class=" flex rounded-[8px] gap-[15px] shadow-lg
+            bg-white pt-[10px] pb-[11px] pr-[13px] pl-[12px] ">
            
             <div    class="bigsearchdropdnbox relative w-[286px] text-[13px]">
 
-              <div  class="flex bg-inputsGray   rounded-[4px]  ">
+              <div  class="flex bg-inputsGray  rounded-[4px] ">
 
                 <div  class="flex items-center  gap-[10px]  mx-[12px] mt-[11px] mb-[12px]">
                   <img class="flex " src="../../assets/icons/location 1.svg" alt="location-icon">
