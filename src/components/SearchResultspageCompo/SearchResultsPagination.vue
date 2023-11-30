@@ -3,7 +3,7 @@
 
     <div class="mt-[56px] flex gap-[8px] m-auto text-center items-center justify-center ">
 
-      <div class="flex items-center justify-center  bg-green-300  "    >
+      <div class="flex items-center justify-center  "    >
 
 
         <div class=" cursor-pointer flex items-center justify-center m-auto text-center pt-2  " 
@@ -37,14 +37,14 @@
                 @click="changePage(pageNumber)"
                 :class="{ 'active-page': currentPage === pageNumber }" -->
 
-        <div class="flex  "  v-for="pageNumber in totalPages" :key="pageNumber"  >
+        <div class="flex  "  v-for="pn in totalPages" :key="pn"  >
 
           <div 
-          @click="changePage(pageNumber)"
-          :class="{ 'bg-primary text-white': currentPage === pageNumber, 
-          'bg-white text-paginatiopntextcolr ': currentPage !== pageNumber }"
+          @click="changePage(pn)"
+          :class="{ 'bg-primary text-white': currentPage === pn, 
+          'bg-white text-paginatiopntextcolr ': currentPage !== pn }"
           class="rounded-[6px] cursor-pointer w-[40px] h-[41px]  
-          text-[16px] py-[9px] text-center" >{{ pageNumber }}</div>
+          text-[16px] py-[9px] text-center" >{{ pn }}</div>
 
           <!-- <div class="rounded-[6px] cursor-pointer w-[40px] h-[41px] bg-white text-paginatiopntextcolr 
             text-[16px] py-[9px] text-center">....</div>
