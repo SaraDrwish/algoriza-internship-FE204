@@ -19,7 +19,7 @@
 
       <div class="relative top-[1px] bg-slate-700 p-2">
         <div class="absolute w-full bottom-unset h-[72px] bg-slate-500 mb-[30px] top-[1px] left-0">
-          <HomeAlert class="relative" />
+          <!-- <HomeAlert class="relative" /> -->
         </div>
       </div>
 
@@ -32,7 +32,7 @@
       <!-- start left big div -->
 
         <div class="bg-slate-400 p-2 flex-1 flex flex-col gap-[30px]">
-
+      <!-- ///// -->
           <div class="bg-green-600 p-2">
             <div class="bg-primary text-white rounded-t-[6px] ">
               <div class="flex gap-[16px] font-[500] py-[18px] pl-[20px]">
@@ -43,7 +43,7 @@
             </div>
             <div class="bg-white rounded-b-[6px]">
               
-              <form @submit.prevent class="p-[32px] flex flex-col " >
+              <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
 
                 <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
                   <div class="flex flex-col gap-[4px]  w-full ">
@@ -87,16 +87,76 @@
                         focus:border-2 focus:bg-white " type="text" placeholder="88672778">
                     </div>
 
-                    
                   </div>
-          
+
                 </div>
 
-
+                <div class="bg-yellow-200 p-1 w-2/3 flex gap-[8px] items-center ">
+                  <input class="w-[20px] h-[20px] rounded-[5px] border-2 border-bordersr "  type="checkbox">
+                  <p>Receive text alerts about this trip.</p>
+                </div>
 
               </form>
             </div>
-          </div>
+
+        </div>
+
+        <!-- ////// -->
+
+           <div class="bg-green-600 p-2">
+              <div class="bg-primary text-white rounded-t-[6px] ">
+                <div class="flex gap-[16px] font-[500] py-[18px] pl-[20px]">
+                  <img src="../../assets/icons/card-tick 111.svg" alt="card">
+                  <p class=" text-[18px]" >Payment options </p>
+                 </div>
+              </div>
+              <div class="bg-white rounded-b-[6px]">
+              
+                <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
+
+                  <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                    <div class="flex flex-col gap-[4px]  w-full ">
+                      <label >First name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                    </div>
+                    <div class="flex flex-col gap-[4px] w-full ">
+                      <label > Last name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                      focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+
+      <!-- /////// -->
+
+         <div class="bg-green-600 p-2">
+                <div class="bg-CkeckoutYellowPAy text-Gray2 rounded-t-[6px] ">
+                  <div class="flex gap-[16px] font-[500] py-[18px] pl-[20px]">
+                    <p class=" text-[18px]" >Important information about your booking</p>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-b-[6px]">
+              
+                  <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
+
+                    <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                      
+                    </div>
+
+                  </form>
+                
+                </div>
+              </div>
+
+
+              <!-- //////// -->
+
 
         </div>
 

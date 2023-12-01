@@ -30,7 +30,8 @@ module.exports = {
         "gradntbluePD1": "#2366BF",
         "gradntbluePD2": "#4796FF",
         "pdtDetlsylo": "#FFD723",
-        "CeckoutGreen":"#85E0AB"
+        "CeckoutGreen": "#85E0AB",
+        "CkeckoutYellowPAy": "#F2C94C"
         
       }
       
