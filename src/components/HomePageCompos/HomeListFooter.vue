@@ -3,7 +3,7 @@
 
     <div class=" container">
 
-      <div class="flex mb-[60px] gap-[90px] h-[300px] w-full justify-between">
+      <div class="flex mb-[60px]  gap-[90px] h-[300px] w-full justify-between">
 
       <!-- //////////////////// -->
       

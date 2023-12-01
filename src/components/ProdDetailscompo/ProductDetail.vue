@@ -7,11 +7,14 @@
       <NavSignined  class="" />
     </div>
 
-  <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)] bg-orange-300 p-2  " >  
+  <div class=" "> 
 
-      <div class="bg-pink-600 flex flex-col p-2 mb-[172px] gap-[30px] ">
+    <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)]  " >  
 
-        <div class="bg-pink-900   flex h-[452px] gap-[20px] ">
+      <div class="bg-pink-600 flex flex-col p-2  gap-[30px] ">
+        <!-- <div class="bg-pink-600 flex flex-col p-2 mb-[172px] gap-[30px] "> -->
+
+        <div class="bg-red-700   flex h-[452px] gap-[20px] ">
 
           <div class=" h-[452px] w-[68%]   flex-2  ">
               <img class="rounded-[5px] w-[100%] h-[100%] " src="../../assets/imgs/d1.png" alt="d1">
@@ -30,6 +33,20 @@
 
         </div>
 
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- //next section -->
+
+ <div class="bg-bggraynstedpage  "> 
+   <!-- <div class="bg-orange-900 p-2  ">  -->
+
+  <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)]  p-2 bg-blue-800" >  
+
+      <div class="bg-pink-900 flex flex-col p-2 mb-[172px] gap-[30px]  ">
         <!-- <div class="bg-bggraynstedpage"> -->
         <div class="bg-yellow-500 p-2 relative top-[unset] bottom-0 m-auto   ">
           <!-- start products details nav  -->
@@ -37,7 +54,8 @@
             <span class=" py-[10px] px-[14px] text-Gray2  border-b-4 border-primary  ">Overview</span>
             <span class=" py-[10px] px-[14px] text-Gray2 ">Rooms</span>
           </div>
-        <div class="bg-gray-800 p-2 border-t-2 border-gray-400 flex gap-[30px] ">
+
+        <div class="bg-gray-500 p-2 border-t-2 border-gray-400 flex gap-[30px] ">
 
           <div class="bg-pink-300 p-2 flex flex-col gap-[12px] flex-2">
           <p class="text-[32px] font-[600] text-checkoutText1 ">Lakeside Motel Warefront</p>
@@ -98,27 +116,51 @@
             </div>
           </div>
 
-         <!-- // -->
+  
+
+        </div>
+
+        <!-- //// -->
+
+        <div class="bg-gray-600 p-2 mt-[40px]  ">
+          <p class="text-[24px] font-[600] text-checkoutText1 " >Available rooms</p>
+
+          <div class="">
+
+          </div>
+
+          <div class="">
+            <div class=""></div>
+            <div class=""></div>
+          </div>
 
         </div>
 
 
+        <!-- /// -->
+
+
       </div>
 
-  </div>
+    </div>
+
+
 
       <!-- /////////////////// -->
 
-    <div class="relative top-[unset] bottom-[0px] w-[full] bg-green-500 p-1">
-      <div class="top-[unset] h-[72px] w-full mb-[70px]">
-        <HomeAlert class=" top-[unset] "  />
+    <div class="relative top-[unset] bottom-[0px] w-[full] ">
+      <div class="top-[unset] h-[72px]  w-full mb-[70px] ">
+        <HomeAlert class=" top-[unset]  "  />
       </div>
-      <div class="bottom-0">
-        <HomeListFooter />
+      <!-- <div class="mb-[unset] pb-[60px]" > -->
+        <div class=" " >
+        <HomeListFooter   />
       </div>
     </div>
   
   </div>
+
+</div>
 
   <div class="relative bottom-0 left-0 w-full ">
     <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
