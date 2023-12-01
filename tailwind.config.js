@@ -29,7 +29,8 @@ module.exports = {
         "checkoutText1": "#1A1A1A",
         "gradntbluePD1": "#2366BF",
         "gradntbluePD2": "#4796FF",
-        "pdtDetlsylo": "#FFD723" ,
+        "pdtDetlsylo": "#FFD723",
+        "CeckoutGreen":"#85E0AB"
         
       }
       
