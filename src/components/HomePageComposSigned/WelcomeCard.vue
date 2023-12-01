@@ -43,7 +43,7 @@ const hideComponent = () => {
 </script>
 
 <style scoped>
-.color{
-  color: #FFF;
-}
+
+ 
+
 </style>

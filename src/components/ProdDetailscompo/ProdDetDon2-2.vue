@@ -10,32 +10,85 @@
 
       </div>
 
-      <div class="bg-purple-600 p-2  flex gap-[15px] ">
+      <div class="bg-purple-600 p-2  flex gap-[15px] w-[100%]">
 
 
         <!-- // 1 // -->
-        <div class="bg-blue-900 p-2 flex-2 ">
+        <div class="bg-orange-600 p-2 flex flex-2 ">
 
-          <div class="h-[340px] w-1/3 rounded-[6px] bg-gradient-to-r from-[#4796FF] to-[#2366BF] ">
-
+          <div class=" w-full rounded-[6px] bg-gradient-to-r from-[#4796FF] to-[#2366BF] ">
+            <p>
+              <img src="../../assets/icons/plnaltwit3.svg" alt="plan">
+              <span>my Dream Place</span>
+            </p>
+            <p> 20% off Use Promotional Coupon Code:
+              <span> Orlando </span>
+            </p>
+  
           </div>
 
         </div>
 
         <!-- //2 //  -->
 
-        <div class="h-[432px] flex-1 bg-pink-600 p-2 flex gap-[20px] ">
+        <div class="  bg-pink-600 p-2 flex gap-[20px] flex-1 ">
 
           <!-- ////// -->
 
-          <div class="bg-yellow-800 p-2 ">
+          <div class="bg-yellow-800 flex flex-col  ">
+
+             <div class="w-full ">
+              <img class="h-[200px] w-[100%]" src="../../assets/imgs/pdbtn1.png" alt="pdbtn1">
+             </div>
+
+             <div class="p-[20px]">
+              <p class="text-checkoutText1 text-[18px] font-[500] mb-[18px]" >Standard twin ben, Multiple beds</p>
+              <ul class="flex flex-col gap-[10px] text-[14px] text-light-black mb-[24px] ">
+                <li class="flex gap-[10px] ">
+                  <img src="../../assets/icons/bag-tick2.svg" alt="bag-tick-2">
+                  <span>300 sq ft</span>
+                </li>
+                <li  class="flex gap-[10px]" >
+                  <img src="../../assets/icons/lifebuoy2.svg" alt="lifebuoy2">
+                  <span>Sleeps 3</span>
+                </li>
+                <li  class="flex gap-[10px]" >
+                  <img src="../../assets/icons/like-2.svg" alt="like2">
+                  <span>1 double bed and 1 twin bed</span>
+                </li>
+              </ul>
+              <button class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
+             </div>
 
           </div>
 
-          <div class="bg-yellow-900 p-2 ">
-          
-       
-          </div>
+
+          <div class="bg-yellow-700 flex flex-col  ">
+
+            <div class="w-full ">
+            <img class="h-[200px] w-[100%]" src="../../assets/imgs/pdbtm2.png" alt="pdbtm2">
+            </div>
+
+            <div class="p-[20px]">
+            <p class="text-checkoutText1 text-[18px] font-[500] mb-[18px]" >Standard twin ben, Multiple beds</p>
+            <ul class="flex flex-col gap-[10px] text-[14px] text-light-black mb-[24px] ">
+              <li class="flex gap-[10px] ">
+                <img src="../../assets/icons/bag-tick2.svg" alt="bag-tick-2">
+                <span>300 sq ft</span>
+              </li>
+              <li  class="flex gap-[10px]" >
+                <img src="../../assets/icons/lifebuoy2.svg" alt="lifebuoy2">
+                <span>Sleeps 3</span>
+              </li>
+              <li  class="flex gap-[10px]" >
+                <img src="../../assets/icons/like-2.svg" alt="like2">
+                <span>1 double bed and 1 twin bed</span>
+              </li>
+            </ul>
+            <button class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
+            </div>
+
+        </div>
 
          <!-- ////// -->
 

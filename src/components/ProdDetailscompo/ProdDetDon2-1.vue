@@ -1,8 +1,7 @@
 <template>
   <div>
 
-
-     <div class=" flex gap-[30px] border-t-2 border-borderserbox  pt-[40px]">
+    <div class=" flex gap-[30px] border-t-2 border-borderserbox  pt-[40px]">
 
             <div class=" w-[68%]   ">
 
@@ -153,7 +152,6 @@
           <ProdDetDon22/>
 
         <!-- //// -->
-
 
   </div>
 </template>
