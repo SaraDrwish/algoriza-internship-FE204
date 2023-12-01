@@ -10,20 +10,25 @@
 
       </div>
 
-      <div class="bg-purple-600 p-2  flex gap-[15px] w-[100%]">
+      <div class="bg-purple-600 p-2  flex gap-[15px] w-[100%] m-auto">
 
 
         <!-- // 1 // -->
-        <div class="bg-orange-600 p-2 flex flex-2 ">
+        <div class="bg-orange-600 p-2 flex flex-2 w-1/3 h-[340px] ">
 
-          <div class=" w-full rounded-[6px] bg-gradient-to-r from-[#4796FF] to-[#2366BF] ">
-            <p>
+          <div class=" relative pl-[30px] pt-[55px] w-full rounded-[6px] bg-gradient-to-r from-[#4796FF] to-[#2366BF] gap-[30px] text-white ">
+
+            <p class=" flex gap-[4px] mb-[30px] " >
               <img src="../../assets/icons/plnaltwit3.svg" alt="plan">
-              <span>my Dream Place</span>
+              <span class=" text-[18px] ">my Dream Place</span>
             </p>
-            <p> 20% off Use Promotional Coupon Code:
-              <span> Orlando </span>
+            <p class="text-[24px] font-[900]  w-[195px]"> 20% off Use Promotional Coupon Code:
+              <span class="text-pdtDetlsylo " > Orlando </span>
             </p>
+
+            <div class="absolute top-[30px] right-[88px]">
+              <img class="h-[280px] w-[170px]" src="../../assets/imgs/Picture111.png" alt="Picture111">
+            </div>
   
           </div>
 
@@ -31,14 +36,14 @@
 
         <!-- //2 //  -->
 
-        <div class="  bg-pink-600 p-2 flex gap-[20px] flex-1 ">
+        <div class="  bg-pink-600 p-2 flex gap-[20px] w-2/3 flex-1 ">
 
           <!-- ////// -->
 
-          <div class="bg-yellow-800 flex flex-col  ">
+          <div class="bg-yellow-800 w-[50%] flex flex-col  ">
 
              <div class="w-full ">
-              <img class="h-[200px] w-[100%]" src="../../assets/imgs/pdbtn1.png" alt="pdbtn1">
+              <img class="rounded-t-[6px] h-[200px] w-[100%]" src="../../assets/imgs/pdbtn1.png" alt="pdbtn1">
              </div>
 
              <div class="p-[20px]">
@@ -63,10 +68,10 @@
           </div>
 
 
-          <div class="bg-yellow-700 flex flex-col  ">
+          <div class="bg-yellow-700 w-[50%] flex flex-col  ">
 
             <div class="w-full ">
-            <img class="h-[200px] w-[100%]" src="../../assets/imgs/pdbtm2.png" alt="pdbtm2">
+            <img class=" rounded-t-[6px] h-[200px] w-[100%]" src="../../assets/imgs/pdbtm2.png" alt="pdbtm2">
             </div>
 
             <div class="p-[20px]">
