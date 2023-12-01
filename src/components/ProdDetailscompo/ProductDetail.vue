@@ -19,11 +19,11 @@
 
  <div class="bg-bggraynstedpage  "> 
 
-  <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)]  p-2 bg-blue-100" >  
+  <div class="relative top-[unset] bottom-0 m-auto w-[calc(100%-100px)] " >  
 
       <div class="bg-bggraynstedpage flex flex-col p-2 mb-[172px] gap-[30px]  ">
 
-        <div class="bg-yellow-300 p-2  ">
+        <div class="  ">
 
 
       <!-- :class="{ '  border-primary': PrdDetNv.value }" -->
@@ -56,11 +56,11 @@
       <!-- /////////////////// -->
 
     <div class="relative top-[unset] bottom-[0px] w-[full] ">
-      <div class="top-[unset] h-[72px]  w-full mb-[70px] ">
+      <div class="top-[unset] h-[72px] w-full mb-[70px] ">
         <HomeAlert class=" top-[unset]  "  />
       </div>
-        <div class=" " >
-        <HomeListFooter   />
+        <div  class="bg-bggraynstedpage p-1" >
+        <HomeListFooter  />
       </div>
     </div>
   
@@ -68,7 +68,7 @@
 
 </div>
 
-  <div class="relative bottom-0 left-0 w-full ">
+  <div class="relative bottom-0 left-0 w-full   ">
     <footerlastbtm  class="absolute  left-0 bottom-0 w-[100%] " />
   </div>
 

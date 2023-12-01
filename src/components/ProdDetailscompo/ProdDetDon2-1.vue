@@ -4,7 +4,7 @@
 
      <div class=" flex gap-[30px] border-t-2 border-borderserbox  pt-[40px]">
 
-            <div class=" w-[70%]  flex gap-[30px] ">
+            <div class=" w-[68%]   ">
 
               <div class=" flex flex-col gap-[12px] flex-2">
               <p class="text-[32px] font-[600] text-checkoutText1 ">Lakeside Motel Warefront</p>
@@ -26,7 +26,7 @@
                 </div>
                 <!-- /////// -->
 
-                <div class=" rounded-[6px] bg-white w-[818px]">
+                <div class=" rounded-[6px] bg-white ">
 
                   <p class="pt-[24px] pl-[30px] mb-[20px] text-[18px] text-checkoutText1 font-[500] " >Overview</p>
                 
@@ -88,10 +88,10 @@
 
                 <!-- /// -->
 
-            <div class="flex flex-col flex-1 w-[30%]  gap-[35px]">
+            <div class="flex flex-col flex-1 w-[29%]  gap-[35px] ">
 
-              <div class="   ">
-                <img class=" w-[400px] h-[240px]  rounded-[6px]" src="../../assets/imgs/locationmap1.png" alt="locationmap1">
+              <div class=" w-[100%] h-[240px] ">
+                <img class=" w-full h-[100%] rounded-[6px]" src="../../assets/imgs/locationmap1.png" alt="locationmap1">
               </div>
               <div class="  gap-[22px] ">
                 <p class="text-[18px] font-[500] pb-[22px] ">Explore the area</p>
