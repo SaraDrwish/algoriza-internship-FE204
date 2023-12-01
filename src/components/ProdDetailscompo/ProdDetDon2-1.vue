@@ -4,10 +4,11 @@
 
      <div class="bg-blue-400 p-2 flex gap-[30px] border-t-2 border-gray-400 ">
 
-            <div class="bg-orange-500 p-2 w-[68%] flex gap-[30px] ">
+            <div class=" w-[70%] flex gap-[30px] ">
 
               <div class=" flex flex-col gap-[12px] flex-2">
               <p class="text-[32px] font-[600] text-checkoutText1 ">Lakeside Motel Warefront</p>
+
                 <!-- /////// -->
                 <div class="flex gap-[12px] mb-[17px]">
                   <span class="flex"> 
@@ -40,13 +41,7 @@
                   </div>
 
                   <hr class="fill-borderserbox text-borderserbox border-borderserbox">
-                  <!-- <div class="w-[100%]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="2" viewBox="0 0 810 2" fill="none">
-                    <path d="M0 1H810" stroke="#E0E0E0"/>
-                  </svg>
-                </div> -->
-                
-
+  
                   <div class="mt-[26px] pl-[30px] pb-[40px] ">
                     <p class="mb-[24px] text-[18px] font-[500] text-checkoutText1  ">Top facilities</p>
                     <ul class="flex text-[15px]  gap-[100px]  text-light-black " >
@@ -90,16 +85,15 @@
 
             </div>
 
-      
 
                 <!-- /// -->
 
-            <div class="flex flex-col flex-1 bg-red-200 p-2 w-[30%]  gap-[35px] ">
+            <div class="flex flex-col flex-1 w-[30%]  gap-[35px] ">
 
-              <div class=" bg-red-400 p-2  ">
+              <div class="   ">
                 <img class=" w-[400px] h-[240px]  rounded-[6px]" src="../../assets/imgs/locationmap1.png" alt="locationmap1">
               </div>
-              <div class="bg-red-900 p-2  gap-[22px] ">
+              <div class="  gap-[22px] ">
                 <p class="text-[18px] font-[500] pb-[22px] ">Explore the area</p>
                 <ul class="flex flex-col justify-between text-[14px] gap-[12px] " >
                   <li class="flex justify-between ">
@@ -154,27 +148,17 @@
 
           </div>
 
-          <!-- //// -->
+        <!-- //// -->
 
-          <div class="bg-gray-600 p-2 mt-[40px]  ">
-            <p class="text-[24px] font-[600] text-checkoutText1 " >Available rooms</p>
+         <ProdDetDon22/>
 
-            <div class="">
-
-            </div>
-
-            <div class="">
-              <div class=""></div>
-              <div class=""></div>
-            </div>
-
-          </div>
+        <!-- //// -->
 
 
   </div>
 </template>
 
 <script setup>
-
+import  ProdDetDon22 from './ProdDetDon2-2.vue'
 </script>
  
