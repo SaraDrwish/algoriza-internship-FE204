@@ -2,9 +2,9 @@
   <div>
 
 
-     <div class="bg-blue-400 p-2 flex gap-[30px] border-t-2 border-gray-400 ">
+     <div class=" flex gap-[30px] border-t-2 border-borderserbox  pt-[40px]">
 
-            <div class=" w-[70%] flex gap-[30px] ">
+            <div class=" w-[70%]  flex gap-[30px] ">
 
               <div class=" flex flex-col gap-[12px] flex-2">
               <p class="text-[32px] font-[600] text-checkoutText1 ">Lakeside Motel Warefront</p>
@@ -88,7 +88,7 @@
 
                 <!-- /// -->
 
-            <div class="flex flex-col flex-1 w-[30%]  gap-[35px] ">
+            <div class="flex flex-col flex-1 w-[30%]  gap-[35px]">
 
               <div class="   ">
                 <img class=" w-[400px] h-[240px]  rounded-[6px]" src="../../assets/imgs/locationmap1.png" alt="locationmap1">

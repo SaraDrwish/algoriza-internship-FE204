@@ -27,18 +27,15 @@
 
 
       <!-- :class="{ '  border-primary': PrdDetNv.value }" -->
-   <!-- :class="{ 'border-transparent': PrdDetNv.value, 'border-primary': !PrdDetNv.value }" -->
 
           <!-- start products details nav  -->
           <div class="flex gap-[14px] text-[16px] font-[400]">
             <span @click="handlePDN(!false) " class=" py-[10px] px-[14px]
               cursor-pointer text-Gray2 border-b-4   "
-              :class="{ 'border-primary': PrdDetNv }"
-
-             
+            :class="{ 'border-transparent': !PrdDetNv , 'border-primary': PrdDetNv }"
               >Overview</span>
             <span 
-            :class="{ 'border-primary': !PrdDetNv }"
+            :class="{ 'border-transparent': PrdDetNv, 'border-primary':  !PrdDetNv }"
             @click="handlePDN(false)" class=" py-[10px] px-[14px] border-b-4  cursor-pointer text-Gray2 ">Rooms</span>
           </div>
           <!--  end products details nav -->
@@ -89,12 +86,9 @@ import ProdDetDon21 from './ProdDetDon2-1.vue';
 import { ref } from 'vue';
 
 const PrdDetNv = ref(true)
-// const PrdDetNv = ref(false)
 
 const handlePDN = (value ) => {
-  // PrdDetNv.value = !PrdDetNv.value
   PrdDetNv.value = value;
-  //  console.log("handlePDN , PrdDetNv " )
 }
 
 </script>
