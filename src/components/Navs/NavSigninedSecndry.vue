@@ -37,7 +37,7 @@
                   w-[100%] py-[10px] border-solid border-b-2
                     border-bordrBtnGry cursor-pointer" href="#" >
                       <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/bxs-plane-take-off 1.svg" alt="">
-                      <li class=" ">My Trips</li>
+                      <li  @click="handleMyTripsBtn" class=" ">My Trips</li>
                   </a>
 
                   <a class="flex gap-[10px]    w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
@@ -63,6 +63,9 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
 const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
@@ -73,6 +76,10 @@ defineProps({
     default: false,
   }
 })
+
+const handleMyTripsBtn = () => {
+  router.push('/mytrips');
+}
 
 </script>
 

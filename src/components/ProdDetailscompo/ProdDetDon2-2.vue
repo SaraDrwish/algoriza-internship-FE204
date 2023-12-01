@@ -1,20 +1,14 @@
 <template>
   <div>
 
+    <div class="  p-2 mt-[40px]  " >
 
-    <div class="bg-gray-400 p-2 mt-[40px]  " >
+      <p class="text-[24px] mb-[32px] font-[600] text-checkoutText1 " >Available rooms</p>
 
-      <p class="text-[24px] font-[600] text-checkoutText1 " >Available rooms</p>
+      <div class="flex gap-[15px] w-[100%] m-auto">
 
-      <div class="bg-purple-300 p-2 ">
-
-      </div>
-
-      <div class="bg-purple-600 p-2  flex gap-[15px] w-[100%] m-auto">
-
-
-        <!-- // 1 // -->
-        <div class="bg-orange-600 p-2 flex flex-2 w-1/3 h-[340px] ">
+        <!-- // 1 start first blue div // -->
+        <div class=" flex flex-2 w-1/3 h-[340px] ">
 
           <div class=" relative pl-[30px] pt-[55px] w-full rounded-[6px] bg-gradient-to-r from-[#4796FF] to-[#2366BF] gap-[30px] text-white ">
 
@@ -34,13 +28,13 @@
 
         </div>
 
-        <!-- //2 //  -->
+        <!-- // 2 second big div that contains 2 small boxes //  -->
 
-        <div class="  bg-pink-600 p-2 flex gap-[20px] w-2/3 flex-1 ">
+        <div class=" flex gap-[20px] w-2/3 flex-1 ">
 
-          <!-- ////// -->
+          <!-- ///start ssmall divs/// -->
 
-          <div class="bg-yellow-800 w-[50%] flex flex-col  ">
+          <div class="w-[50%] flex flex-col  ">
 
              <div class="w-full ">
               <img class="rounded-t-[6px] h-[200px] w-[100%]" src="../../assets/imgs/pdbtn1.png" alt="pdbtn1">
@@ -62,13 +56,12 @@
                   <span>1 double bed and 1 twin bed</span>
                 </li>
               </ul>
-              <button class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
+              <button @click="handleBotton" class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
              </div>
 
           </div>
 
-
-          <div class="bg-yellow-700 w-[50%] flex flex-col  ">
+          <div class="w-[50%] flex flex-col  ">
 
             <div class="w-full ">
             <img class=" rounded-t-[6px] h-[200px] w-[100%]" src="../../assets/imgs/pdbtm2.png" alt="pdbtm2">
@@ -90,12 +83,12 @@
                 <span>1 double bed and 1 twin bed</span>
               </li>
             </ul>
-            <button class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
+            <button @click="handleBotton" class="w-full text-white bg-primary py-[12px] px-[18px] rounded-[6px] " > Reserve suite </button>
             </div>
 
         </div>
 
-         <!-- ////// -->
+         <!-- ///end small divs /// -->
 
         </div>
 
@@ -105,8 +98,17 @@
 
     </div>
 
-
   </div>
 </template>
- 
- 
+
+
+<script setup >
+
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
+const handleBotton = () => {
+  router.push('/checkout');
+}
+
+</script>
