@@ -21,50 +21,54 @@
 
         <div class=" flex relative right-0">
 
-            <div class="flex gap-[22px] ">
-              <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification2.png" alt="icons">
-              <!-- <slot   /> -->
-              <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
-             </div>
+        <div class="flex gap-[22px] ">
+          <img class="py-[10px] px-[18px] cursor-pointer " src="../../assets/icons/notification2.png" alt="icons">
+          <!-- <slot   /> -->
+          <img  @click="toggleModal" class="cursor-pointer " src="../../assets/icons/Ellipse 2.svg" alt="userimg">
+        </div>
 
-             <div v-if="modalActive" class="absolute right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
+        <div v-if="modalActive" class="absolute right-[0px] bottom-[-200px] w-[200px] flex text-[15px] bg-BGC rounded-[10px]  ">
 
-                   <ul class=" flex flex-col  items-center 
-                    capitalize transition ease-in duration-400
-                    text-light-black w-[100%] justify-center
-                     text-center  gap-[4px] mx-[12px] ">
+            <ul class=" flex flex-col  items-center 
+              capitalize transition ease-in duration-400
+            text-light-black w-[100%] justify-center
+              text-center  gap-[4px] mx-[12px] ">
 
-                    <a class="flex gap-[10px] hover:transition-all 
-                      transition ease-in duration-400 
-                      w-[100%] py-[10px] border-solid border-b-2
-                       border-bordrBtnGry cursor-pointer" href="#" >
+            <!-- <RouterLink :to="{ name: 'home' }"> -->
+              <a class="flex gap-[10px] hover:transition-all 
+              transition ease-in duration-400 
+              w-[100%] py-[10px] border-solid border-b-2
+                border-bordrBtnGry cursor-pointer" href="#" >
 
-                     <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/user-square 1.svg" alt="">
-                     <li class=" ">Manage account</li>
-                    </a>
+                <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/user-square 1.svg" alt="">
+                <li class=" ">Manage account</li>
+              </a>
+            <!-- </RouterLink> -->
+            
+            <a class="flex gap-[10px] hover:transition-all 
+              transition ease-in duration-400 
+              w-[100%] py-[10px] border-solid border-b-2
+                border-bordrBtnGry cursor-pointer" href="#" >
+                <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/bxs-plane-take-off 1.svg" alt="">
+                <li @click="handleMyTripsBtn" class=" ">My Trips</li>
+            </a>
 
-                    <a class="flex gap-[10px] hover:transition-all 
-                      transition ease-in duration-400 
-                      w-[100%] py-[10px] border-solid border-b-2
-                       border-bordrBtnGry cursor-pointer" href="#" >
-                       <img class="flex  w-[20px] h-[20px]" src="../../assets/icons/bxs-plane-take-off 1.svg" alt="">
-                       <li @click="handleMyTripsBtn" class=" ">My Trips</li>
-                    </a>
+            <RouterLink :to="{ name: 'checkout' }">
+              <a class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+                <img class="w-[20px] h-[20px]" src="../../assets/icons/wallet-3 1.svg" alt="">
+                <li class=" ">Reward and wallet</li>
+              </a>
+            </RouterLink>
 
-                    <a class="flex gap-[10px]    w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
-                     <img class="w-[20px] h-[20px]" src="../../assets/icons/wallet-3 1.svg" alt="">
-                     <li class=" ">Reward and wallet</li>
-                    </a>
+            <RouterLink :to="{name:'home'}" class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
+              <img class="w-[20px] h-[20px]" src="../../assets/icons/logout 1.svg" alt="">
+              <li class="">Sign out</li>
+            </RouterLink>
+            
+            </ul>
+          </div>
 
-                     <RouterLink :to="{name:'home'}" class="flex gap-[10px]  w-[100%] py-[10px] border-solid border-b-2 border-bordrBtnGry cursor-pointer" href="#" >
-                      <img class="w-[20px] h-[20px]" src="../../assets/icons/logout 1.svg" alt="">
-                      <li class="">Sign out</li>
-                     </RouterLink>
-                     
-                   </ul>
-              </div>
-
-          </div> 
+        </div> 
 
       </nav>
     </header>
@@ -82,26 +86,17 @@ const modalActive = ref(null);
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
+
 defineProps({
   modalActive: {
     type: Boolean,
     default: false,
   },
-  // togglNotific: {
-  //   type: String
-  // },
 
 })
 
-
 const handleMyTripsBtn = () => {
-    router.push('/mytrips');
+  router.push('/mytrips');
 }
 
-
 </script>
-
-<!-- <style scoped>
-ul a li:last-child { border-bottom: none; }
-</style> -->
- 
