@@ -112,20 +112,84 @@
               </div>
               <div class="bg-white rounded-b-[6px]">
               
-                <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
+              <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
+
+                <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                  <div class="flex flex-col gap-[4px]  w-full ">
+                    <label >First name </label>
+                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                  focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                  </div>
+                  <div class="flex flex-col gap-[4px] w-full ">
+                    <label > Last name </label>
+                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                  </div>
+                </div>
+
+                <!-- // -->
+
+
+                <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                    <div class="flex flex-col gap-[4px]  w-full ">
+                      <label >First name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                  focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                    </div>
+                    <div class="flex flex-col gap-[4px] w-full ">
+                      <label > Last name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                    </div>
+                  </div>
+
+                  <!-- /// -->
+
 
                   <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
                     <div class="flex flex-col gap-[4px]  w-full ">
                       <label >First name </label>
                       <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                        focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
                     </div>
                     <div class="flex flex-col gap-[4px] w-full ">
                       <label > Last name </label>
                       <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                      focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                        focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
                     </div>
                   </div>
+
+                  <!-- // -->
+
+                  <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                    <div class="flex flex-col gap-[4px]  w-full ">
+                      <label >First name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                      focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                    </div>
+                    <div class="flex flex-col gap-[4px] w-full ">
+                      <label > Last name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                        focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                    </div>
+                  </div>
+
+                  <!-- //// -->
+
+                  <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                    <div class="flex flex-col gap-[4px]  w-full ">
+                      <label >First name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                      focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                    </div>
+                    <div class="flex flex-col gap-[4px] w-full ">
+                      <label > Last name </label>
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                    </div>
+                  </div>
+
+                  <!-- /// -->
 
                 </form>
 
@@ -145,7 +209,7 @@
               
                   <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
 
-                    <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                    <div class="bg-pink-200 p-[24px] flex "> 
                       
                     </div>
 
