@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 py-2 ">
+  <div class="bg-bggraynstedpage py-2 ">
 
   <!-- <div class="  bg-yellow-500   "> -->
     <!-- <div class=" bg-yellow-500  mt-[128px] "> -->
@@ -17,10 +17,10 @@
         
       <!-- <div class="bg-green-500 p-2 "> -->
 
-      <div class="relative ">
-        <!-- <div class="absolute w-full bottom-unset h-[72px] mb-[30px] bg-slate-500 p-2 "> -->
-          <HomeAlert class="top-1" />
-        <!-- </div> -->
+      <div class="relative top-[1px] bg-slate-700 p-2">
+        <div class="absolute w-full bottom-unset h-[72px] bg-slate-500 mb-[30px] top-[1px] left-0">
+          <HomeAlert class="relative" />
+        </div>
       </div>
 
       <!-- </div> -->
@@ -31,8 +31,73 @@
 
       <!-- start left big div -->
 
-        <div class="bg-slate-500 p-2 flex-1 flex flex-col gap-[30px]">
-        
+        <div class="bg-slate-400 p-2 flex-1 flex flex-col gap-[30px]">
+
+          <div class="bg-green-600 p-2">
+            <div class="bg-primary text-white rounded-t-[6px] ">
+              <div class="flex gap-[16px] font-[500] py-[18px] pl-[20px]">
+                <img src="../../assets/icons/security-user 111.svg" alt="security-user">
+                <p class=" text-[18px]" >Room 1 </p>
+                <span class="pl-[2px] text-[16px]">2 adults, 1 double bed and 1 twin bed, Non-smoking</span>
+              </div>
+            </div>
+            <div class="bg-white rounded-b-[6px]">
+              
+              <form @submit.prevent class="p-[32px] flex flex-col " >
+
+                <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+                  <div class="flex flex-col gap-[4px]  w-full ">
+                    <label >First name </label>
+                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
+                  </div>
+                  <div class="flex flex-col gap-[4px] w-full ">
+                    <label > Last name </label>
+                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                      focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
+                  </div>
+                </div>
+
+                <div class="bg-pink-800 p-2 flex gap-[12px] w-2/3 "> 
+
+                  <div class="flex gap-[4px] items-end w-full bg-slate-800  ">
+                    <div class="flex flex-col bg-orange-300 mr-[12px] w-[33%] "><label >Mobile number</label> 
+                      <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
+                        <img class="w-[24px] h-[24px]" src="../../assets/imgs/flag.png" alt="flagnumber">
+                        <input v-model="searchQuery"  @input="getSearchContsResults" 
+                        class="rounded-[4px] w-full bg-inputsGray 
+                        focus:outline-none focus:ring focus:border-primary focus:border-2
+                        focus:bg-white " type="number" placeholder="+91" >
+                        <span @click="toggleModal" class="flex cursor-pointer  ">
+                          <svg  v-show="!modalActive"  xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                              <path d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345" stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <svg  v-show="modalActive" xmlns="http://www.w3.org/2000/svg" 
+                              width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655" 
+                              stroke="#828282" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col gap-[4px] w-[70%]">
+                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                        focus:outline-none focus:ring focus:border-primary
+                        focus:border-2 focus:bg-white " type="text" placeholder="88672778">
+                    </div>
+
+                    
+                  </div>
+          
+                </div>
+
+
+
+              </form>
+            </div>
+          </div>
+
         </div>
 
 
@@ -126,5 +191,7 @@ import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 </script>
 
 <style scoped>
-
+/* p{
+  color: #F4F4F4;
+} */
 </style>
