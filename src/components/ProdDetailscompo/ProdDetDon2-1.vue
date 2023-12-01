@@ -150,7 +150,7 @@
 
         <!-- //// -->
 
-         <ProdDetDon22/>
+          <ProdDetDon22/>
 
         <!-- //// -->
 
@@ -161,4 +161,3 @@
 <script setup>
 import  ProdDetDon22 from './ProdDetDon2-2.vue'
 </script>
- 
