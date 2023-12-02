@@ -153,14 +153,13 @@
 
               <!-- /// -->
 
-           <div class="bg-pink-200 p-2 flex flex-col gap-[4px] w-2/3  ">
+           <div class="  flex flex-col gap-[4px] w-2/3  ">
               <div class="flex flex-col ">
                 <label >Expiration Date </label>
               </div>
-              <div class="flex gap-[12px] w-full p-2 bg-yellow-900  ">
+              <div class="flex gap-[12px] w-full  ">
 
-              <div  @focus="toggleArrows(true)" 
-                    @blur="toggleArrows(false)" 
+              <div 
                     class="relative">
                 <select 
                   required 
@@ -260,7 +259,7 @@
                           height="8"
                           viewBox="0 0 14 8"
                           fill="none"
-                        >
+                          >
                           <path
                             d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345"
                             stroke="#828282"
