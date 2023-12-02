@@ -1,7 +1,6 @@
 <template>
   <div>
 
-
     <!-- start left sec -->
     
     <div class="bg-slate-400 p-2 flex-1 flex flex-col gap-[30px]">
@@ -43,10 +42,10 @@
                       v-model="searchQuery" 
                       @input="getSearchContsResults" 
 
-                    class="rounded-[4px] w-full bg-inputsGray 
-                    focus:outline-none focus:ring focus:border-primary focus:border-2
-                  focus:bg-white  appearance-none " 
-                    type="number" placeholder="+91" >
+                      class="rounded-[4px] w-full bg-inputsGray 
+                      focus:outline-none focus:ring focus:border-primary focus:border-2
+                    focus:bg-white  appearance-none " 
+                      type="number" placeholder="+91" >
                     <span
                       @click="toggleModal" 
                       class="flex cursor-pointer  ">
@@ -86,12 +85,7 @@
 
     </div>
 
-
-
-
     <!-- ////////////////////////////// -->
-
-
 
         <div class=" ">
 
@@ -115,7 +109,6 @@
 
          <!-- /// -->
             <div class="flex gap-[6px] mb-[26px] " >
-
               <div class="bg-inputsGray rounded-[5px] p-[8px]  ">
                 <img class="w-[42px] h-[24px]" src="../../assets/imgs/visa.png" alt="master visa">
               </div>
@@ -126,32 +119,17 @@
                 <img class="w-[42px] h-[24px]" src="../../assets/imgs/amricanExpress.png" alt="amrican ">
               </div>  
               <div class="bg-inputsGray rounded-[5px] p-[8px] w-[60px] h-[40px]">
-                <img class="w-[53px] h-[19px]" src="../../assets/imgs/discover.png" alt="discvr ">
+                <img class="w-[100%] h-[100%]" src="../../assets/imgs/image 8.png" alt="discvr ">
               </div>  
-
             </div>
           <!-- /// -->
-
-            <!-- <div class="flex gap-[16px] items-end  ">
-              <div class="flex gap-[4px] w-2/3 ">
-                <div class="w-full flex flex-col gap-[4px] ">
-                  <label >Name on card </label>
-                  <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                  focus:outline-none focus:ring focus:border-primary 
-                  focus:border-2 focus:bg-white " type="text" placeholder="Julius Lorenzo">
-                </div>
-                <div class="flex gap-[4px] w-1/3 py-[12px] px-[16px] items-end  ">
-                  <img class="w-[24px] h-[24px]" src="../../assets/icons/tick-circle 111.svg" alt="ticCircl">
-                </div>
-              </div>
-            </div> -->
 
             <div class="  flex gap-[16px] items-end  "> 
               <div class="flex flex-col gap-[4px] w-2/3  ">
                 <label >Name on card</label>
                 <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-              focus:outline-none focus:ring focus:border-primary 
-              focus:border-2 focus:bg-white " type="text" placeholder="Julius Lorenzo">
+                  focus:ring focus:border-primary 
+                  " type="text" placeholder="Julius Lorenzo">
               </div> 
               <div class="flex flex-col gap-[4px] w-1/3 py-[12px] px-[16px] items-start ">
                 <img class="w-[24px] h-[24px]" src="../../assets/icons/tick-circle 111.svg" alt="ticCircl">
@@ -178,16 +156,18 @@
                   <div class="flex flex-col ">
                     <label >Expiration Date </label>
                   </div>
-                  <div class="flex  gap-[12px]  w-full ">
+                  <div class="flex  gap-[12px]  w-full p-2 bg-green-600  ">
                     <!-- <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                       focus:outline-none focus:ring focus:border-primary
                       focus:border-2 focus:bg-white " 
                       type="text" placeholder="Juilis"> -->
 
-                      <select  class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                      focus:outline-none focus:ring focus:border-primary
-                      focus:border-2 focus:bg-white " >
-                        <option value="">April</option>
+                      <select v-model="selectedMonth" id="month"
+                        class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                        focus:outline-none focus:ring focus:border-primary
+                        focus:border-2 focus:bg-white " >
+                        <option v-for="(month , indx) in months " :key="indx" :value="indx+1" 
+                         class="p-[12px] m-[10px] text-center text-primary "  > {{ month }} </option>
                       </select>
 
                      <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
@@ -201,7 +181,6 @@
 
               <!-- // -->
 
-             
               <div class="  flex  w-2/3   ">
                 <div class="flex gap-[20px] w-full items-end ">
                   <div class="  flex flex-col gap-[4px] ">
@@ -224,17 +203,12 @@
               </div>
 
               <!-- //// -->
- 
 
             </form>
 
           </div>
 
-
         </div>
-
-
-
 
   <!-- ////////////////////////////// -->
 
@@ -294,6 +268,14 @@
 
 <script setup>
 
+import { ref } from 'vue';
+
+const selectedMonth = ref(4);  
+const months = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
 </script>
 
 
@@ -306,5 +288,9 @@ input[type="number"]::-webkit-inner-spin-button
 input[type="text"]::placeholder , input[type="number"]::placeholder{
   color : #333 ;
 }
+
+/* select  {
+  padding: 10px ;
+} */
 
 </style>
