@@ -158,19 +158,20 @@
                 <label >Expiration Date </label>
               </div>
               <div class="flex gap-[12px] w-full p-2 bg-yellow-900  ">
-                <!-- <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                  focus:outline-none focus:ring focus:border-primary
-                  focus:border-2 focus:bg-white " 
-                  type="text" placeholder="Juilis"> -->
+
               <div  @focus="toggleArrows(true)" 
                     @blur="toggleArrows(false)" 
                     class="relative">
-                <select required v-model="selectedMonth" id="month"
+                <select 
+                  required 
+                  v-model="selectedMonth"
+                  @click="toggleArrows(2, !isSelectFocused2)"
+                  @change="toggleArrows(2, false)"
+                  id="month"
                   class="w-[199px] text-left rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                   focus:outline-none focus:ring focus:border-primary
                   focus:border-2 focus:bg-white 
                   appearance-none  
-                  
                   " >
                   <option v-for="(month , indx) in months " :key="indx" :value="indx+1" 
                     class=" p-[12px] m-[10px]  text-primary "  > {{ month }} </option>
@@ -180,7 +181,7 @@
                         transform -translate-y-1/2 cursor-pointer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          v-show="!isSelectFocused"
+                          v-show="!isSelectFocused2"
                           width="16"
                           height="16"
                           viewBox="0 0 16 16"
@@ -197,7 +198,7 @@
                         </svg>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          v-show="isSelectFocused"
+                          v-show="isSelectFocused2"
                           width="14"
                           height="8"
                           viewBox="0 0 14 8"
@@ -221,13 +222,13 @@
                           class="relative">
 
                       <select required
-                         style="bottom: 0;"
-                         v-model="selectedYear"
-                         @click="toggleArrows(!isSelectFocused)"
-                         @change="toggleArrows(false)"
-                          class="rounded-[4px] w-[190px] bg-inputsGray
-                          appearance-none focus:outline-none focus:ring
-                          focus:border-primary focus:border-2 focus:bg-white px-[12px] pt-[11px] pb-[12px]" >
+                        style="bottom: 0;"
+                        v-model="selectedYear"
+                        @click="toggleArrows(1, !isSelectFocused)"
+                        @change="toggleArrows(1, false)"
+                        class="rounded-[4px] w-[190px] bg-inputsGray
+                        appearance-none focus:outline-none focus:ring
+                        focus:border-primary focus:border-2 focus:bg-white px-[12px] pt-[11px] pb-[12px]" >
                         <option style="bottom: 0;" v-for="year in getYears()" :key="year" :value="year">
                           {{ year }}
                         </option>
@@ -295,7 +296,7 @@
                   <div class="flex flex-col gap-[4px]  ">
                     <label >Billing Zip code </label>
                     <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                     focus:outline-none focus:ring
+                      focus:outline-none focus:ring
                     focus:border-primary focus:border-2 focus:bg-white  " type="number" placeholder="203846">
                   </div>
                   <div class="flex flex-col w-1/3 py-[12px] px-[16px]  ">
@@ -387,30 +388,21 @@ const modalActive = ref(false);
 
 const selectedYear = ref(new Date().getFullYear());
 
-
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
 
 // //////////////////////////
 
-// const dropdownVisible = ref(false);
-
-// const showDropdown = () => {
-//   dropdownVisible.value = true;
-// };
-
-// const hideDropdown = () => {
-//   dropdownVisible.value = false;
-// };
-
-// const toggleDropdown = () => {
-//   dropdownVisible.value = !dropdownVisible.value;
-// };
 const isSelectFocused = ref(false);
+const isSelectFocused2 = ref(false);
 
-const toggleArrows = (focused) => {
-  isSelectFocused.value = focused;
+const toggleArrows = (selectNumber, focused) => {
+  if (selectNumber === 1) {
+    isSelectFocused.value = focused;
+  } else if (selectNumber === 2) {
+    isSelectFocused2.value = focused;
+  }
 };
 
 const getYears = () => {
