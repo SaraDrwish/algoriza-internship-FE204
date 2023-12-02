@@ -3,7 +3,9 @@
 
     <!-- ///start right sec/// -->
 
-      <div class="bg-white rounded-b-[6px] rounded-t-[6px] ">
+    <div class="flex flex-col gap-[30px]">
+
+      <div class="bg-white rounded-b-[6px] rounded-t-[6px]  ">
 
         <div class="mb-[20px]  ">
           <img class="rounded-t-[6px]" src="../../assets/imgs/d3.png" alt="d3">
@@ -57,9 +59,9 @@
           <span class="text-[20px] font-[600] ">$130</span>
         </div>
 
-      
       </div>
 
+    </div>
 
   </div>
 

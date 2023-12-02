@@ -8,7 +8,7 @@
 
     <!-- ////////////////////////////// -->
 
-        <div class="bg-green-600 p-2">
+        <div class=" ">
         <div class="bg-primary text-white rounded-t-[6px] ">
           <div class="flex gap-[16px] font-[500] py-[18px] pl-[20px]">
             <img src="../../assets/icons/security-user 111.svg" alt="security-user">
@@ -20,7 +20,7 @@
         
           <form @submit.prevent class="px-[32px] pt-[32px] p-[40px] flex flex-col gap-[20px] " >
 
-            <div class="bg-pink-200 p-2 flex gap-[20px] w-2/3  "> 
+            <div class=" flex gap-[20px] w-2/3  "> 
               <div class="flex flex-col gap-[4px]  w-full ">
                 <label >First name </label>
                 <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
@@ -33,10 +33,10 @@
               </div>
             </div>
 
-            <div class="bg-pink-800 p-2 flex gap-[12px] w-2/3 "> 
+            <div class=" flex gap-[12px] w-2/3 "> 
 
-              <div class="flex gap-[4px] items-end w-full bg-slate-800  ">
-                <div class="flex flex-col bg-orange-300 mr-[12px] w-[33%] "><label >Mobile number</label> 
+              <div class="flex gap-[4px] items-end w-full  ">
+                <div class="flex flex-col  mr-[12px] w-[33%] "><label >Mobile number</label> 
                   <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
                     <img class="w-[24px] h-[24px]" src="../../assets/imgs/flag.png" alt="flagnumber">
                     <input v-model="searchQuery"  @input="getSearchContsResults" 
@@ -66,7 +66,7 @@
 
             </div>
 
-            <div class="bg-yellow-200 p-1 w-2/3 flex gap-[8px] items-center ">
+            <div class="  w-2/3 flex gap-[8px] items-center ">
               <input class="w-[20px] h-[20px] rounded-[5px] border-2 border-bordersr "  type="checkbox">
               <p>Receive text alerts about this trip.</p>
             </div>
@@ -230,3 +230,13 @@
 <script setup>
 
 </script>
+
+
+<style scoped>
+
+input[type="number"]::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+}
+
+</style>
