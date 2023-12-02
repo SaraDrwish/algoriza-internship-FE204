@@ -11,7 +11,7 @@
           <img class="rounded-t-[6px]" src="../../assets/imgs/d3.png" alt="d3">
         </div>
         <div class="pl-[20px] pb-[20px] ">
-          <p class="mb-[10px]" >Lakeside Motel Warefront</p>
+          <p class="mb-[10px] text-[18px] font-[500] " >Lakeside Motel Warefront</p>
           <!-- ///starts and viwes div //// -->
           <div class="flex gap-[12px] mb-[25px]">
             <span class="flex"> 
@@ -52,7 +52,7 @@
             <span>$ 8.32</span>
           </li>
         </ul>
-        <hr>
+        <hr class="border-b-2 border-borderserbox " >
 
         <div class="flex justify-between px-[18px] pb-[23px] pt-[25px] text-checkoutText1  ">
           <p class="text-[16px] font-[500]" >Total</p>
