@@ -9,10 +9,14 @@
 
       <p class="text-[32px] font-[600] text-checkoutText1 mb-[30px]">Secure your reservation</p>
         
-      <div class="relative top-[1px] h-[72px] bg-orange-700 p-2">
-        <CheckoutAlert/>
+      <div class="relative    ">
+        <HomeAlert class="top-[unset]"/>
       </div>
 
+      <!-- <div class="relative top-[1px] h-[72px] bg-orange-700 p-2">
+        <CheckoutAlert/>
+      </div> -->
+      
 
       <div class="bg-orange-300 p-2 flex gap-[30px] mt-[130px]">
 

@@ -1,14 +1,18 @@
 <template>
-  <div class="absolute top-1 w-full ">
+  <div class="relative  w-full ">
 
-    <div class="  w-full bottom-unset p-2 h-full bg-slate-500 mb-[30px] top-[1px] left-0">
-      <!-- <div class="absolute w-full bottom-unset h-[72px] bg-slate-500 mb-[30px] top-[1px] left-0"> -->
-        <HomeAlert   />
+    <div class="flex items-center rounded-[8px] absolute    
+        h-[72px] py-[20px]
+        pl-[24px] gap-[19px] w-full bg-yellow-color ">
+        <div class="flex items-center py-[5px]   ">
+          <img class="w-[32px] h-[32px] " src="../../assets/icons/danger 1.svg" alt="danger">
+        </div>
+        <p>Check the latest COVID-19 restrictions before you travel .  <a href="#" class="text-primary"> Learn more </a> </p>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import HomeAlert from '../HomePageCompos/HomeAlert.vue'
+
 </script>
