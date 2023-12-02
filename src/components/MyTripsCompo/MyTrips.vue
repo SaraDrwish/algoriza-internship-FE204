@@ -7,16 +7,15 @@
 
 <!-- start container -->
  
-  <div class="bg-pink-600 p-2 text-center  m-auto w-[calc(100%-100px)] " >
-
-      <p class="text-[32px] font-[600] text-checkoutText1">My trips</p>
+  <div class="bg-pink-600 p-2 m-auto w-[calc(100%-100px)] " >
       
       <div class="bg-orange-500 p-2 ">
 
-        <!-- //start small divs  -->
+        <!-- //start small divs and small container  -->
 
-        <div class="flex flex-col gap-[24px] bg-orange-200 " >
-
+        <div class="flex flex-col gap-[24px] p-2 bg-purple-400 m-auto w-[calc(100%-210px)] mb-[577px] " >
+          
+          <p class="text-[32px] font-[600] text-checkoutText1 mb-[28px]">My trips</p>
           <div class=" w-[1030px] h-[240px] bg-blue-400  flex gap-[24px]" >
 
             <div class="flex gap-[24px] rounded-[5px] border-solid border-2 border-borderserbox py-[20px] pl-[20px] pr-[24px] ">
@@ -60,6 +59,7 @@
 
         </div>
 
+    </div>
 
         <!-- //end small divs  -->
   
@@ -77,7 +77,7 @@
         </div>
 
       </div>
-    </div>
+   
 
   <!-- end the container -->
 
