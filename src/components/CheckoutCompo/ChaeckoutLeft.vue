@@ -170,16 +170,33 @@
                       class="p-[12px] m-[10px] text-center text-primary "  > {{ month }} </option>
                   </select>
 
-                  <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
-                    <input
-                        class="rounded-[4px] w-[150px] bg-inputsGray  "
-                        type="number"
-                        placeholder="2026"
-                        @focus="showDropdown"
-                        @blur="hideDropdown"
-                      />
-                      <span @click="toggleModal" class="flex cursor-pointer">
-                        <svg v-show="!modalActive" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <!-- //// -->
+
+                    <div  @focus="toggleArrows(true)" 
+                          @blur="toggleArrows(false)" 
+                          class="relative">
+
+                      <select
+                        v-model="selectedYear"
+                          @change="toggleArrows(false)"
+                          class="rounded-[4px] w-[190px] bg-inputsGray
+                          appearance-none focus:outline-none focus:ring
+                          focus:border-primary focus:border-2 focus:bg-white py-[10px] px-[12px]" >
+                        <option v-for="year in getYears()" :key="year" :value="year">
+                          {{ year }}
+                        </option>
+                      </select>
+
+                      <span @click="toggleDropdown" class="absolute right-3 top-1/2 
+                      transform -translate-y-1/2 cursor-pointer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          v-show="!isSelectFocused"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
                           <path
                             d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655"
                             stroke="#828282"
@@ -190,8 +207,8 @@
                           />
                         </svg>
                         <svg
-                          v-show="modalActive"
                           xmlns="http://www.w3.org/2000/svg"
+                          v-show="isSelectFocused"
                           width="14"
                           height="8"
                           viewBox="0 0 14 8"
@@ -207,13 +224,56 @@
                           />
                         </svg>
                       </span>
-                      <select v-show="dropdownVisible"
-                      class="absolute top-full left-0 mt-1 rounded-md bg-white shadow-md">
-                        <option v-for="year in getYears()" :key="year" :value="year">
-                          {{ year }}
-                        </option>
-                      </select>
                     </div>
+
+
+            <!-- ///// -->
+              <!-- <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
+                <input
+                    class="rounded-[4px] w-[150px] bg-inputsGray  "
+                    type="number"
+                    placeholder="2026"
+                    @focus="showDropdown"
+                    @blur="hideDropdown"
+                  />
+                  <span @click="toggleModal" class="flex cursor-pointer">
+                    <svg v-show="!modalActive" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655"
+                        stroke="#828282"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      v-show="modalActive"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="8"
+                      viewBox="0 0 14 8"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345"
+                        stroke="#828282"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <select v-show="dropdownVisible"
+                  class="absolute top-full left-0 mt-1 rounded-md bg-white shadow-md">
+                    <option v-for="year in getYears()" :key="year" :value="year">
+                      {{ year }}
+                    </option>
+                  </select>
+                </div> -->
+
+
                     <!-- /////// -->
 
                     <div class="flex flex-col gap-[4px] w-1/3 py-[12px] px-[16px] items-start ">
@@ -326,24 +386,32 @@ const months = [
 
 const modalActive = ref(false);
 
+const selectedYear = ref(new Date().getFullYear());
+
+
 const toggleModal = () => {
   modalActive.value = !modalActive.value
 }
 
 // //////////////////////////
 
-const dropdownVisible = ref(false);
+// const dropdownVisible = ref(false);
 
-const showDropdown = () => {
-  dropdownVisible.value = true;
-};
+// const showDropdown = () => {
+//   dropdownVisible.value = true;
+// };
 
-const hideDropdown = () => {
-  dropdownVisible.value = false;
-};
+// const hideDropdown = () => {
+//   dropdownVisible.value = false;
+// };
 
-const toggleDropdown = () => {
-  dropdownVisible.value = !dropdownVisible.value;
+// const toggleDropdown = () => {
+//   dropdownVisible.value = !dropdownVisible.value;
+// };
+const isSelectFocused = ref(false);
+
+const toggleArrows = (focused) => {
+  isSelectFocused.value = focused;
 };
 
 const getYears = () => {
