@@ -9,10 +9,8 @@
 
       <p class="text-[32px] font-[600] text-checkoutText1 mb-[30px]">Secure your reservation</p>
         
-      <div class="relative top-[1px] bg-slate-700 p-2">
-        <div class="absolute w-full bottom-unset h-[72px] bg-slate-500 mb-[30px] top-[1px] left-0">
-          <HomeAlert class="relative" />
-        </div>
+      <div class="relative top-[1px] h-[72px] bg-orange-700 p-2">
+        <CheckoutAlert/>
       </div>
 
 
@@ -47,6 +45,7 @@ import NavSigninedSecndry from '../Navs/NavSigninedSecndry.vue';
 import HomeAlert from '../HomePageCompos/HomeAlert.vue';
 import ChaeckoutRight from './ChaeckoutRight.vue';
 import ChaeckoutLeft from './ChaeckoutLeft.vue';
+import CheckoutAlert from './CheckoutAlert.vue'
 </script>
 
 <style scoped>
