@@ -2,8 +2,9 @@
   <div>
 
     <!-- start left sec -->
-    
-    <div class="bg-slate-400 p-2 flex-1 flex flex-col gap-[30px]">
+   <form @submit.prevent class=" " > 
+
+    <div class=" flex-1 flex flex-col gap-[30px]">
 
     <!-- ////////////////////////////// -->
 
@@ -22,12 +23,12 @@
             <div class=" flex gap-[20px] w-2/3  "> 
               <div class="flex flex-col gap-[4px]  w-full ">
                 <label >First name </label>
-                <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
               focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Juilis">
               </div>
               <div class="flex flex-col gap-[4px] w-full ">
                 <label > Last name </label>
-                <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                 focus:outline-none focus:ring focus:border-primary focus:border-2 focus:bg-white " type="text" placeholder="Lorenzo">
               </div>
             </div>
@@ -38,7 +39,7 @@
                 <div class="flex flex-col  mr-[12px] w-[33%] "><label >Mobile number</label> 
                   <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
                     <img class="w-[24px] h-[24px]" src="../../assets/imgs/flag.png" alt="flagnumber">
-                    <input 
+                    <input required
                       v-model="searchQuery" 
                       @input="getSearchContsResults" 
 
@@ -65,8 +66,8 @@
                   </div>
                 </div>
 
-                <div class="flex flex-col gap-[4px] w-[70%]">
-                  <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                <div  class="flex flex-col gap-[4px] w-[70%]">
+                  <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                   focus:outline-none focus:ring focus:border-primary
                   focus:border-2 focus:bg-white " type="text" placeholder="88672778">
                 </div>
@@ -76,7 +77,7 @@
             </div>
 
             <div class="  w-2/3 flex gap-[8px] items-center ">
-              <input class="w-[20px] h-[20px] rounded-[5px] border-2 border-bordersr "  type="checkbox">
+              <input required class="w-[20px] h-[20px] rounded-[5px] border-2 border-bordersr "  type="checkbox">
               <p>Receive text alerts about this trip.</p>
             </div>
 
@@ -127,7 +128,7 @@
             <div class="  flex gap-[16px] items-end  "> 
               <div class="flex flex-col gap-[4px] w-2/3  ">
                 <label >Name on card</label>
-                <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                   focus:ring focus:border-primary 
                   " type="text" placeholder="Julius Lorenzo">
               </div> 
@@ -141,7 +142,7 @@
             <div class="  flex gap-[16px] items-end  "> 
               <div class="flex flex-col gap-[4px] w-2/3  ">
                 <label >Debit/Credit card number </label>
-                <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                 focus:outline-none focus:ring focus:border-primary 
                 focus:border-2 focus:bg-white " type="text" placeholder="9923464374822293">
               </div> 
@@ -161,34 +162,79 @@
                   focus:outline-none focus:ring focus:border-primary
                   focus:border-2 focus:bg-white " 
                   type="text" placeholder="Juilis"> -->
+              <div  @focus="toggleArrows(true)" 
+                    @blur="toggleArrows(false)" 
+                    class="relative">
+                <select required v-model="selectedMonth" id="month"
+                  class="w-[199px] text-left rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                  focus:outline-none focus:ring focus:border-primary
+                  focus:border-2 focus:bg-white 
+                  appearance-none  
+                  
+                  " >
+                  <option v-for="(month , indx) in months " :key="indx" :value="indx+1" 
+                    class=" p-[12px] m-[10px]  text-primary "  > {{ month }} </option>
+                </select>
 
-                  <select v-model="selectedMonth" id="month"
-                    class="w-[260px] text-left rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
-                    focus:outline-none focus:ring focus:border-primary
-                    focus:border-2 focus:bg-white " >
-                    <option v-for="(month , indx) in months " :key="indx" :value="indx+1" 
-                      class="p-[12px] m-[10px] text-center text-primary "  > {{ month }} </option>
-                  </select>
-
-                <!-- //// -->
+                <span @click="toggleDropdown" class="absolute right-3 top-1/2 
+                        transform -translate-y-1/2 cursor-pointer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          v-show="!isSelectFocused"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655"
+                            stroke="#828282"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          v-show="isSelectFocused"
+                          width="14"
+                          height="8"
+                          viewBox="0 0 14 8"
+                          fill="none"
+                        >
+                          <path
+                            d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345"
+                            stroke="#828282"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                <!-- //////////////////////// -->
 
                     <div  @focus="toggleArrows(true)" 
                           @blur="toggleArrows(false)" 
                           class="relative">
 
-                      <select
-                        v-model="selectedYear"
-                          @change="toggleArrows(false)"
+                      <select required
+                         style="bottom: 0;"
+                         v-model="selectedYear"
+                         @click="toggleArrows(!isSelectFocused)"
+                         @change="toggleArrows(false)"
                           class="rounded-[4px] w-[190px] bg-inputsGray
                           appearance-none focus:outline-none focus:ring
-                          focus:border-primary focus:border-2 focus:bg-white py-[10px] px-[12px]" >
-                        <option v-for="year in getYears()" :key="year" :value="year">
+                          focus:border-primary focus:border-2 focus:bg-white px-[12px] pt-[11px] pb-[12px]" >
+                        <option style="bottom: 0;" v-for="year in getYears()" :key="year" :value="year">
                           {{ year }}
                         </option>
                       </select>
 
                       <span @click="toggleDropdown" class="absolute right-3 top-1/2 
-                      transform -translate-y-1/2 cursor-pointer">
+                         transform -translate-y-1/2 cursor-pointer">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           v-show="!isSelectFocused"
@@ -226,54 +272,6 @@
                       </span>
                     </div>
 
-
-            <!-- ///// -->
-              <!-- <div class=" bg-inputsGray rounded-[4px] flex items-center px-[12px] py-[10px] gap-[10px] ">
-                <input
-                    class="rounded-[4px] w-[150px] bg-inputsGray  "
-                    type="number"
-                    placeholder="2026"
-                    @focus="showDropdown"
-                    @blur="hideDropdown"
-                  />
-                  <span @click="toggleModal" class="flex cursor-pointer">
-                    <svg v-show="!modalActive" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path
-                        d="M13.2797 5.96655L8.93306 10.3132C8.41973 10.8266 7.57973 10.8266 7.06639 10.3132L2.71973 5.96655"
-                        stroke="#828282"
-                        stroke-width="2"
-                        stroke-miterlimit="10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      v-show="modalActive"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="8"
-                      viewBox="0 0 14 8"
-                      fill="none"
-                    >
-                      <path
-                        d="M1.72027 6.03345L6.06694 1.68678C6.58027 1.17345 7.42027 1.17345 7.93361 1.68678L12.2803 6.03345"
-                        stroke="#828282"
-                        stroke-width="2"
-                        stroke-miterlimit="10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  <select v-show="dropdownVisible"
-                  class="absolute top-full left-0 mt-1 rounded-md bg-white shadow-md">
-                    <option v-for="year in getYears()" :key="year" :value="year">
-                      {{ year }}
-                    </option>
-                  </select>
-                </div> -->
-
-
                     <!-- /////// -->
 
                     <div class="flex flex-col gap-[4px] w-1/3 py-[12px] px-[16px] items-start ">
@@ -283,20 +281,20 @@
                   </div>   
               </div>
 
-              <!-- // -->
+              <!-- ////////////////////////// -->
 
               <div class="  flex  w-2/3   ">
                 <div class="flex gap-[20px] w-full items-end ">
                   <div class="  flex flex-col gap-[4px] ">
                     <label >Security Code </label>
-                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                     focus:outline-none focus:ring focus:border-primary
                     focus:border-2 focus:bg-white " 
                     type="number" placeholder="543">
                   </div>
                   <div class="flex flex-col gap-[4px]  ">
                     <label >Billing Zip code </label>
-                    <input class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
+                    <input required class="rounded-[4px] px-[12px] pt-[11px] pb-[12px] bg-inputsGray 
                      focus:outline-none focus:ring
                     focus:border-primary focus:border-2 focus:bg-white  " type="number" placeholder="203846">
                   </div>
@@ -349,7 +347,7 @@
                 </div>
 
                 <button class="px-[18px] py-[12px] bg-primary text-white text-[15px] 
-              w-1/4 mb-[21px] mt-[24px]"> Complete Booking </button>
+                  w-1/4 mb-[21px] mt-[24px]"> Complete Booking </button>
 
                 <div class="flex gap-[8px] ">
                   <img class="w-[24px] h-[24px] " src="../../assets/icons/lock-circle 111.svg" alt="lock">
@@ -366,6 +364,7 @@
       </div>
 
     <!-- end left sec -->
+   </form>
 
   </div>
 </template>

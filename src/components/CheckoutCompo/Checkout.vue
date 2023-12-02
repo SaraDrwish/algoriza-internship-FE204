@@ -2,11 +2,11 @@
 
   <div class="bg-bggraynstedpage py-2 ">
 
-    <div class="  bg-yellow-500  mt-[128px] mb-[141px]  ">
+    <div class="  mt-[128px] mb-[141px]  ">
 
       <NavSigninedSecndry  />
 
-    <div class="p-2 bg-pink-400 m-auto w-[calc(100%-100px)]  ">
+    <div class="  m-auto w-[calc(100%-100px)]  ">
 
       <p class="text-[32px] font-[600] text-checkoutText1 mb-[30px]">Secure your reservation</p>
         
@@ -14,7 +14,7 @@
         <HomeAlert class="top-[unset]"/>
       </div>
       
-    <div class="bg-orange-300 p-2 flex gap-[30px] mt-[130px]">
+    <div class="  flex gap-[30px] mt-[130px]">
 
         <!-- start left big div -->
             
