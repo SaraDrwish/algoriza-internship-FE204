@@ -1,5 +1,6 @@
 <script setup>
-import Nav from "./components/HomePageCompos/Navs/Nav.vue";
+import NavSignined from "./components/HomePageCompos/Navs/NavSignined.vue";
+// import Nav from "./components/HomePageCompos/Navs/Nav.vue";
 import footerlastbtm from "./components/footerlastbtm.vue";
 </script>
 
@@ -7,7 +8,7 @@ import footerlastbtm from "./components/footerlastbtm.vue";
   <div class="  ">
     <div class="">
       <div class="">
-        <Nav />
+        <NavSignined :showUl="true" :showRegstr="false" />
       </div>
       <div class=" "></div>
       <div class="">

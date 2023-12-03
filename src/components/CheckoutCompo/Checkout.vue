@@ -1,7 +1,7 @@
 <template>
   <div class="bg-bggraynstedpage py-2">
     <div class="mt-[128px] mb-[141px]">
-      <NavSignined :showUl="false" />
+      <NavSignined :showRegstr="false" :showIcons="true" :showUl="false" />
 
       <div class="m-auto w-[calc(100%-100px)]">
         <p class="text-[32px] font-[600] text-checkoutText1 mb-[30px]">

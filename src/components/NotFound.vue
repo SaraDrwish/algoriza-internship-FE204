@@ -1,6 +1,6 @@
 <template>
   <div class="  ">
-    <NavSecndry />
+    <NavSignined :showUl="false" />
 
     <div
       class="absolute left-[calc(100vw/12)] text-center container m-auto flex items-center justify-center text-[33px] w-[80%] h-[80%] font-bold text-primary"
@@ -16,5 +16,6 @@
 
 <script setup>
 import footerlastbtm from "./footerlastbtm.vue";
-import NavSecndry from "./Navs/NavSecndry.vue";
+import NavSignined from "./Navs/NavSignined.vue";
+// import NavSecndry from "./Navs/NavSecndry.vue";
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh]">
     <div class="container m-auto flex flex-col">
-      <NavSignined :showUl="false" />
+      <NavSignined :showUl="false" :showRegstr="false" />
       <div class="flex flex-col items-center m-auto w-[401px] mt-[92px]">
         <h2 class="text-[28px] mb-[40px] font-[600]">Sign In</h2>
         <form

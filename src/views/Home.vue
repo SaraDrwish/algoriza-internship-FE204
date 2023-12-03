@@ -1,7 +1,7 @@
 <template>
   <div class="app" id="app">
     <!-- <Nav /> -->
-    <div :showUl="false" :showRegstr="true">
+    <div :showUl="true" :showRegstr="false">
       <NavSignined />
     </div>
 

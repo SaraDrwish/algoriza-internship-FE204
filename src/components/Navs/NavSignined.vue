@@ -34,14 +34,14 @@
       <div v-if="showRegstr">
         <router-link to="/register">
           <button
-            class="bg-primary py-[10px] px-[18px] text-white text-[15px] font-[500] leading-[20px] tracking-[0.3px]"
+            class="flex relative right-0 bg-primary py-[10px] px-[18px] text-white text-[15px] font-[500] leading-[20px] tracking-[0.3px]"
           >
             Register
           </button>
         </router-link>
       </div>
       <!-- ////////// -->
-      <div v-if="showUl" class="flex relative right-0">
+      <div v-if="showIcons" class="flex relative right-0">
         <div class="flex gap-[22px]">
           <img
             class="py-[10px] px-[18px] cursor-pointer"
@@ -140,10 +140,14 @@ defineProps({
     type: Boolean,
     default: true,
   },
-  // showRegstr: {
-  //   type: Boolean,
-  //   default: true,
-  // },
+  showRegstr: {
+    type: Boolean,
+    default: true,
+  },
+  showIcons: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const handleMyTripsBtn = () => {

@@ -1,7 +1,7 @@
 <template>
   <div class="pt-[128px] bg-bggraynstedpage relative">
     <div class="">
-      <NavSignined />
+      <NavSignined :showRegstr="false" :showIcons="true" />
     </div>
 
     <!-- start container -->

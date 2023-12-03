@@ -1,6 +1,6 @@
 <template>
   <div class="mb-[92px] top-[unset]">
-    <NavSignined />
+    <NavSignined :showRegstr="false" :showIcons="true" />
   </div>
 
   <div class=" ">

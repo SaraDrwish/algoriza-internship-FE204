@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh]">
     <div class="m-auto flex flex-col">
-      <NavSignined :showUl="false" />
+      <NavSignined :showUl="false" :showRegstr="false" />
       <div class="w-[401px] m-auto flex flex-col items-center">
         <h2 class="text-[28px] mb-[40px] mt-[92px] font-[600]">Register</h2>
 

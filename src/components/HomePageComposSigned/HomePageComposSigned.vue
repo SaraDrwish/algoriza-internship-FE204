@@ -4,8 +4,8 @@
       <WelcomeCard />
     </div>
 
-    <div :showUl="true" :showRegstr="false">
-      <NavSignined />
+    <div>
+      <NavSignined :showRegstr="false" :showIcons="true" />
     </div>
 
     <div v-if="!loading" class="mx-auto w-[calc(100%-100px)]">
