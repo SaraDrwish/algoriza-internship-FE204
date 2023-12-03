@@ -20,13 +20,23 @@
 
       <div v-if="showUl">
         <ul
-          class="inline-flex tracking-[0.36px] text-[16px] text-Gray2 items-start gap-[48px]"
+          class="transition duration-300 ease-in inline-flex tracking-[0.36px] text-[16px] text-Gray2 items-start gap-[48px]"
         >
-          <a href="/"><li>Home</li></a>
-          <a href="#"><li>Discover</li></a>
-          <a href="#"><li>Activities</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Contact</li></a>
+          <a class="hover:text-primary transition duration-300 ease-in" href="/"
+            ><li>Home</li></a
+          >
+          <a class="hover:text-primary transition duration-300 ease-in" href="#"
+            ><li>Discover</li></a
+          >
+          <a class="hover:text-primary transition duration-300 ease-in" href="#"
+            ><li>Activities</li></a
+          >
+          <a class="hover:text-primary transition duration-300 ease-in" href="#"
+            ><li>About</li></a
+          >
+          <a class="hover:text-primary transition duration-300 ease-in" href="#"
+            ><li>Contact</li></a
+          >
         </ul>
       </div>
       <!-- ////// -->
@@ -34,7 +44,7 @@
       <div v-if="showRegstr">
         <router-link to="/register">
           <button
-            class="flex relative right-0 bg-primary py-[10px] px-[18px] text-white text-[15px] font-[500] leading-[20px] tracking-[0.3px]"
+            class="transition duration-400 ease-in flex relative right-0 bg-primary py-[10px] px-[18px] text-white text-[15px] font-[500] leading-[20px] tracking-[0.3px]"
           >
             Register
           </button>
@@ -154,9 +164,6 @@ const handleMyTripsBtn = () => {
   router.push("/mytrips");
 };
 
-// ////////////////////////////////////////////
-
-// const props = defineProps(["showUl"]);
-
-// ///////////////////////////////////////////
+// //////////////////////////////////////////// // const props =
+// defineProps(["showUl"]); // ///////////////////////////////////////////
 </script>
