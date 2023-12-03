@@ -2,9 +2,6 @@
   <div>
     <div class="flex items-center justify-between mb-[24px]">
       <h2 class="text-[24px] font-[600] text-dark-black">
-        <!-- Melbourne : {{ hotelsNummm }} , 2,582 search results found -->
-        <!-- Melbourne :{{ $store.api.numberOfHotels }}, 2,582 search results found -->
-        <!-- Melbourne :{{ apiStore.numberOfHotels }}, 2,582 search results found -->
         Melbourne : 2,582 search results found
       </h2>
       <div

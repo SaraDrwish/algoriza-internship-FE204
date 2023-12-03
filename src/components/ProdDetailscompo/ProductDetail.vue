@@ -74,10 +74,22 @@ import ProdDetDon21 from "./ProdDetDon2-1.vue";
 
 import { ref } from "vue";
 
+import { useGetHotelDetailsStore } from "../../stores/GetHotelDetails";
 // ///////////////////////////////////////////////
 const PrdDetNv = ref(true);
 
 const handlePDN = (value) => {
   PrdDetNv.value = value;
+
+  // //////// pinia store ///////
+
+  const getHotelDetailsStore = useGetHotelDetailsStore();
+  // Trigger the API call
+  getHotelDetailsStore.fetchHotelDetails();
+  // Access the data
+  const hotelDetails = getHotelDetailsStore.hotelDetails;
+  console.log("hotelDetails:::", hotelDetails);
+
+  // /////////////end store /////////////////
 };
 </script>
