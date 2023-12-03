@@ -140,10 +140,32 @@ const handleSearch = async () => {
 };
 
 // //////////////////////////////////////////////////////////////
+// import { useSearchResultsStore } from "../../stores/searchResultsStore";
+// const searchResultsStore = useSearchResultsStore();
 
-// window.addEventListener('load', searchHotels);
+// onMounted(async () => {
+//   await searchResultsStore.fetchSearchResults({
+//     dest_id: "-2092174",
+//     search_type: "CITY",
+//     arrival_date: props.checkInDate,
+//     departure_date: props.checkOutDate,
+//     currency_code: "AED",
+//   });
+// });
 
-// ////////////
+// const handleSearch = async () => {
+//    await searchResultsStore.fetchSearchResults({
+//     dest_id: "-2092174",
+//     search_type: "CITY",
+//     arrival_date: props.checkInDate,
+//     departure_date: props.checkOutDate,
+//     currency_code: "AED",
+//   });
+
+//   console.log(searchResultsStore.searchResults);
+// };
+
+// //////////////////////////////////////////////////////////////
 </script>
 
 <style scoped>

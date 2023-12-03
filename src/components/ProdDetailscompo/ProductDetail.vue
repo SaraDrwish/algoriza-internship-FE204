@@ -74,7 +74,7 @@ import ProdDetDon21 from "./ProdDetDon2-1.vue";
 
 import { ref } from "vue";
 
-// import { useStore } from "pinia";
+import { useStore } from "pinia";
 import { useGetHotelDetailsStore } from "../../stores/GetHotelDetails";
 // ///////////////////////////////////////////////
 const PrdDetNv = ref(true);
