@@ -1,17 +1,18 @@
-import { ref } from 'vue';
+import { ref } from "vue";
 export const isAuthen = ref(false);
- 
-const userTokenKey = 'userToken';
+
+const userTokenKey = "userToken";
 
 export const generateToken = () => {
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const tokenLength = characters.length ;
-  let token = '';
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const tokenLength = characters.length;
+  let token = "";
   for (let i = 0; i < tokenLength; i++) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     token += characters.charAt(randomIndex);
   }
-  console.log( "token:", token )
+  console.log("token:", token);
   return token;
 };
 
@@ -20,7 +21,7 @@ export const SignIn = () => {
     const userToken = generateToken();
     localStorage.setItem(userTokenKey, userToken);
     isAuthen.value = true;
-  } 
+  }
 };
 export const logout = () => {
   localStorage.removeItem(userTokenKey);
@@ -29,8 +30,6 @@ export const logout = () => {
 export const authService = {
   checkUserSignIn() {
     const userToken = localStorage.getItem(userTokenKey);
-    return !!userToken; 
+    return !!userToken;
   },
-
 };
-
