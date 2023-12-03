@@ -62,6 +62,6 @@ onMounted(() => {
   setTimeout(() => {
     loading.value = false;
     isSignedIn.value = authService.checkUserSignIn();
-  }, 3000);
+  }, 1000);
 });
 </script>

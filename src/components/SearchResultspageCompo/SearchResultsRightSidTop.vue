@@ -2,7 +2,7 @@
   <div>
     <div class="flex items-center justify-between mb-[24px]">
       <h2 class="text-[24px] font-[600] text-dark-black">
-        Melbourne : 2,582 search results found
+        Melbourne : {{ hotelsNummm }} , 2,582 search results found
       </h2>
       <div
         class="flex items-center w-[190px] gap-[10px] mx-[12px] mt-[11px] mb-[12px]"
@@ -69,4 +69,9 @@ const modalActiveSerch = ref(false);
 const toggleModalSerch = () => {
   modalActiveSerch.value = !modalActiveSerch.value;
 };
+
+window.localStorage.getItem("hotelsNummm");
+window.localStorage.getItem("selectedCountry");
+console.log("hotelsNummm", hotelsNummm);
+console.log("selectedCountry", selectedCountry);
 </script>

@@ -14,6 +14,8 @@
             alt="search"
           />
           <input
+            v-model="searchTerm"
+            @input="searchHotels"
             class="bg-white text-light-black"
             type="text"
             placeholder="eg. Beach westpalm"
@@ -160,7 +162,68 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const axios = require("axios");
+const searchResults = ref(null);
+const searchTerm = ref("");
+
+// /////
+
+const searchHotels = async () => {
+  const searchDetails = {
+    search_type: localStorage.getItem("search_type") || "CITY",
+    arrival_date: localStorage.getItem("arrival_date") || "",
+    departure_date: localStorage.getItem("departure_date") || "",
+  };
+
+  const searchOptions = {
+    method: "GET",
+    url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
+    params: {
+      dest_id: "-2092174",
+      ...searchDetails,
+      search_type: "Cairo",
+      // arrival_date: "2023-12-05",
+      arrival_date: checkOutDate.value,
+      departure_date: checkInDate.value,
+      // departure_date: "2023-12-09",
+      adults: "1",
+      children_age: "0,17",
+      room_qty: "1",
+      page_number: "1",
+      languagecode: "en-us",
+      currency_code: "AED",
+      name: searchTerm,
+    },
+    headers: {
+      "X-RapidAPI-Key": "feb9f2fc76msh209ee120c0ccda0p17fbc5jsnf6f0ee7a354c",
+      "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await axios.request(searchOptions);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// //////////////////////
+const props = defineProps({
+  city: String,
+  checkInDate: String,
+  checkOutDate: String,
+  guests: Number,
+  rooms: Number,
+  modalActive: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+// /////////////////////
+</script>
 
 <style scoped>
 input {

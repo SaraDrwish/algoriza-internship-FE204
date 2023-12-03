@@ -192,7 +192,7 @@ const fetchCountries = async (query) => {
     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination",
     params: { query },
     headers: {
-      "X-RapidAPI-Key": "52d9ce7503mshb0dfbdcfb3bcaf8p12dfabjsn97b7216b41ea",
+      "X-RapidAPI-Key": "feb9f2fc76msh209ee120c0ccda0p17fbc5jsnf6f0ee7a354c",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -230,6 +230,13 @@ const selectCountry = (country) => {
   );
   searchQuery.value = country.name;
   modalActive.value = false;
+
+  console.log("country.city_name::::", country.city_name);
+  console.log("country.dest_id::::", country.dest_id);
+  window.localStorage.setItem("selectedCountry", country.city_name);
+  window.localStorage.setItem("CountryID", country.dest_id);
+  window.localStorage.setItem("hotelsNummm", country.hotels);
+  // window.localStorage.setItem("CountryID", country.chekin);
 };
 
 const handleSubmit = () => {
@@ -244,6 +251,10 @@ const handleSubmit = () => {
     window.localStorage.setItem("checkOutDate", checkOutDate.value);
     window.localStorage.setItem("guests", guests.value);
     window.localStorage.setItem("rooms", rooms.value);
+    console.log("selectedCountry", searchQuery.value);
+    console.log("checkInDate", checkInDate.value);
+    console.log("checkOutDate", checkOutDate.value);
+    console.log("......");
   };
 
   if (validateForm()) {
