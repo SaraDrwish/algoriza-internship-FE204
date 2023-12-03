@@ -2,7 +2,10 @@
   <div>
     <div class="flex items-center justify-between mb-[24px]">
       <h2 class="text-[24px] font-[600] text-dark-black">
-        Melbourne : {{ hotelsNummm }} , 2,582 search results found
+        <!-- Melbourne : {{ hotelsNummm }} , 2,582 search results found -->
+        <!-- Melbourne :{{ $store.api.numberOfHotels }}, 2,582 search results found -->
+        <!-- Melbourne :{{ apiStore.numberOfHotels }}, 2,582 search results found -->
+        Melbourne : 2,582 search results found
       </h2>
       <div
         class="flex items-center w-[190px] gap-[10px] mx-[12px] mt-[11px] mb-[12px]"
@@ -64,6 +67,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useApiStore } from "../../stores/store";
+
+const apiStore = useApiStore();
 
 const modalActiveSerch = ref(false);
 const toggleModalSerch = () => {
