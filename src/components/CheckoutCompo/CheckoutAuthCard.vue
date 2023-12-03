@@ -19,11 +19,15 @@
       </p>
     </div>
     <div class="w-[100%]">
-      <button class="text-white bg-primary py-[12px] px-[18px] w-full">
-        View Trip
-      </button>
+      <RouterLink :to="{ name: 'mytrips' }">
+        <button class="text-white bg-primary py-[12px] px-[18px] w-full">
+          View Trip
+        </button>
+      </RouterLink>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
