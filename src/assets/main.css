@@ -1,7 +1,5 @@
 /* @import url('https://fonts.cdnfonts.com/css/sf-pro-display'); */
 
-/* https: //fonts.google.com/specimen/Work+Sans?query=work+sans */
-
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Caveat:wght@400;700&family=Hachi+Maru+Pop&family=Inter:wght@100;200;300;400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600&family=Mukta+Mahee:wght@600;700;800&family=Open+Sans:wght@300&family=Poltawski+Nowy&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,700;1,200;1,300;1,400;1,700&display=swap');
 
 :root{
@@ -17,7 +15,6 @@
 }
 body{
 background-color: #FFF ;
-/* color: #2F80ED ; */
 }
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
   border-radius: 4px;
@@ -34,10 +31,17 @@ button{
 button:hover , input[type="submit"]:hover {
   background-color: #318afe;
 }
-
-/* #app {
-  background-color: #a66173;
-} */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  margin: 0;
+}
 
 /* //////////////////////////////////////////////// */
 
@@ -47,7 +51,7 @@ button:hover , input[type="submit"]:hover {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2F80ED;
+  background: var(--primary);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -65,6 +69,6 @@ button:hover , input[type="submit"]:hover {
 /* selection */
 ::selection {
   color: #62a5fb;
-  background-color:#0d213a ;
+  background-color: rgb(87, 73, 73);
 }
 

@@ -457,13 +457,13 @@
                   <a href="#" class="text-primary"> Terms of Use</a> .
                 </p>
               </div>
-
-              <button
-                class="px-[18px] py-[12px] bg-primary text-white text-[15px] w-1/4 mb-[21px] mt-[24px]"
-              >
-                Complete Booking
-              </button>
-
+              <RouterLink :to="{ name: 'checkoutcard' }">
+                <button
+                  class="px-[18px] py-[12px] bg-primary text-white text-[15px] w-1/4 mb-[21px] mt-[24px]"
+                >
+                  Complete Booking
+                </button>
+              </RouterLink>
               <div class="flex gap-[8px]">
                 <img
                   class="w-[24px] h-[24px]"
