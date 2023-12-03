@@ -1,6 +1,6 @@
 <template>
   <div class="mb-[92px] top-[unset]">
-    <NavSignined :showUl="true" />
+    <NavSignined />
   </div>
 
   <div class=" ">
@@ -71,6 +71,8 @@ import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
 import footerlastbtm from "../footerlastbtm.vue";
 import ProdDetDon1 from "./ProdDetDon1.vue";
 import ProdDetDon21 from "./ProdDetDon2-1.vue";
+
+import { ref } from "vue";
 
 // ///////////////////////////////////////////////
 const PrdDetNv = ref(true);

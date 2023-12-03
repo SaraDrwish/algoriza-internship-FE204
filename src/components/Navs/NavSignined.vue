@@ -111,7 +111,7 @@
 
 <script setup>
 import { RouterLink, useRouter } from "vue-router";
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 
 const router = useRouter();
 
@@ -125,6 +125,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  showUl: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 const handleMyTripsBtn = () => {
@@ -133,7 +137,7 @@ const handleMyTripsBtn = () => {
 
 // ////////////////////////////////////////////
 
-const props = defineProps(["showUl"]);
+// const props = defineProps(["showUl"]);
 
 // ///////////////////////////////////////////
 </script>
