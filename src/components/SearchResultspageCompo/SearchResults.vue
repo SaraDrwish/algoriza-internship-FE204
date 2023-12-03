@@ -93,6 +93,8 @@ import NavSignined from "../layout/NavSignined.vue";
 import SearchResultsNavVue from "./SearchResultsNav.vue";
 import SearchResultsPagination from "./SearchResultsPagination.vue";
 
+// import { useStore } from "pinia";
+
 const props = defineProps({
   city: String,
   checkInDate: String,
@@ -154,7 +156,7 @@ const handleSearch = async () => {
 // });
 
 // const handleSearch = async () => {
-//    await searchResultsStore.fetchSearchResults({
+//   await searchResultsStore.fetchSearchResults({
 //     dest_id: "-2092174",
 //     search_type: "CITY",
 //     arrival_date: props.checkInDate,

@@ -64,9 +64,9 @@
 
 <script setup>
 import { ref } from "vue";
-import { useApiStore } from "../../stores/store";
 
-const apiStore = useApiStore();
+// import { useApiStore } from "../../stores/store";
+// const apiStore = useApiStore();
 
 const modalActiveSerch = ref(false);
 const toggleModalSerch = () => {

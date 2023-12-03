@@ -16,7 +16,7 @@ export const useSearchHotelDetailesStore = pinia.defineStore(
           const response = await axios.request({
             method: "GET",
             url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination",
-            params: { query },
+            params: { query: "egypt" },
             headers: {
               "X-RapidAPI-Key":
                 "d275ed8749msh9c4994d1decc1e4p1208f5jsn9fa5576c4196",
