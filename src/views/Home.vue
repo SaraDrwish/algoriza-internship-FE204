@@ -1,7 +1,8 @@
 <template>
   <div class="app" id="app">
-    <div class="">
-      <Nav />
+    <!-- <Nav /> -->
+    <div :showUl="false" :showRegstr="true">
+      <NavSignined />
     </div>
 
     <div class="mx-auto w-[calc(100%-100px)]">
@@ -44,5 +45,6 @@ import PopularHotelsSec from "../components/HomePageCompos/PopularHotelsSec.vue"
 import HomeDownloadSec from "../components/HomePageCompos/HomeDownloadSec.vue";
 import HomeListFooter from "../components/HomePageCompos/HomeListFooter.vue";
 import footerlastbtm from "../components/footerlastbtm.vue";
-import Nav from "../components/Navs/Nav.vue";
+import NavSignined from "../components/Navs/NavSignined.vue";
+// import Nav from "../components/Navs/Nav.vue";
 </script>

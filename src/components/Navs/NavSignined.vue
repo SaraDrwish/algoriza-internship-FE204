@@ -29,7 +29,18 @@
           <a href="#"><li>Contact</li></a>
         </ul>
       </div>
-
+      <!-- ////// -->
+      <!-- <div v-if="showUl"> -->
+      <div v-if="showRegstr">
+        <router-link to="/register">
+          <button
+            class="bg-primary py-[10px] px-[18px] text-white text-[15px] font-[500] leading-[20px] tracking-[0.3px]"
+          >
+            Register
+          </button>
+        </router-link>
+      </div>
+      <!-- ////////// -->
       <div v-if="showUl" class="flex relative right-0">
         <div class="flex gap-[22px]">
           <img
@@ -129,6 +140,10 @@ defineProps({
     type: Boolean,
     default: true,
   },
+  // showRegstr: {
+  //   type: Boolean,
+  //   default: true,
+  // },
 });
 
 const handleMyTripsBtn = () => {

@@ -4,7 +4,7 @@
       <WelcomeCard />
     </div>
 
-    <div class="">
+    <div :showUl="true" :showRegstr="false">
       <NavSignined />
     </div>
 
