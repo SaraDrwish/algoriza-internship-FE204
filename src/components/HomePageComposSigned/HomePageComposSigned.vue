@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div v-if="loading">
-      <WelcomeCard :loading="loading" />
+      <WelcomeCard />
     </div>
 
     <div class="">
@@ -60,7 +60,7 @@ const isSignedIn = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
-    loading.value = false; // Hide the card after 3 seconds
+    loading.value = false;
     isSignedIn.value = authService.checkUserSignIn();
   }, 3000);
 });

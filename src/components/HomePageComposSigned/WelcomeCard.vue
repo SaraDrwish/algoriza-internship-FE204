@@ -1,5 +1,5 @@
 <template>
-  <div class="relative top-[80px] z-10 bg-welcomeGray">
+  <div v-if="loading" class="relative top-[80px] z-10 bg-welcomeGray">
     <div
       class="absolute left-[38%] mt-[2%] max-w-[440px] px-[24px] pb-[28px] pt-[50px] max-h-[500px] flex flex-col text-center gap-[45px] bg-white rounded-[10px]"
     >
@@ -41,20 +41,31 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { authService } from "../../auth";
+// import { authService } from "../../auth";
 
 const loading = ref(true);
 
-const props = defineProps(["loading"]);
-
-onMounted(async () => {
-  await authService.simulatedAsyncCheck();
-  setTimeout(() => {
-    loading.value = false;
-  }, 3000);
-});
+// onMounted(async () => {
+//   await authService.simulatedAsyncCheck();
+//   setTimeout(() => {
+//     loading.value = false;
+//   }, 3000);
+// });
 
 const hideComponent = () => {
   loading.value = true;
 };
+
+// /////////////////////////////////////////////////
+const simulatedAsyncCheck = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+};
+onMounted(async () => {
+  await simulatedAsyncCheck();
+  hideComponent();
+  window.addEventListener("load", () => {
+    loading.value = false;
+  });
+});
+// ////////////////////////////////////////////////
 </script>

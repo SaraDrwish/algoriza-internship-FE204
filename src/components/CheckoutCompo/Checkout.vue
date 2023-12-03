@@ -1,7 +1,8 @@
 <template>
   <div class="bg-bggraynstedpage py-2">
     <div class="mt-[128px] mb-[141px]">
-      <NavSigninedSecndry />
+      <!-- <NavSigninedSecndry /> -->
+      <NavSignined :isNavVisible="isNavVisible" />
 
       <!-- /////start Secure Card ///// -->
       <!-- <CheckoutAuthCard /> -->
@@ -33,11 +34,21 @@
 </template>
 
 <script setup>
-import NavSigninedSecndry from "../Navs/NavSigninedSecndry.vue";
+// import NavSigninedSecndry from "../Navs/NavSigninedSecndry.vue";
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import ChaeckoutRight from "./ChaeckoutRight.vue";
 import ChaeckoutLeft from "./ChaeckoutLeft.vue";
-import CheckoutAuthCard from "./CheckoutAuthCard.vue";
-</script>
+// import CheckoutAuthCard from "./CheckoutAuthCard.vue";
+import NavSignined from "../Navs/NavSignined.vue";
 
-<style scoped></style>
+// import { inject } from "vue";
+// const isNavVisible = inject("isNavVisible", ref(true));
+import { ref, provide, onMounted } from "vue";
+
+const isNavVisible = ref(true);
+
+onMounted(() => {
+  isNavVisible.value = false;
+});
+provide("isNavVisible", isNavVisible);
+</script>

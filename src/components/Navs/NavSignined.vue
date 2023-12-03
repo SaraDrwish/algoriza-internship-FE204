@@ -18,7 +18,7 @@
         </div>
       </RouterLink>
 
-      <div class=" ">
+      <div v-if="isNavVisible" class="">
         <ul
           class="inline-flex tracking-[0.36px] text-[16px] text-Gray2 items-start gap-[48px]"
         >
@@ -110,11 +110,10 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
-import { ref } from "vue";
-import HomeSearch from "../HomePageCompos/HomeSearch.vue";
+import { RouterLink, useRouter } from "vue-router";
+import { ref, watch } from "vue";
 
-import { useRouter } from "vue-router";
+const isNavVisible = ref(true);
 const router = useRouter();
 
 const modalActive = ref(null);
@@ -132,4 +131,13 @@ defineProps({
 const handleMyTripsBtn = () => {
   router.push("/mytrips");
 };
+
+// ////////////////////////////////////////////
+
+watch(() => {
+  isNavVisible.value = props.isNavVisible;
+});
+const props = defineProps(["isNavVisible"]);
+
+// ///////////////////////////////////////////
 </script>
