@@ -1,7 +1,7 @@
 <template>
-  <div v-if="!loading" class="relative z-10 bg-welcomeGray">
+  <div class="relative top-[80px] z-10 bg-welcomeGray">
     <div
-      class="absolute left-[40%] mt-[2%] max-w-[400px] px-[24px] pb-[28px] pt-[50px] max-h-[500px] flex flex-col text-center gap-[45px] bg-white rounded-[10px]"
+      class="absolute left-[38%] mt-[2%] max-w-[440px] px-[24px] pb-[28px] pt-[50px] max-h-[500px] flex flex-col text-center gap-[45px] bg-white rounded-[10px]"
     >
       <div
         class="bg-welcomeBlue w-[240px] pt-[15px] h-[200px] m-auto rounded-[100px] flex items-center justify-center relative"
@@ -45,14 +45,16 @@ import { authService } from "../../auth";
 
 const loading = ref(true);
 
+const props = defineProps(["loading"]);
+
 onMounted(async () => {
   await authService.simulatedAsyncCheck();
-  loading.value = true;
+  setTimeout(() => {
+    loading.value = false;
+  }, 3000);
 });
 
 const hideComponent = () => {
   loading.value = true;
 };
 </script>
-
-<style scoped></style>

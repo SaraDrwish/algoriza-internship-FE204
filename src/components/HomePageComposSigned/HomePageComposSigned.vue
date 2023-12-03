@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div v-if="isSignedIn && loading" class=" ">
-      <WelcomeCard />
+    <div v-if="loading">
+      <WelcomeCard :loading="loading" />
     </div>
 
     <div class="">
@@ -54,13 +54,14 @@ import WelcomeCard from "./WelcomeCard.vue";
 import { ref, onMounted } from "vue";
 
 import { authService } from "../../auth";
+
 const loading = ref(true);
 const isSignedIn = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
-    loading.value = false;
+    loading.value = false; // Hide the card after 3 seconds
     isSignedIn.value = authService.checkUserSignIn();
-  }, 2000);
+  }, 3000);
 });
 </script>
