@@ -459,6 +459,10 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import axios from "axios";
+
+import { ref, onMounted } from "vue";
+
 const router = useRouter();
 
 const handleBotton = () => {
@@ -497,10 +501,11 @@ const handleBotton = () => {
 //   try {
 //     const response = await axios.request(options);
 //     console.log("response.data", response.data);
+//     return response.data;
 //   } catch (error) {
 //     console.error(error);
+//     return null;
 //   }
 // };
-
-// window.addEventListener('load', searchHotels);
+// window.addEventListener("load", searchHotels);
 </script>

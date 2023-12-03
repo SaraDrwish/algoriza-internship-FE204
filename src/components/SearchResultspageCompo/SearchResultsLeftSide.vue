@@ -163,7 +163,7 @@
 </template>
 
 <script setup>
-const axios = require("axios");
+// const axios = require("axios");
 // const searchResults = ref(null);
 
 // const searchTerm = ref("");
@@ -189,7 +189,7 @@ const axios = require("axios");
 //     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
 //     params: {
 //       dest_id: "-2092174",
-//       ...searchDetails,
+//       // ...searchDetails,
 //       search_type: "Cairo",
 //       // arrival_date: "2023-12-05",
 //       arrival_date: checkOutDate.value,
@@ -218,19 +218,6 @@ const axios = require("axios");
 // };
 
 // //////////////////////
-const props = defineProps({
-  city: String,
-  checkInDate: String,
-  checkOutDate: String,
-  guests: Number,
-  rooms: Number,
-  modalActive: {
-    type: Boolean,
-    default: false,
-  },
-});
-
-// /////////////////////
 </script>
 
 <style scoped>

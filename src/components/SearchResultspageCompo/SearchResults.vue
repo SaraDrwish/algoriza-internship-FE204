@@ -6,7 +6,7 @@
       <!-- ///start nav///// -->
 
       <!-- <NavSignined :showRegstr="false" :showIcons="true" /> -->
-      <SearchResultsNavVue />
+      <SearchResultsNav />
 
       <!-- ////end nav//// -->
 
@@ -29,7 +29,7 @@
   <div class="relative m-auto w-[calc(100vw-200px)]">
     <div class="flex mb-[96px] gap-[30px]">
       <div class="leftbox flex flex-col gap-[20px] flex-2">
-        <SearchResultsLeftSideVue />
+        <SearchResultsLeftSide />
       </div>
 
       <!-- end flex 2-->
@@ -82,15 +82,12 @@ import HomeSearch from "../HomePageCompos/HomeSearch.vue";
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
 import footerlastbtm from "../layout/footerlastbtm.vue";
-import { ref, defineProps } from "vue";
-import axios from "axios";
-import { onMounted } from "vue";
+import { defineProps } from "vue";
 
 import SearchResultsRightDonSide from "./SearchResultsRightDonSide.vue";
-import SearchResultsLeftSideVue from "./SearchResultsLeftSide.vue";
+import SearchResultsLeftSide from "./SearchResultsLeftSide.vue";
 import SearchResultsRightSidTop from "./SearchResultsRightSidTop.vue";
-import NavSignined from "../layout/NavSignined.vue";
-import SearchResultsNavVue from "./SearchResultsNav.vue";
+import SearchResultsNav from "./SearchResultsNav.vue";
 import SearchResultsPagination from "./SearchResultsPagination.vue";
 
 const props = defineProps({
@@ -104,68 +101,6 @@ const props = defineProps({
     default: false,
   },
 });
-
-// /////////////////////
-
-const searchResults = ref(null);
-
-onMounted(async () => {
-  searchResults.value = await fetchSearchResults();
-});
-
-const handleSearch = async () => {
-  if (!checkInDate.value || !checkOutDate.value) {
-    alert("Please select both arrival and departure dates.");
-    return;
-  }
-
-  try {
-    const response = await fetchHotelData({
-      dest_id: "-2092174",
-      search_type: "CITY",
-      arrival_date: checkInDate.value,
-      departure_date: checkOutDate.value,
-      adults: "1",
-      children_age: "0,17",
-      room_qty: "1",
-      page_number: "1",
-      languagecode: "en-us",
-      currency_code: "AED",
-    });
-
-    console.log(response);
-  } catch (error) {
-    console.error("Error fetching hotel data:", error);
-  }
-};
-
-// //////////////////////////////////////////////////////////////
-// import { useSearchResultsStore } from "../../stores/searchResultsStore";
-// const searchResultsStore = useSearchResultsStore();
-
-// onMounted(async () => {
-//   await searchResultsStore.fetchSearchResults({
-//     dest_id: "-2092174",
-//     search_type: "CITY",
-//     arrival_date: props.checkInDate,
-//     departure_date: props.checkOutDate,
-//     currency_code: "AED",
-//   });
-// });
-
-// const handleSearch = async () => {
-//   await searchResultsStore.fetchSearchResults({
-//     dest_id: "-2092174",
-//     search_type: "CITY",
-//     arrival_date: props.checkInDate,
-//     departure_date: props.checkOutDate,
-//     currency_code: "AED",
-//   });
-
-//   console.log(searchResultsStore.searchResults);
-// };
-
-// //////////////////////////////////////////////////////////////
 </script>
 
 <style scoped>
