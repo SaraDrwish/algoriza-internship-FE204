@@ -2,7 +2,7 @@
   <div class="bg-bggraynstedpage py-2">
     <div class="mt-[128px] mb-[141px]">
       <!-- <NavSigninedSecndry /> -->
-      <NavSignined :isNavVisible="isNavVisible" />
+      <NavSignined :showUl="false" />
 
       <!-- /////start Secure Card ///// -->
       <!-- <CheckoutAuthCard /> -->
@@ -43,12 +43,6 @@ import NavSignined from "../Navs/NavSignined.vue";
 
 // import { inject } from "vue";
 // const isNavVisible = inject("isNavVisible", ref(true));
-import { ref, provide, onMounted } from "vue";
 
-const isNavVisible = ref(true);
-
-onMounted(() => {
-  isNavVisible.value = false;
-});
-provide("isNavVisible", isNavVisible);
+// /////////////////////////////////////
 </script>

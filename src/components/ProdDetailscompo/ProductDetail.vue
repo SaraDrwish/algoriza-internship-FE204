@@ -1,6 +1,6 @@
 <template>
   <div class="mb-[92px] top-[unset]">
-    <NavSignined :isNavVisible="isNavVisible" class="" />
+    <NavSignined :showUl="true" />
   </div>
 
   <div class=" ">
@@ -72,15 +72,7 @@ import footerlastbtm from "../footerlastbtm.vue";
 import ProdDetDon1 from "./ProdDetDon1.vue";
 import ProdDetDon21 from "./ProdDetDon2-1.vue";
 
-import { ref, provide, onMounted } from "vue";
-
-const isNavVisible = ref(true);
-
-onMounted(() => {
-  isNavVisible.value = false;
-});
-provide("isNavVisible", isNavVisible);
-
+// ///////////////////////////////////////////////
 const PrdDetNv = ref(true);
 
 const handlePDN = (value) => {
