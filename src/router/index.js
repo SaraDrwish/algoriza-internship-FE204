@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Register from "../components/Register.vue";
+import Register from "../components/layout/Register.vue";
 import HomePageComposSigned from "../components/HomePageComposSigned/HomePageComposSigned.vue";
-import NotFound from "../components/NotFound.vue";
+import NotFound from "../components/layout/NotFound.vue";
 import SearchResults from "../components/SearchResultspageCompo/SearchResults.vue";
 import ProdDetails from "../components/ProdDetailscompo/ProductDetail.vue";
 import Checkout from "../components/CheckoutCompo/Checkout.vue";
@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: "/signin",
       name: "signin",
-      component: () => import("../components/SignIn.vue"),
+      component: () => import("../components/layout/SignIn.vue"),
     },
     {
       path: "/register",

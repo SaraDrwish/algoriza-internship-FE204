@@ -47,8 +47,8 @@ import GetInspirationSec from "../HomePageCompos/GetInspirationSec.vue";
 import PopularHotelsSec from "../HomePageCompos/PopularHotelsSec.vue";
 import HomeDownloadSec from "../HomePageCompos/HomeDownloadSec.vue";
 import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
-import footerlastbtm from "../footerlastbtm.vue";
-import NavSignined from "../Navs/NavSignined.vue";
+import footerlastbtm from "../layout/footerlastbtm.vue";
+import NavSignined from "../layout/NavSignined.vue";
 import WelcomeCard from "./WelcomeCard.vue";
 
 import { ref, onMounted } from "vue";

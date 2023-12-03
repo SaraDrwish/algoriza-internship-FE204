@@ -44,7 +44,6 @@ import GetInspirationSec from "../components/HomePageCompos/GetInspirationSec.vu
 import PopularHotelsSec from "../components/HomePageCompos/PopularHotelsSec.vue";
 import HomeDownloadSec from "../components/HomePageCompos/HomeDownloadSec.vue";
 import HomeListFooter from "../components/HomePageCompos/HomeListFooter.vue";
-import footerlastbtm from "../components/footerlastbtm.vue";
-import NavSignined from "../components/Navs/NavSignined.vue";
-// import Nav from "../components/Navs/Nav.vue";
+import footerlastbtm from "../components/layout/footerlastbtm.vue";
+import NavSignined from "../components/layout/NavSignined.vue";
 </script>

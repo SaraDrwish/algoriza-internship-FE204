@@ -1,7 +1,6 @@
 <script setup>
-import NavSignined from "./components/HomePageCompos/Navs/NavSignined.vue";
-// import Nav from "./components/HomePageCompos/Navs/Nav.vue";
-import footerlastbtm from "./components/footerlastbtm.vue";
+import NavSignined from "./navsignined.vue";
+import footerlastbtm from "./footerlastbtm.vue";
 </script>
 
 <template>

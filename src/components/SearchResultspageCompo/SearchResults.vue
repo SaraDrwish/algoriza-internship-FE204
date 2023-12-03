@@ -5,6 +5,7 @@
     >
       <!-- ///start nav///// -->
 
+      <!-- <NavSignined :showRegstr="false" :showIcons="true" /> -->
       <SearchResultsNavVue />
 
       <!-- ////end nav//// -->
@@ -80,7 +81,7 @@
 import HomeSearch from "../HomePageCompos/HomeSearch.vue";
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
-import footerlastbtm from "../footerlastbtm.vue";
+import footerlastbtm from "../layout/footerlastbtm.vue";
 import { ref, defineProps } from "vue";
 import axios from "axios";
 import { onMounted } from "vue";
@@ -88,6 +89,7 @@ import { onMounted } from "vue";
 import SearchResultsRightDonSide from "./SearchResultsRightDonSide.vue";
 import SearchResultsLeftSideVue from "./SearchResultsLeftSide.vue";
 import SearchResultsRightSidTop from "./SearchResultsRightSidTop.vue";
+import NavSignined from "../layout/NavSignined.vue";
 import SearchResultsNavVue from "./SearchResultsNav.vue";
 import SearchResultsPagination from "./SearchResultsPagination.vue";
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="  ">
+  <div class=" ">
     <NavSignined :showUl="false" />
 
     <div
@@ -15,7 +15,6 @@
 </template>
 
 <script setup>
-import footerlastbtm from "./footerlastbtm.vue";
-import NavSignined from "./Navs/NavSignined.vue";
-// import NavSecndry from "./Navs/NavSecndry.vue";
+import NavSignined from "./NavSignined.vue";
+import footerlastbtm from "./NavSignined.vue";
 </script>

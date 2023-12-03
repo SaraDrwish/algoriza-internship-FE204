@@ -35,8 +35,8 @@
 </template>
 
 <script setup>
-import footerlastbtmVue from "../footerlastbtm.vue";
-import NavSignined from "../Navs/NavSignined.vue";
+import footerlastbtmVue from "../layout/footerlastbtm.vue";
+import NavSignined from "../layout/NavSignined.vue";
 import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import MyTripsCards from "./MyTripsCards.vue";

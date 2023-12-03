@@ -32,7 +32,7 @@
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import ChaeckoutRight from "./ChaeckoutRight.vue";
 import ChaeckoutLeft from "./ChaeckoutLeft.vue";
-import NavSignined from "../Navs/NavSignined.vue";
+import NavSignined from "../layout/NavSignined.vue";
 
 // /////////////////////////////////////
 </script>

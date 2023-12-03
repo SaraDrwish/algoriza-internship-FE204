@@ -42,7 +42,7 @@
               />
               <img
                 class="w-[20px] h-[20px] cursor-pointer"
-                src="../assets/icons/eye 1.svg"
+                src="../../assets/icons/eye 1.svg"
                 alt="password"
               />
             </div>
@@ -68,7 +68,7 @@
               />
               <img
                 class="w-[20px] h-[20px] cursor-pointer"
-                src="../assets/icons/eye 1.svg"
+                src="../../assets/icons/eye 1.svg"
                 alt="password"
               />
             </div>
@@ -97,8 +97,8 @@
 </template>
 
 <script setup>
-import NavSignined from "./Navs/NavSignined.vue";
-import footerlastbtm from "./footerlastbtm.vue";
+import NavSignined from "../layout/NavSignined.vue";
+import footerlastbtm from "../layout/footerlastbtm.vue";
 
 import { ref } from "vue";
 

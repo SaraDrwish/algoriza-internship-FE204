@@ -65,10 +65,10 @@
 </template>
 
 <script setup>
-import NavSignined from "../Navs/NavSignined.vue";
+import NavSignined from "../layout/NavSignined.vue";
 import HomeAlert from "../HomePageCompos/HomeAlert.vue";
 import HomeListFooter from "../HomePageCompos/HomeListFooter.vue";
-import footerlastbtm from "../footerlastbtm.vue";
+import footerlastbtm from "../layout/footerlastbtm.vue";
 import ProdDetDon1 from "./ProdDetDon1.vue";
 import ProdDetDon21 from "./ProdDetDon2-1.vue";
 
