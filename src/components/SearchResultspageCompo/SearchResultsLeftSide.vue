@@ -13,9 +13,9 @@
             src="../../assets/icons/search 1.svg"
             alt="search"
           />
+          <!-- v-model="searchTerm" -->
+          <!-- @input="searchHotels" -->
           <input
-            v-model="searchTerm"
-            @input="searchHotels"
             class="bg-white text-light-black"
             type="text"
             placeholder="eg. Beach westpalm"
@@ -163,18 +163,20 @@
 </template>
 
 <script setup>
-// const axios = require("axios");
+const axios = require("axios");
 // const searchResults = ref(null);
 
-const searchTerm = ref("");
-import { useApiStore } from "../../stores/store";
-const apiStore = useApiStore();
+// const searchTerm = ref("");
+// import { useApiStore } from "../../stores/store";
+// const apiStore = useApiStore();
 
-// /////
+// // /////
 
-const searchHotels = async () => {
-  await apiStore.searchHotels(searchTerm.value);
-};
+// const searchHotels = async () => {
+//   await apiStore.searchHotels(searchTerm.value);
+// };
+
+// ///////////////////////
 
 // const searchHotels = async () => {
 //   const searchDetails = {
@@ -199,7 +201,7 @@ const searchHotels = async () => {
 //       page_number: "1",
 //       languagecode: "en-us",
 //       currency_code: "AED",
-//       name: searchTerm,
+//       // name: searchTerm,
 //     },
 //     headers: {
 //       "X-RapidAPI-Key": "feb9f2fc76msh209ee120c0ccda0p17fbc5jsnf6f0ee7a354c",

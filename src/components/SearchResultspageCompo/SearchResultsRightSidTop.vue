@@ -73,8 +73,8 @@ const toggleModalSerch = () => {
   modalActiveSerch.value = !modalActiveSerch.value;
 };
 
-window.localStorage.getItem("hotelsNummm");
-window.localStorage.getItem("selectedCountry");
-console.log("hotelsNummm", hotelsNummm);
-console.log("selectedCountry", selectedCountry);
+// window.localStorage.getItem("hotelsNummm");
+// window.localStorage.getItem("selectedCountry");
+// console.log("hotelsNummm", hotelsNummm);
+// console.log("selectedCountry", selectedCountry);
 </script>

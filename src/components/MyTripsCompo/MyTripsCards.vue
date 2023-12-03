@@ -53,6 +53,7 @@
                 Includes taxes and fees
               </p>
               <button
+                @click="handleBotton"
                 class="mt-[16px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]"
               >
                 See availability
@@ -110,6 +111,7 @@
                 Includes taxes and fees
               </p>
               <button
+                @click="handleBotton"
                 class="mt-[16px] text-white bg-primary rounded-[6px] py-[10px] px-[18px] text-[15px]"
               >
                 See availability
@@ -124,4 +126,12 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+// ////////////////////////////////////
+import { useRouter } from "vue-router";
+const router = useRouter();
+const handleBotton = () => {
+  router.push("/prodetails");
+};
+// ////////////////////////////////////
+</script>

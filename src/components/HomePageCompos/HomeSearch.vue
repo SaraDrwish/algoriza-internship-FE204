@@ -192,7 +192,7 @@ const fetchCountries = async (query) => {
     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination",
     params: { query },
     headers: {
-      "X-RapidAPI-Key": "feb9f2fc76msh209ee120c0ccda0p17fbc5jsnf6f0ee7a354c",
+      "X-RapidAPI-Key": "d275ed8749msh9c4994d1decc1e4p1208f5jsn9fa5576c4196",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -223,9 +223,9 @@ const getSearchContsResults = async () => {
 const selectCountry = (country) => {
   console.log(
     country,
-    "::cty nam::",
+    "::cty nam::::::",
     country.city_name,
-    "id::",
+    "id:::::::",
     country.dest_id
   );
   searchQuery.value = country.name;
@@ -233,10 +233,12 @@ const selectCountry = (country) => {
 
   console.log("country.city_name::::", country.city_name);
   console.log("country.dest_id::::", country.dest_id);
-  window.localStorage.setItem("selectedCountry", country.city_name);
-  window.localStorage.setItem("CountryID", country.dest_id);
-  window.localStorage.setItem("hotelsNummm", country.hotels);
+  // window.localStorage.setItem("selectedCountry", country.city_name);
+  // window.localStorage.setItem("CountryID", country.dest_id);
+  // window.localStorage.setItem("hotelsNummm", country.hotels);
   // window.localStorage.setItem("CountryID", country.chekin);
+  window.localStorage.setItem("CountryNAme", country.city_name);
+  window.localStorage.setItem("CountryID", country.dest_id);
 };
 
 const handleSubmit = () => {
@@ -251,10 +253,10 @@ const handleSubmit = () => {
     window.localStorage.setItem("checkOutDate", checkOutDate.value);
     window.localStorage.setItem("guests", guests.value);
     window.localStorage.setItem("rooms", rooms.value);
-    console.log("selectedCountry", searchQuery.value);
-    console.log("checkInDate", checkInDate.value);
-    console.log("checkOutDate", checkOutDate.value);
-    console.log("......");
+    // console.log("selectedCountry", searchQuery.value);
+    // console.log("checkInDate", checkInDate.value);
+    // console.log("checkOutDate", checkOutDate.value);
+    // console.log("......");
   };
 
   if (validateForm()) {

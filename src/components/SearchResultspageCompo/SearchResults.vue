@@ -93,8 +93,6 @@ import NavSignined from "../layout/NavSignined.vue";
 import SearchResultsNavVue from "./SearchResultsNav.vue";
 import SearchResultsPagination from "./SearchResultsPagination.vue";
 
-// import { useStore } from "pinia";
-
 const props = defineProps({
   city: String,
   checkInDate: String,

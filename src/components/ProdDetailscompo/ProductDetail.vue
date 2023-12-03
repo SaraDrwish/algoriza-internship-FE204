@@ -77,20 +77,19 @@ import { ref } from "vue";
 // import { useStore } from "pinia";
 // import { useGetHotelDetailsStore } from "../../stores/GetHotelDetails";
 // ///////////////////////////////////////////////
+
 const PrdDetNv = ref(true);
 
 const handlePDN = (value) => {
   PrdDetNv.value = value;
-
-  // //////// pinia store ///////
-
-  const getHotelDetailsStore = useGetHotelDetailsStore();
-  // Trigger the API call
-  getHotelDetailsStore.fetchHotelDetails();
-  // Access the data
-  const hotelDetails = getHotelDetailsStore.hotelDetails;
-  console.log("hotelDetails:::", hotelDetails);
-
-  // /////////////end store /////////////////
 };
+
+// //////// pinia store ///////
+// const getHotelDetailsStore = useGetHotelDetailsStore();
+// Trigger the API call
+// getHotelDetailsStore.fetchHotelDetails();
+// Access the data
+// const hotelDetails = getHotelDetailsStore.hotelDetails;
+// console.log("hotelDetails:::", hotelDetails);
+// /////////////end store /////////////////
 </script>
