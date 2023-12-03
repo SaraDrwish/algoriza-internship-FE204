@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh]">
     <div class="container m-auto flex flex-col">
-      <NavSecndry />
+      <NavSignined :showUl="false" />
       <div class="flex flex-col items-center m-auto w-[401px] mt-[92px]">
         <h2 class="text-[28px] mb-[40px] font-[600]">Sign In</h2>
         <form
@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-import NavSecndry from "./Navs/NavSecndry.vue";
+import NavSignined from "./Navs/NavSignined.vue";
 import footerlastbtm from "./footerlastbtm.vue";
 import { ref } from "vue";
 import { useRouter } from "vue-router";

@@ -1,7 +1,7 @@
 <template>
   <div class="h-[100vh]">
     <div class="m-auto flex flex-col">
-      <NavSecndry />
+      <NavSignined :showUl="false" />
       <div class="w-[401px] m-auto flex flex-col items-center">
         <h2 class="text-[28px] mb-[40px] mt-[92px] font-[600]">Register</h2>
 
@@ -97,7 +97,7 @@
 </template>
 
 <script setup>
-import NavSecndry from "./Navs/NavSecndry.vue";
+import NavSignined from "./Navs/NavSignined.vue";
 import footerlastbtm from "./footerlastbtm.vue";
 
 import { ref } from "vue";

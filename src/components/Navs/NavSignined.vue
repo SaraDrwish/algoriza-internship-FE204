@@ -30,7 +30,7 @@
         </ul>
       </div>
 
-      <div class="flex relative right-0">
+      <div v-if="showUl" class="flex relative right-0">
         <div class="flex gap-[22px]">
           <img
             class="py-[10px] px-[18px] cursor-pointer"
