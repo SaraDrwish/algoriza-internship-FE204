@@ -5,7 +5,7 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicPath: "/algoriza-internship-FE204/",
+  publicPath: "https://SaraDrwish.github.io/algoriza-internship-FE204",
   base: "/deploying-vite-algoriza-internship-FE204/",
   plugins: [vue()],
   resolve: {
