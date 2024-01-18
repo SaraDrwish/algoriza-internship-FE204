@@ -1,22 +1,14 @@
 {
-<<<<<<< HEAD
-  "homepage": "https://saradrwish.github.io/algoriza-internship-FE204",
-=======
-  "homepage": "https://SaraDrwish.github.io/algoriza-internship-FE204",
->>>>>>> b6f08a0e034111fff27d40528d885e2ce92b7a28
-  "name": "mydreamplace",
+   "homepage": "https://saradrwish.github.io/algoriza-internship-FE204",
+   "name": "mydreamplace",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-<<<<<<< HEAD
-    "deploy":"npm run deploy"
-=======
-    "deploy": "gh-pages -d dist",
->>>>>>> b6f08a0e034111fff27d40528d885e2ce92b7a28
-  },
+    "deploy": "gh-pages -d dist"
+   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.3.2",
     "@headlessui/vue": "^1.7.16",
