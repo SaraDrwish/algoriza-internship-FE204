@@ -1,7 +1,7 @@
 <template>
   <header class="text-white mb-[104px]">
     <div
-      class="relative top-0 text-white h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2"
+      class="relative top-0 left-0 text-white h-[200px] w-full bg-gradient-to-b from-laniergrad1 to-laniergrad2"
     >
       <!-- ///start nav///// -->
 
